@@ -71,6 +71,9 @@
         get_cohesion = -(Int(x / 5) - 5)
         If get_cohesion >= 0 Then get_cohesion = 0
     End Function
+    Public Sub test_sub()
+
+    End Sub
     Public Sub emph(x As Object)
         If x.backcolor = defa Then x.backcolor = golden Else x.backcolor = defa
     End Sub
