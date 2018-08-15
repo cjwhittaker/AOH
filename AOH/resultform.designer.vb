@@ -41,7 +41,7 @@ Partial Class resultform
         Me.result.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.result.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.result.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.result.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.result.ForeColor = System.Drawing.SystemColors.WindowText
         Me.result.Location = New System.Drawing.Point(12, 22)
         Me.result.Name = "result"
         Me.result.Size = New System.Drawing.Size(655, 543)
@@ -157,7 +157,7 @@ Partial Class resultform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.AOH.My.Resources.Resources.syw1
+        Me.BackgroundImage = Global.AOH.My.Resources.Resources.napoleon_Logo2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(684, 661)
         Me.Controls.Add(Me.reverse)

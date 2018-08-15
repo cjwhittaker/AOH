@@ -904,11 +904,11 @@ Partial Class Firing_AOE
         Me.f30.Text = "2"
         Me.f30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Firing
+        'Firing_AOE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.AOE.My.Resources.Resources.napoleon_Logo21
+        Me.BackgroundImage = Global.AOH.My.Resources.Resources.napoleon_Logo2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(684, 661)
         Me.Controls.Add(Me.f30)
@@ -982,7 +982,7 @@ Partial Class Firing_AOE
         Me.MaximumSize = New System.Drawing.Size(700, 700)
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(700, 700)
-        Me.Name = "Firing"
+        Me.Name = "Firing_AOE"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Firing Phase"
         Me.ResumeLayout(False)
