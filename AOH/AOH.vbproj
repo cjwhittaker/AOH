@@ -126,6 +126,12 @@
     <Compile Include="Firing.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Firing_AOE.designer.vb">
+      <DependentUpon>Firing_AOE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Firing_AOE.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Module1.vb" />
     <Compile Include="movement.designer.vb">
       <DependentUpon>movement.vb</DependentUpon>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Firing.resx">
       <DependentUpon>Firing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Firing_AOE.resx">
+      <DependentUpon>Firing_AOE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="movement.resx">
       <DependentUpon>movement.vb</DependentUpon>
