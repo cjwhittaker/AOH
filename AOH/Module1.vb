@@ -1,4 +1,5 @@
 ﻿Module Module1
+    'Test 
     Public currdir As String, goback As Boolean = False, event_list As Collection, generals As Collection, timed_event As cevents, display_dice As Boolean, solo_game As Boolean
     Public p1_poor As Integer, p1_average As Integer, p1_cautious As Integer, p1_bold As Integer
     Public p2_poor As Integer, p2_average As Integer, p2_cautious As Integer, p2_bold As Integer
