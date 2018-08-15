@@ -8,7 +8,7 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Age of Honour Automated Quick Reference and Play System")>
+<Assembly: AssemblyTitle("Age of Eagles Automated Quick Reference and Play System")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("AOH")>
