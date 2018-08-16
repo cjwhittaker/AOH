@@ -131,20 +131,20 @@ backbutton:
                     goback = False
                 End If
             End If
+            'If phase = 2 Then
+            '    phase = 3 : quit = True
+            '    With Reserve
+            '        .Text = "Reserve Movement Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
+            '        .Player.Text = p1 + " Reserve Movement Phase" + vbNewLine + "Move Brigades and Batteries"
+            '        .Tag = p1
+            '        .ShowDialog()
+            '    End With
+
+            '    If quit Then GoTo closeprogram
+            '    If goback Then phase = 1 : GoTo backbutton
+            'End If
             If phase = 2 Then
                 phase = 3 : quit = True
-                With Reserve
-                    .Text = "Reserve Movement Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
-                    .Player.Text = p1 + " Reserve Movement Phase" + vbNewLine + "Move Brigades and Batteries"
-                    .Tag = p1
-                    .ShowDialog()
-                End With
-
-                If quit Then GoTo closeprogram
-                If goback Then phase = 1 : GoTo backbutton
-            End If
-            If phase = 3 Then
-                phase = 4 : quit = True
                 With resultform
                     .Text = "Tactical March Phase Results - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .confirm.Text = "OK"
@@ -160,8 +160,8 @@ backbutton:
                 If quit Then GoTo closeprogram
                 If goback Then phase = 2 : goback = False : GoTo backbutton
             End If
-            If phase = 4 Then
-                phase = 5 : quit = True
+            If phase = 3 Then
+                phase = 4 : quit = True
                 With resultform
                     .adjust.Visible = False
                     .Text = "Tactical March Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
@@ -177,8 +177,8 @@ backbutton:
                 If quit Then GoTo closeprogram
                 If goback Then phase = 2 : goback = False : GoTo backbutton
             End If
-            If phase = 5 Then
-                phase = 6 : quit = True
+            If phase = 4 Then
+                phase = 5 : quit = True
                 With Firing
                     .Text = "Firing Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p2 + " Defender's Fire Phase"
@@ -189,8 +189,8 @@ backbutton:
                 If quit Then GoTo closeprogram
                 If goback Then phase = 3 : goback = False : GoTo backbutton
             End If
-            If phase = 6 Then
-                phase = 7 : quit = True
+            If phase = 5 Then
+                phase = 6 : quit = True
                 With Firing
                     .Text = "Firing Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Attacker's Fire Phase"
@@ -200,7 +200,7 @@ backbutton:
                 If quit Then GoTo closeprogram
                 If goback Then phase = 4 : goback = False : GoTo backbutton
             End If
-            If phase = 7 Then
+            If phase = 6 Then
                 quit = True
                 With charge
                     .Text = "Charge Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"

@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Fire and Fury Automated Quick Reference and Play System")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyCompany("cjwhittaker@hotmail.co.uk")>
 <Assembly: AssemblyProduct("F&F")>
-<Assembly: AssemblyCopyright("Copyright  © cjwhittaker@hotmail.co.uk 2018")>
+<Assembly: AssemblyCopyright("Copyright  © 2018")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
