@@ -133,6 +133,12 @@
     <Compile Include="movement.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="movement_FF.designer.vb">
+      <DependentUpon>movement_FF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="movement_FF.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="movement.resx">
       <DependentUpon>movement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="movement_FF.resx">
+      <DependentUpon>movement_FF.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
