@@ -133,9 +133,13 @@ backbutton:
             End If
             If phase = 2 Then
                 phase = 3 : quit = True
-                Reserve.Player.Text = Current_time.Text + "hrs " + p1 + " Reserve Movement Phase" + vbNewLine
-                Reserve.Tag = p1
-                Reserve.ShowDialog()
+                With Reserve
+                    .Text = "Reserve Movement Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
+                    .Player.Text = p1 + " Reserve Movement Phase" + vbNewLine + "Move Brigades and Batteries"
+                    .Tag = p1
+                    .ShowDialog()
+                End With
+
                 If quit Then GoTo closeprogram
                 If goback Then phase = 1 : GoTo backbutton
             End If
@@ -147,14 +151,14 @@ backbutton:
                 End With
                 With Tactical
                     .Text = "Tactical March Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
-                    .Player.Text = p1 + " Tactical March Phase" + vbNewLine + " Move Brigades and Batteries"
+                    .Player.Text = p1 + " Tactical March Phase" + vbNewLine + "Move Brigades and Batteries"
                     .doctrine.Visible = IIf(solo.Checked, True, False)
                     .Tag = p1
                     .ShowDialog()
                 End With
 
                 If quit Then GoTo closeprogram
-                If goback Then phase = 1 : goback = False : GoTo backbutton
+                If goback Then phase = 2 : goback = False : GoTo backbutton
             End If
             If phase = 4 Then
                 phase = 5 : quit = True

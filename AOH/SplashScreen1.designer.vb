@@ -27,6 +27,7 @@ Partial Class SplashScreen1
         Me.Version = New System.Windows.Forms.Label()
         Me.Copyright = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Company = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -43,9 +44,9 @@ Partial Class SplashScreen1
         'Version
         '
         Me.Version.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Version.Location = New System.Drawing.Point(298, 215)
+        Me.Version.Location = New System.Drawing.Point(271, 200)
         Me.Version.Name = "Version"
-        Me.Version.Size = New System.Drawing.Size(186, 30)
+        Me.Version.Size = New System.Drawing.Size(213, 30)
         Me.Version.TabIndex = 1
         Me.Version.Text = "Label1"
         Me.Version.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -53,9 +54,9 @@ Partial Class SplashScreen1
         'Copyright
         '
         Me.Copyright.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Copyright.Location = New System.Drawing.Point(298, 262)
+        Me.Copyright.Location = New System.Drawing.Point(271, 262)
         Me.Copyright.Name = "Copyright"
-        Me.Copyright.Size = New System.Drawing.Size(186, 32)
+        Me.Copyright.Size = New System.Drawing.Size(213, 32)
         Me.Copyright.TabIndex = 2
         Me.Copyright.Text = "Label1"
         Me.Copyright.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -70,12 +71,23 @@ Partial Class SplashScreen1
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
+        'Company
+        '
+        Me.Company.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Company.Location = New System.Drawing.Point(271, 230)
+        Me.Company.Name = "Company"
+        Me.Company.Size = New System.Drawing.Size(213, 32)
+        Me.Company.TabIndex = 4
+        Me.Company.Text = "Label1"
+        Me.Company.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'SplashScreen1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(496, 303)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Company)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Copyright)
         Me.Controls.Add(Me.Version)
@@ -96,4 +108,5 @@ Partial Class SplashScreen1
     Friend WithEvents Version As Label
     Friend WithEvents Copyright As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Company As Label
 End Class

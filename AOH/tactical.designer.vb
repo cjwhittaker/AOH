@@ -48,7 +48,7 @@ Partial Class Tactical
         'getresult
         '
         Me.getresult.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.getresult.Location = New System.Drawing.Point(242, 529)
+        Me.getresult.Location = New System.Drawing.Point(244, 538)
         Me.getresult.Name = "getresult"
         Me.getresult.Size = New System.Drawing.Size(210, 47)
         Me.getresult.TabIndex = 8
@@ -63,16 +63,16 @@ Partial Class Tactical
         Me.Player.Location = New System.Drawing.Point(12, 0)
         Me.Player.MinimumSize = New System.Drawing.Size(300, 0)
         Me.Player.Name = "Player"
-        Me.Player.Size = New System.Drawing.Size(660, 58)
+        Me.Player.Size = New System.Drawing.Size(660, 79)
         Me.Player.TabIndex = 9
-        Me.Player.Text = "Label1"
+        Me.Player.Text = "now is the time for all good men to come to the aid of the party"
         Me.Player.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'disengage
         '
         Me.disengage.Appearance = System.Windows.Forms.Appearance.Button
         Me.disengage.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.disengage.Location = New System.Drawing.Point(141, 391)
+        Me.disengage.Location = New System.Drawing.Point(143, 400)
         Me.disengage.Name = "disengage"
         Me.disengage.Size = New System.Drawing.Size(400, 40)
         Me.disengage.TabIndex = 12
@@ -84,7 +84,7 @@ Partial Class Tactical
         '
         Me.Column.Appearance = System.Windows.Forms.Appearance.Button
         Me.Column.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Column.Location = New System.Drawing.Point(141, 161)
+        Me.Column.Location = New System.Drawing.Point(143, 170)
         Me.Column.Name = "Column"
         Me.Column.Size = New System.Drawing.Size(400, 40)
         Me.Column.TabIndex = 13
@@ -96,7 +96,7 @@ Partial Class Tactical
         '
         Me.Fresh.Appearance = System.Windows.Forms.Appearance.Button
         Me.Fresh.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Fresh.Location = New System.Drawing.Point(141, 253)
+        Me.Fresh.Location = New System.Drawing.Point(143, 262)
         Me.Fresh.Name = "Fresh"
         Me.Fresh.Size = New System.Drawing.Size(400, 40)
         Me.Fresh.TabIndex = 14
@@ -108,7 +108,7 @@ Partial Class Tactical
         '
         Me.spent.Appearance = System.Windows.Forms.Appearance.Button
         Me.spent.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.spent.Location = New System.Drawing.Point(141, 299)
+        Me.spent.Location = New System.Drawing.Point(143, 308)
         Me.spent.Name = "spent"
         Me.spent.Size = New System.Drawing.Size(400, 40)
         Me.spent.TabIndex = 15
@@ -120,7 +120,7 @@ Partial Class Tactical
         '
         Me.disordered.Appearance = System.Windows.Forms.Appearance.Button
         Me.disordered.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.disordered.Location = New System.Drawing.Point(141, 483)
+        Me.disordered.Location = New System.Drawing.Point(143, 492)
         Me.disordered.Name = "disordered"
         Me.disordered.Size = New System.Drawing.Size(400, 40)
         Me.disordered.TabIndex = 16
@@ -132,7 +132,7 @@ Partial Class Tactical
         '
         Me.Impulse.Appearance = System.Windows.Forms.Appearance.Button
         Me.Impulse.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Impulse.Location = New System.Drawing.Point(141, 207)
+        Me.Impulse.Location = New System.Drawing.Point(143, 216)
         Me.Impulse.Name = "Impulse"
         Me.Impulse.Size = New System.Drawing.Size(400, 40)
         Me.Impulse.TabIndex = 17
@@ -144,7 +144,7 @@ Partial Class Tactical
         '
         Me.detached.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.detached.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.detached.Location = New System.Drawing.Point(433, 71)
+        Me.detached.Location = New System.Drawing.Point(435, 80)
         Me.detached.Name = "detached"
         Me.detached.Size = New System.Drawing.Size(107, 38)
         Me.detached.TabIndex = 25
@@ -154,7 +154,7 @@ Partial Class Tactical
         'b1
         '
         Me.b1.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.b1.Location = New System.Drawing.Point(141, 71)
+        Me.b1.Location = New System.Drawing.Point(143, 80)
         Me.b1.Name = "b1"
         Me.b1.Size = New System.Drawing.Size(286, 39)
         Me.b1.TabIndex = 24
@@ -165,7 +165,7 @@ Partial Class Tactical
         '
         Me.attached.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.attached.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.attached.Location = New System.Drawing.Point(433, 117)
+        Me.attached.Location = New System.Drawing.Point(435, 126)
         Me.attached.Name = "attached"
         Me.attached.Size = New System.Drawing.Size(107, 38)
         Me.attached.TabIndex = 27
@@ -175,7 +175,7 @@ Partial Class Tactical
         'b2
         '
         Me.b2.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.b2.Location = New System.Drawing.Point(141, 116)
+        Me.b2.Location = New System.Drawing.Point(143, 125)
         Me.b2.Name = "b2"
         Me.b2.Size = New System.Drawing.Size(286, 39)
         Me.b2.TabIndex = 26
@@ -186,7 +186,7 @@ Partial Class Tactical
         '
         Me.Unsecure.Appearance = System.Windows.Forms.Appearance.Button
         Me.Unsecure.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Unsecure.Location = New System.Drawing.Point(140, 345)
+        Me.Unsecure.Location = New System.Drawing.Point(142, 354)
         Me.Unsecure.Name = "Unsecure"
         Me.Unsecure.Size = New System.Drawing.Size(400, 40)
         Me.Unsecure.TabIndex = 12
@@ -198,7 +198,7 @@ Partial Class Tactical
         '
         Me.Cavalry.Appearance = System.Windows.Forms.Appearance.Button
         Me.Cavalry.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cavalry.Location = New System.Drawing.Point(141, 437)
+        Me.Cavalry.Location = New System.Drawing.Point(143, 446)
         Me.Cavalry.Name = "Cavalry"
         Me.Cavalry.Size = New System.Drawing.Size(400, 40)
         Me.Cavalry.TabIndex = 28

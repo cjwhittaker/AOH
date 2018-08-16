@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>AOH.My.MyApplication</StartupObject>
     <RootNamespace>AOH</RootNamespace>
-    <AssemblyName>AOH</AssemblyName>
+    <AssemblyName>Age_of_Honour</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -36,7 +36,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>AOH.xml</DocumentationFile>
+    <DocumentationFile>Age_of_Honour.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -46,7 +46,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>AOH.xml</DocumentationFile>
+    <DocumentationFile>Age_of_Honour.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -277,6 +277,36 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\napoleon_Logo2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\napoleon_Logo3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1870.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cluster1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitch1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitch1_2El_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags02.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
