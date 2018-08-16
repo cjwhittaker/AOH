@@ -58,7 +58,7 @@ Partial Class solo_settings
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label7.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label7.Location = New System.Drawing.Point(12, 9)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(63, 23)
@@ -114,7 +114,7 @@ Partial Class solo_settings
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label1.Location = New System.Drawing.Point(12, 86)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 23)
@@ -127,7 +127,7 @@ Partial Class solo_settings
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label2.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label2.Location = New System.Drawing.Point(12, 125)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(75, 23)
@@ -173,7 +173,7 @@ Partial Class solo_settings
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label3.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label3.Location = New System.Drawing.Point(12, 48)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(73, 23)
@@ -274,7 +274,7 @@ Partial Class solo_settings
         '
         Me.comd_name.BackColor = System.Drawing.Color.Transparent
         Me.comd_name.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.comd_name.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.comd_name.ForeColor = System.Drawing.SystemColors.WindowText
         Me.comd_name.Location = New System.Drawing.Point(128, 444)
         Me.comd_name.Name = "comd_name"
         Me.comd_name.Size = New System.Drawing.Size(176, 21)
@@ -294,7 +294,7 @@ Partial Class solo_settings
         '
         Me.comd_strength.BackColor = System.Drawing.Color.Transparent
         Me.comd_strength.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.comd_strength.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.comd_strength.ForeColor = System.Drawing.SystemColors.WindowText
         Me.comd_strength.Location = New System.Drawing.Point(100, 485)
         Me.comd_strength.Name = "comd_strength"
         Me.comd_strength.Size = New System.Drawing.Size(204, 21)
@@ -340,7 +340,7 @@ Partial Class solo_settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.AOH.My.Resources.Resources.syw1
+        Me.BackgroundImage = Global.AOH.My.Resources.Resources.flags01
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(584, 575)
         Me.Controls.Add(Me.command_decisions)

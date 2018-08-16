@@ -256,7 +256,7 @@ Partial Class calculator
         '
         Me.Label48.BackColor = System.Drawing.Color.Transparent
         Me.Label48.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label48.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label48.ForeColor = System.Drawing.Color.Black
         Me.Label48.Location = New System.Drawing.Point(9, 16)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(52, 38)
@@ -268,7 +268,7 @@ Partial Class calculator
         '
         Me.Label47.BackColor = System.Drawing.Color.Transparent
         Me.Label47.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label47.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label47.ForeColor = System.Drawing.Color.Black
         Me.Label47.Location = New System.Drawing.Point(141, 16)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(65, 38)
@@ -280,7 +280,7 @@ Partial Class calculator
         '
         Me.Label46.BackColor = System.Drawing.Color.Transparent
         Me.Label46.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label46.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label46.ForeColor = System.Drawing.Color.Black
         Me.Label46.Location = New System.Drawing.Point(67, 16)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(75, 38)
@@ -302,7 +302,7 @@ Partial Class calculator
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(265, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 38)
@@ -338,7 +338,7 @@ Partial Class calculator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.AOH.My.Resources.Resources.syw1
+        Me.BackgroundImage = Global.AOH.My.Resources.Resources.flags01
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(328, 305)
         Me.Controls.Add(Me.routers)

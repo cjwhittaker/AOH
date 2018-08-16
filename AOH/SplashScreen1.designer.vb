@@ -62,7 +62,7 @@ Partial Class SplashScreen1
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackgroundImage = Global.AOH.My.Resources.Resources.syw1
+        Me.PictureBox1.BackgroundImage = Global.AOH.My.Resources.Resources.flags01
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Location = New System.Drawing.Point(2, 2)
         Me.PictureBox1.Name = "PictureBox1"
@@ -74,6 +74,7 @@ Partial Class SplashScreen1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(496, 303)
         Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox1)

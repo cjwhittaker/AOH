@@ -66,6 +66,7 @@ Partial Class casualties
         'p1_cas
         '
         Me.p1_cas.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.p1_cas.ForeColor = System.Drawing.Color.Black
         Me.p1_cas.Location = New System.Drawing.Point(154, 99)
         Me.p1_cas.Name = "p1_cas"
         Me.p1_cas.Size = New System.Drawing.Size(51, 31)
@@ -76,7 +77,7 @@ Partial Class casualties
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(47, 100)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(101, 25)
@@ -88,7 +89,7 @@ Partial Class casualties
         '
         Me.p1_cas_c.BackColor = System.Drawing.Color.Transparent
         Me.p1_cas_c.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.p1_cas_c.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.p1_cas_c.ForeColor = System.Drawing.Color.Black
         Me.p1_cas_c.Location = New System.Drawing.Point(211, 100)
         Me.p1_cas_c.Name = "p1_cas_c"
         Me.p1_cas_c.Size = New System.Drawing.Size(41, 26)
@@ -100,7 +101,7 @@ Partial Class casualties
         '
         Me.p1.BackColor = System.Drawing.Color.Transparent
         Me.p1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.p1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.p1.ForeColor = System.Drawing.Color.Black
         Me.p1.Location = New System.Drawing.Point(129, 56)
         Me.p1.Name = "p1"
         Me.p1.Size = New System.Drawing.Size(101, 25)
@@ -111,6 +112,7 @@ Partial Class casualties
         'p2_cas
         '
         Me.p2_cas.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.p2_cas.ForeColor = System.Drawing.Color.Black
         Me.p2_cas.Location = New System.Drawing.Point(279, 100)
         Me.p2_cas.Name = "p2_cas"
         Me.p2_cas.Size = New System.Drawing.Size(51, 31)
@@ -121,7 +123,7 @@ Partial Class casualties
         '
         Me.p2_cas_c.BackColor = System.Drawing.Color.Transparent
         Me.p2_cas_c.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.p2_cas_c.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.p2_cas_c.ForeColor = System.Drawing.Color.Black
         Me.p2_cas_c.Location = New System.Drawing.Point(336, 100)
         Me.p2_cas_c.Name = "p2_cas_c"
         Me.p2_cas_c.Size = New System.Drawing.Size(37, 26)
@@ -133,7 +135,7 @@ Partial Class casualties
         '
         Me.p2.BackColor = System.Drawing.Color.Transparent
         Me.p2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.p2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.p2.ForeColor = System.Drawing.Color.Black
         Me.p2.Location = New System.Drawing.Point(254, 56)
         Me.p2.Name = "p2"
         Me.p2.Size = New System.Drawing.Size(101, 25)
@@ -144,6 +146,7 @@ Partial Class casualties
         'p1_ske
         '
         Me.p1_ske.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.p1_ske.ForeColor = System.Drawing.Color.Black
         Me.p1_ske.Location = New System.Drawing.Point(154, 146)
         Me.p1_ske.Name = "p1_ske"
         Me.p1_ske.Size = New System.Drawing.Size(51, 31)
@@ -153,6 +156,7 @@ Partial Class casualties
         'p2_ske
         '
         Me.p2_ske.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.p2_ske.ForeColor = System.Drawing.Color.Black
         Me.p2_ske.Location = New System.Drawing.Point(279, 147)
         Me.p2_ske.Name = "p2_ske"
         Me.p2_ske.Size = New System.Drawing.Size(51, 31)
@@ -163,7 +167,7 @@ Partial Class casualties
         '
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label5.ForeColor = System.Drawing.Color.Black
         Me.Label5.Location = New System.Drawing.Point(47, 147)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(101, 25)
@@ -175,7 +179,7 @@ Partial Class casualties
         '
         Me.p1_ske_c.BackColor = System.Drawing.Color.Transparent
         Me.p1_ske_c.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.p1_ske_c.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.p1_ske_c.ForeColor = System.Drawing.Color.Black
         Me.p1_ske_c.Location = New System.Drawing.Point(211, 147)
         Me.p1_ske_c.Name = "p1_ske_c"
         Me.p1_ske_c.Size = New System.Drawing.Size(41, 26)
@@ -187,7 +191,7 @@ Partial Class casualties
         '
         Me.p2_ske_c.BackColor = System.Drawing.Color.Transparent
         Me.p2_ske_c.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.p2_ske_c.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.p2_ske_c.ForeColor = System.Drawing.Color.Black
         Me.p2_ske_c.Location = New System.Drawing.Point(336, 147)
         Me.p2_ske_c.Name = "p2_ske_c"
         Me.p2_ske_c.Size = New System.Drawing.Size(53, 26)
@@ -198,6 +202,7 @@ Partial Class casualties
         'p1_cap
         '
         Me.p1_cap.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.p1_cap.ForeColor = System.Drawing.Color.Black
         Me.p1_cap.Location = New System.Drawing.Point(154, 197)
         Me.p1_cap.Name = "p1_cap"
         Me.p1_cap.Size = New System.Drawing.Size(51, 31)
@@ -207,6 +212,7 @@ Partial Class casualties
         'p2_cap
         '
         Me.p2_cap.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.p2_cap.ForeColor = System.Drawing.Color.Black
         Me.p2_cap.Location = New System.Drawing.Point(279, 198)
         Me.p2_cap.Name = "p2_cap"
         Me.p2_cap.Size = New System.Drawing.Size(51, 31)
@@ -217,7 +223,7 @@ Partial Class casualties
         '
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(47, 198)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(101, 25)
@@ -229,7 +235,7 @@ Partial Class casualties
         '
         Me.p1_cap_c.BackColor = System.Drawing.Color.Transparent
         Me.p1_cap_c.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.p1_cap_c.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.p1_cap_c.ForeColor = System.Drawing.Color.Black
         Me.p1_cap_c.Location = New System.Drawing.Point(211, 198)
         Me.p1_cap_c.Name = "p1_cap_c"
         Me.p1_cap_c.Size = New System.Drawing.Size(41, 26)
@@ -241,7 +247,7 @@ Partial Class casualties
         '
         Me.p2_cap_c.BackColor = System.Drawing.Color.Transparent
         Me.p2_cap_c.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.p2_cap_c.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.p2_cap_c.ForeColor = System.Drawing.Color.Black
         Me.p2_cap_c.Location = New System.Drawing.Point(336, 198)
         Me.p2_cap_c.Name = "p2_cap_c"
         Me.p2_cap_c.Size = New System.Drawing.Size(53, 26)
@@ -252,6 +258,7 @@ Partial Class casualties
         'p1_ldr
         '
         Me.p1_ldr.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.p1_ldr.ForeColor = System.Drawing.Color.Black
         Me.p1_ldr.Location = New System.Drawing.Point(154, 247)
         Me.p1_ldr.Name = "p1_ldr"
         Me.p1_ldr.Size = New System.Drawing.Size(51, 31)
@@ -261,6 +268,7 @@ Partial Class casualties
         'p2_ldr
         '
         Me.p2_ldr.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.p2_ldr.ForeColor = System.Drawing.Color.Black
         Me.p2_ldr.Location = New System.Drawing.Point(279, 248)
         Me.p2_ldr.Name = "p2_ldr"
         Me.p2_ldr.Size = New System.Drawing.Size(51, 31)
@@ -271,7 +279,7 @@ Partial Class casualties
         '
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label11.ForeColor = System.Drawing.Color.Black
         Me.Label11.Location = New System.Drawing.Point(-7, 248)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(155, 25)
@@ -283,7 +291,7 @@ Partial Class casualties
         '
         Me.p1_ldr_c.BackColor = System.Drawing.Color.Transparent
         Me.p1_ldr_c.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.p1_ldr_c.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.p1_ldr_c.ForeColor = System.Drawing.Color.Black
         Me.p1_ldr_c.Location = New System.Drawing.Point(211, 248)
         Me.p1_ldr_c.Name = "p1_ldr_c"
         Me.p1_ldr_c.Size = New System.Drawing.Size(41, 26)
@@ -295,7 +303,7 @@ Partial Class casualties
         '
         Me.p2_ldr_c.BackColor = System.Drawing.Color.Transparent
         Me.p2_ldr_c.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.p2_ldr_c.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.p2_ldr_c.ForeColor = System.Drawing.Color.Black
         Me.p2_ldr_c.Location = New System.Drawing.Point(336, 248)
         Me.p2_ldr_c.Name = "p2_ldr_c"
         Me.p2_ldr_c.Size = New System.Drawing.Size(37, 26)
@@ -307,6 +315,7 @@ Partial Class casualties
         '
         Me.p1_art.DecimalPlaces = 1
         Me.p1_art.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.p1_art.ForeColor = System.Drawing.Color.Black
         Me.p1_art.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
         Me.p1_art.Location = New System.Drawing.Point(154, 299)
         Me.p1_art.Name = "p1_art"
@@ -318,6 +327,7 @@ Partial Class casualties
         '
         Me.p2_art.DecimalPlaces = 1
         Me.p2_art.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.p2_art.ForeColor = System.Drawing.Color.Black
         Me.p2_art.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
         Me.p2_art.Location = New System.Drawing.Point(279, 300)
         Me.p2_art.Name = "p2_art"
@@ -329,7 +339,7 @@ Partial Class casualties
         '
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label14.ForeColor = System.Drawing.Color.Black
         Me.Label14.Location = New System.Drawing.Point(-3, 300)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(151, 25)
@@ -341,7 +351,7 @@ Partial Class casualties
         '
         Me.p1_art_c.BackColor = System.Drawing.Color.Transparent
         Me.p1_art_c.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.p1_art_c.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.p1_art_c.ForeColor = System.Drawing.Color.Black
         Me.p1_art_c.Location = New System.Drawing.Point(211, 299)
         Me.p1_art_c.Name = "p1_art_c"
         Me.p1_art_c.Size = New System.Drawing.Size(55, 26)
@@ -353,7 +363,7 @@ Partial Class casualties
         '
         Me.p2_art_c.BackColor = System.Drawing.Color.Transparent
         Me.p2_art_c.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.p2_art_c.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.p2_art_c.ForeColor = System.Drawing.Color.Black
         Me.p2_art_c.Location = New System.Drawing.Point(336, 300)
         Me.p2_art_c.Name = "p2_art_c"
         Me.p2_art_c.Size = New System.Drawing.Size(53, 26)
@@ -375,7 +385,7 @@ Partial Class casualties
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.AOH.My.Resources.Resources.syw1
+        Me.BackgroundImage = Global.AOH.My.Resources.Resources.flags01
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(434, 411)
         Me.Controls.Add(Me.Button1)

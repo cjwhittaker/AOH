@@ -78,7 +78,7 @@ Partial Class planning
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label7.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label7.Location = New System.Drawing.Point(12, 15)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(63, 23)
@@ -100,7 +100,7 @@ Partial Class planning
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label1.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label1.Location = New System.Drawing.Point(175, 135)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(43, 23)
@@ -113,7 +113,7 @@ Partial Class planning
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label2.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label2.Location = New System.Drawing.Point(62, 168)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(156, 23)
@@ -126,7 +126,7 @@ Partial Class planning
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label3.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label3.Location = New System.Drawing.Point(102, 234)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 23)
@@ -139,7 +139,7 @@ Partial Class planning
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label4.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label4.Location = New System.Drawing.Point(110, 201)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(108, 23)
@@ -152,7 +152,7 @@ Partial Class planning
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label5.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label5.Location = New System.Drawing.Point(100, 267)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(118, 23)
@@ -165,7 +165,7 @@ Partial Class planning
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label6.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label6.Location = New System.Drawing.Point(79, 300)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(139, 23)
@@ -178,7 +178,7 @@ Partial Class planning
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label8.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label8.Location = New System.Drawing.Point(67, 332)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(151, 23)
@@ -227,7 +227,7 @@ Partial Class planning
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label12.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label12.Location = New System.Drawing.Point(170, 373)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(48, 23)
@@ -239,7 +239,7 @@ Partial Class planning
         '
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label13.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label13.Location = New System.Drawing.Point(348, 95)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(37, 27)
@@ -251,7 +251,7 @@ Partial Class planning
         '
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label14.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label14.Location = New System.Drawing.Point(224, 95)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(37, 27)
@@ -263,7 +263,7 @@ Partial Class planning
         '
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label15.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Label15.Location = New System.Drawing.Point(287, 95)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(37, 27)
@@ -466,7 +466,7 @@ Partial Class planning
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.AOH.My.Resources.Resources.syw1
+        Me.BackgroundImage = Global.AOH.My.Resources.Resources.flags01
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(584, 561)
         Me.Controls.Add(Me.TextBox21)
