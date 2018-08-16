@@ -127,12 +127,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
-    <Compile Include="movement.designer.vb">
-      <DependentUpon>movement.vb</DependentUpon>
-    </Compile>
-    <Compile Include="movement.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="movement_FF.designer.vb">
       <DependentUpon>movement_FF.vb</DependentUpon>
     </Compile>
@@ -160,12 +154,6 @@
     <Compile Include="planning.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="reserve.designer.vb">
-      <DependentUpon>reserve.vb</DependentUpon>
-    </Compile>
-    <Compile Include="reserve.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="resultform.designer.vb">
       <DependentUpon>resultform.vb</DependentUpon>
     </Compile>
@@ -188,12 +176,6 @@
       <DependentUpon>SplashScreen1.vb</DependentUpon>
     </Compile>
     <Compile Include="SplashScreen1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="tactical.designer.vb">
-      <DependentUpon>tactical.vb</DependentUpon>
-    </Compile>
-    <Compile Include="tactical.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="tactical_FF.designer.vb">
@@ -219,9 +201,6 @@
     <EmbeddedResource Include="Firing.resx">
       <DependentUpon>Firing.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="movement.resx">
-      <DependentUpon>movement.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="movement_FF.resx">
       <DependentUpon>movement_FF.vb</DependentUpon>
     </EmbeddedResource>
@@ -234,9 +213,6 @@
     <EmbeddedResource Include="planning.resx">
       <DependentUpon>planning.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="reserve.resx">
-      <DependentUpon>reserve.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="resultform.resx">
       <DependentUpon>resultform.vb</DependentUpon>
     </EmbeddedResource>
@@ -248,9 +224,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="tactical.resx">
-      <DependentUpon>tactical.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tactical_FF.resx">
       <DependentUpon>tactical_FF.vb</DependentUpon>

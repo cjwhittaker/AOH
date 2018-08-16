@@ -149,7 +149,7 @@ backbutton:
                     .Text = "Tactical March Phase Results - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .confirm.Text = "OK"
                 End With
-                With Tactical
+                With tactical_FF
                     .Text = "Tactical March Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Tactical March Phase" + vbNewLine + "Move Brigades and Batteries"
                     .doctrine.Visible = IIf(solo.Checked, True, False)
