@@ -64,13 +64,12 @@ Partial Class Firing_FF
         '
         'Player
         '
-        Me.Player.AutoSize = True
         Me.Player.BackColor = System.Drawing.Color.Transparent
         Me.Player.Font = New System.Drawing.Font("Calibri", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Player.Location = New System.Drawing.Point(175, 0)
+        Me.Player.Location = New System.Drawing.Point(12, 0)
         Me.Player.MinimumSize = New System.Drawing.Size(300, 0)
         Me.Player.Name = "Player"
-        Me.Player.Size = New System.Drawing.Size(300, 45)
+        Me.Player.Size = New System.Drawing.Size(650, 45)
         Me.Player.TabIndex = 10
         Me.Player.Text = "Label1"
         Me.Player.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -265,7 +264,7 @@ Partial Class Firing_FF
         'Reset
         '
         Me.Reset.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Reset.Location = New System.Drawing.Point(335, 600)
+        Me.Reset.Location = New System.Drawing.Point(335, 603)
         Me.Reset.Name = "Reset"
         Me.Reset.Size = New System.Drawing.Size(146, 49)
         Me.Reset.TabIndex = 33
@@ -275,7 +274,7 @@ Partial Class Firing_FF
         'adjust
         '
         Me.adjust.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.adjust.Location = New System.Drawing.Point(120, 601)
+        Me.adjust.Location = New System.Drawing.Point(121, 603)
         Me.adjust.Name = "adjust"
         Me.adjust.Size = New System.Drawing.Size(154, 49)
         Me.adjust.TabIndex = 34
@@ -285,7 +284,7 @@ Partial Class Firing_FF
         'nextphase
         '
         Me.nextphase.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nextphase.Location = New System.Drawing.Point(542, 600)
+        Me.nextphase.Location = New System.Drawing.Point(541, 603)
         Me.nextphase.Name = "nextphase"
         Me.nextphase.Size = New System.Drawing.Size(120, 49)
         Me.nextphase.TabIndex = 35
@@ -309,7 +308,7 @@ Partial Class Firing_FF
         Me.Button2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(12, 603)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(47, 47)
+        Me.Button2.Size = New System.Drawing.Size(49, 49)
         Me.Button2.TabIndex = 38
         Me.Button2.Text = "<"
         Me.Button2.UseVisualStyleBackColor = True
@@ -549,7 +548,6 @@ Partial Class Firing_FF
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Firing Phase"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Player As System.Windows.Forms.Label
