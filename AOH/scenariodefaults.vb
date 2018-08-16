@@ -175,7 +175,7 @@ backbutton:
             End If
             If phase = 5 Then
                 phase = 6 : quit = True
-                With Firing
+                With Firing_AOE
                     .Text = "Firing Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p2 + " Defender's Fire Phase"
                     .Tag = p2
