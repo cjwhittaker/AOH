@@ -16,7 +16,7 @@
 
     Private Sub adjust_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles adjust.Click
         If Me.Tag <> "" Then
-            generals(Me.Tag).deployed = True
+            If Not generals Is Nothing Then generals(Me.Tag).deployed = True
         Else
             casualties.ShowDialog()
         End If
