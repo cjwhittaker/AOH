@@ -124,7 +124,7 @@ backbutton:
                     playerphase = 1
                     p1 = player1.Text
                     p2 = player2.Text
-                    phase = 6
+                    phase = 7
                     goback = False
                     GoTo backbutton
                 Else
