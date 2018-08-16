@@ -175,7 +175,7 @@ backbutton:
                     .confirm.Text = "OK"
                 End With
                 If quit Then GoTo closeprogram
-                If goback Then phase = 2 : goback = False : GoTo backbutton
+                If goback Then phase = 3 : goback = False : GoTo backbutton
             End If
             If phase = 5 Then
                 phase = 6 : quit = True
@@ -187,7 +187,7 @@ backbutton:
                 End With
 
                 If quit Then GoTo closeprogram
-                If goback Then phase = 3 : goback = False : GoTo backbutton
+                If goback Then phase = 4 : goback = False : GoTo backbutton
             End If
             If phase = 6 Then
                 phase = 7 : quit = True
@@ -198,7 +198,7 @@ backbutton:
                     .ShowDialog()
                 End With
                 If quit Then GoTo closeprogram
-                If goback Then phase = 4 : goback = False : GoTo backbutton
+                If goback Then phase = 5 : goback = False : GoTo backbutton
             End If
             If phase = 7 Then
                 quit = True
@@ -210,7 +210,7 @@ backbutton:
                     .ShowDialog()
                 End With
                 If quit Then GoTo closeprogram
-                If goback Then phase = 5 : goback = False : GoTo backbutton
+                If goback Then phase = 6 : goback = False : GoTo backbutton
             End If
             playerphase = playerphase + 1
             phase = 0
