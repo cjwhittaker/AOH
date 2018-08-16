@@ -196,6 +196,12 @@
     <Compile Include="tactical.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="tactical_FF.designer.vb">
+      <DependentUpon>tactical_FF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tactical_FF.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="calculator.resx">
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tactical.resx">
       <DependentUpon>tactical.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tactical_FF.resx">
+      <DependentUpon>tactical_FF.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
