@@ -158,7 +158,7 @@ backbutton:
                 End With
 
                 If quit Then GoTo closeprogram
-                If goback Then phase = 2 : goback = False : GoTo backbutton
+                If goback Then phase = 1 : goback = False : GoTo backbutton
             End If
             If phase = 3 Then
                 phase = 4 : quit = True
