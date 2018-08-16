@@ -35,8 +35,8 @@
     End Sub
 
     Private Sub add_firepoints(sender As Object, e As EventArgs) Handles add.Click
-        Firing.firepoints.Text = Val(Firing.firepoints.Text) + Val(points.Text)
-        Firing.adjustfirepoints.Value = Val(Firing.firepoints.Text)
+        Firing_FF.firepoints.Text = Val(Firing_FF.firepoints.Text) + Val(points.Text)
+        Firing_FF.adjustfirepoints.Value = Val(Firing_FF.firepoints.Text)
         Me.Hide()
     End Sub
 

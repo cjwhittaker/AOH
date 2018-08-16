@@ -179,7 +179,7 @@ backbutton:
             End If
             If phase = 4 Then
                 phase = 5 : quit = True
-                With Firing
+                With Firing_FF
                     .Text = "Firing Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p2 + " Defender's Fire Phase"
                     .Tag = p2
@@ -191,7 +191,7 @@ backbutton:
             End If
             If phase = 5 Then
                 phase = 6 : quit = True
-                With Firing
+                With Firing_FF
                     .Text = "Firing Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Attacker's Fire Phase"
                     .Tag = p1
