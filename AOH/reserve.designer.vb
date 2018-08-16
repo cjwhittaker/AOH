@@ -53,10 +53,10 @@ Partial Class Reserve
         Me.Player.BackColor = System.Drawing.Color.Transparent
         Me.Player.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Player.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Player.Location = New System.Drawing.Point(142, 9)
+        Me.Player.Location = New System.Drawing.Point(12, 1)
         Me.Player.MinimumSize = New System.Drawing.Size(300, 0)
         Me.Player.Name = "Player"
-        Me.Player.Size = New System.Drawing.Size(400, 70)
+        Me.Player.Size = New System.Drawing.Size(659, 96)
         Me.Player.TabIndex = 9
         Me.Player.Text = "Label1"
         Me.Player.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

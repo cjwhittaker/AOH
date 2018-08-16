@@ -27,9 +27,9 @@
         '    Version.Text = System.String.Format(Version.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
 
         Version.Text = "Version " + Str(My.Application.Info.Version.Major)
-
+        Company.Text = My.Application.Info.CompanyName
         'Copyright info
-        Copyright.Text = My.Application.Info.CompanyName + vbNewLine + My.Application.Info.Copyright
+        Copyright.Text = My.Application.Info.Copyright
     End Sub
 
 End Class
