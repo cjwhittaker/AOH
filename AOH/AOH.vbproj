@@ -123,7 +123,9 @@
     <Compile Include="Firing_AOE.designer.vb">
       <DependentUpon>Firing_AOE.vb</DependentUpon>
     </Compile>
-    <Compile Include="Firing_AOE.vb" />
+    <Compile Include="Firing_AOE.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Module1.vb" />
     <Compile Include="movement.designer.vb">
       <DependentUpon>movement.vb</DependentUpon>
