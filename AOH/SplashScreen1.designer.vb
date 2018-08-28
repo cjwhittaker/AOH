@@ -20,7 +20,7 @@ Partial Class SplashScreen1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SplashScreen1))
         Me.ApplicationTitle = New System.Windows.Forms.Label()
@@ -63,8 +63,9 @@ Partial Class SplashScreen1
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackgroundImage = Global.AOH.My.Resources.Resources.flags01
+        Me.PictureBox1.BackgroundImage = Global.AOH.My.Resources.Resources.cluster1
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.ErrorImage = Global.AOH.My.Resources.Resources.cluster1
         Me.PictureBox1.Location = New System.Drawing.Point(2, 2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(263, 304)

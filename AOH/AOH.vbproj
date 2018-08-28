@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>AOH.My.MyApplication</StartupObject>
     <RootNamespace>AOH</RootNamespace>
-    <AssemblyName>Fire_and_fury</AssemblyName>
+    <AssemblyName>AOV_1870</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -36,7 +36,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Fire_and_fury.xml</DocumentationFile>
+    <DocumentationFile>AOV_1870.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -46,7 +46,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Fire_and_fury.xml</DocumentationFile>
+    <DocumentationFile>AOV_1870.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -108,10 +108,10 @@
     </Compile>
     <Compile Include="cevents.vb" />
     <Compile Include="cgeneral.vb" />
-    <Compile Include="charge_FF.designer.vb">
-      <DependentUpon>charge_FF.vb</DependentUpon>
+    <Compile Include="charge_AOV.designer.vb">
+      <DependentUpon>charge_AOV.vb</DependentUpon>
     </Compile>
-    <Compile Include="charge_FF.vb">
+    <Compile Include="charge_AOV.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="event_manager.designer.vb">
@@ -120,17 +120,17 @@
     <Compile Include="event_manager.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Firing_FF.designer.vb">
-      <DependentUpon>Firing_FF.vb</DependentUpon>
+    <Compile Include="Firing_AOV.designer.vb">
+      <DependentUpon>Firing_AOV.vb</DependentUpon>
     </Compile>
-    <Compile Include="Firing_FF.vb">
+    <Compile Include="Firing_AOV.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
-    <Compile Include="movement_FF.designer.vb">
-      <DependentUpon>movement_FF.vb</DependentUpon>
+    <Compile Include="movement_AOV.designer.vb">
+      <DependentUpon>movement_AOV.vb</DependentUpon>
     </Compile>
-    <Compile Include="movement_FF.vb">
+    <Compile Include="movement_AOV.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -178,10 +178,10 @@
     <Compile Include="SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tactical_FF.designer.vb">
-      <DependentUpon>tactical_FF.vb</DependentUpon>
+    <Compile Include="tactical_AOV.designer.vb">
+      <DependentUpon>tactical_AOV.vb</DependentUpon>
     </Compile>
-    <Compile Include="tactical_FF.vb">
+    <Compile Include="tactical_AOV.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -192,17 +192,17 @@
     <EmbeddedResource Include="casualties.resx">
       <DependentUpon>casualties.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="charge_FF.resx">
-      <DependentUpon>charge_FF.vb</DependentUpon>
+    <EmbeddedResource Include="charge_AOV.resx">
+      <DependentUpon>charge_AOV.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="event_manager.resx">
       <DependentUpon>event_manager.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Firing_FF.resx">
-      <DependentUpon>Firing_FF.vb</DependentUpon>
+    <EmbeddedResource Include="Firing_AOV.resx">
+      <DependentUpon>Firing_AOV.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="movement_FF.resx">
-      <DependentUpon>movement_FF.vb</DependentUpon>
+    <EmbeddedResource Include="movement_AOV.resx">
+      <DependentUpon>movement_AOV.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -225,8 +225,8 @@
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tactical_FF.resx">
-      <DependentUpon>tactical_FF.vb</DependentUpon>
+    <EmbeddedResource Include="tactical_AOV.resx">
+      <DependentUpon>tactical_AOV.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -268,6 +268,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\f1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cluster1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1870.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -157,7 +157,7 @@ backbutton:
                     .Text = "Tactical March Phase Results - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .confirm.Text = "OK"
                 End With
-                With tactical_FF
+                With tactical_AOV
                     .Text = "Tactical March Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Tactical March Phase" + vbNewLine + "Move Brigades and Batteries"
                     .doctrine.Visible = IIf(solo.Checked, True, False)
@@ -188,7 +188,7 @@ backbutton:
             End If
             If phase = 5 Then
                 phase = 6 : quit = True
-                With Firing_FF
+                With Firing_AOV
                     .Text = "Firing Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p2 + " Defender's Fire Phase"
                     .Tag = p2
@@ -200,7 +200,7 @@ backbutton:
             End If
             If phase = 6 Then
                 phase = 7 : quit = True
-                With Firing_FF
+                With Firing_AOV
                     .Text = "Firing Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Attacker's Fire Phase"
                     .Tag = p1
@@ -211,7 +211,7 @@ backbutton:
             End If
             If phase = 7 Then
                 quit = True
-                With charge_FF
+                With charge_AOV
                     .Text = "Charge Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Charge Phase"
                     .attacker.Text = p1

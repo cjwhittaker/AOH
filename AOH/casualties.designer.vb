@@ -20,7 +20,7 @@ Partial Class casualties
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(casualties))
         Me.p1_cas = New System.Windows.Forms.NumericUpDown()
@@ -172,7 +172,7 @@ Partial Class casualties
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(101, 25)
         Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Skeddaled"
+        Me.Label5.Text = "Routed"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'p1_ske_c
@@ -385,7 +385,7 @@ Partial Class casualties
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.AOH.My.Resources.Resources.flags01
+        Me.BackgroundImage = Global.AOH.My.Resources.Resources.cluster1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(434, 411)
         Me.Controls.Add(Me.Button1)
