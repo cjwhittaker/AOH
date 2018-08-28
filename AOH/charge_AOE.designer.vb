@@ -75,20 +75,18 @@ Partial Class charge_AOE
         '
         'Defender
         '
-        Me.Defender.AutoSize = True
         Me.Defender.BackColor = System.Drawing.Color.Transparent
         Me.Defender.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Defender.Location = New System.Drawing.Point(315, 37)
         Me.Defender.MinimumSize = New System.Drawing.Size(300, 0)
         Me.Defender.Name = "Defender"
-        Me.Defender.Size = New System.Drawing.Size(300, 33)
+        Me.Defender.Size = New System.Drawing.Size(300, 34)
         Me.Defender.TabIndex = 11
         Me.Defender.Text = "Label1"
         Me.Defender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'attacker
         '
-        Me.attacker.AutoSize = True
         Me.attacker.BackColor = System.Drawing.Color.Transparent
         Me.attacker.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.attacker.Location = New System.Drawing.Point(24, 37)
@@ -595,7 +593,7 @@ Partial Class charge_AOE
         Me.Player.Location = New System.Drawing.Point(12, 6)
         Me.Player.MinimumSize = New System.Drawing.Size(300, 0)
         Me.Player.Name = "Player"
-        Me.Player.Size = New System.Drawing.Size(660, 31)
+        Me.Player.Size = New System.Drawing.Size(660, 40)
         Me.Player.TabIndex = 55
         Me.Player.Text = "Label1"
         Me.Player.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -612,13 +610,15 @@ Partial Class charge_AOE
         Me.d_lancers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.d_lancers.UseVisualStyleBackColor = True
         '
-        'charge
+        'charge_AOE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.AOH.My.Resources.Resources.napoleon_Logo2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(684, 661)
+        Me.Controls.Add(Me.attacker)
+        Me.Controls.Add(Me.Defender)
         Me.Controls.Add(Me.Player)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.d_heavy)
@@ -665,18 +665,15 @@ Partial Class charge_AOE
         Me.Controls.Add(Me.a_spent)
         Me.Controls.Add(Me.d_fresh)
         Me.Controls.Add(Me.a_fresh)
-        Me.Controls.Add(Me.attacker)
-        Me.Controls.Add(Me.Defender)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(700, 700)
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(700, 700)
-        Me.Name = "charge"
+        Me.Name = "charge_AOE"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Charge Combat"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Defender As System.Windows.Forms.Label
