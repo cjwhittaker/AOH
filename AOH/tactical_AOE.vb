@@ -1,6 +1,6 @@
-﻿Public Class Tactical
+﻿Public Class tactical_AOE
     Public runaway As Integer
-    Private Sub Reset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+    Private Sub Reset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Reset.Click
         resetform()
     End Sub
     Private Sub resetform()
@@ -164,6 +164,7 @@
         Else
         End If
     End Sub
+
     Private Sub doctrine_Click(sender As Object, e As EventArgs) Handles doctrine.Click
         With resultform
             .adjust.Visible = False

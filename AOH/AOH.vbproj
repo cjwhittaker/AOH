@@ -108,10 +108,10 @@
     </Compile>
     <Compile Include="cevents.vb" />
     <Compile Include="cgeneral.vb" />
-    <Compile Include="charge.designer.vb">
-      <DependentUpon>charge.vb</DependentUpon>
+    <Compile Include="charge_AOE.designer.vb">
+      <DependentUpon>charge_AOE.vb</DependentUpon>
     </Compile>
-    <Compile Include="charge.vb">
+    <Compile Include="charge_AOE.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="event_manager.designer.vb">
@@ -127,10 +127,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
-    <Compile Include="movement.designer.vb">
-      <DependentUpon>movement.vb</DependentUpon>
+    <Compile Include="movement_AOE.designer.vb">
+      <DependentUpon>movement_AOE.vb</DependentUpon>
     </Compile>
-    <Compile Include="movement.vb">
+    <Compile Include="movement_AOE.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -154,10 +154,10 @@
     <Compile Include="planning.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="reserve.designer.vb">
-      <DependentUpon>reserve.vb</DependentUpon>
+    <Compile Include="reserve_AOE.designer.vb">
+      <DependentUpon>reserve_AOE.vb</DependentUpon>
     </Compile>
-    <Compile Include="reserve.vb">
+    <Compile Include="reserve_AOE.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="resultform.designer.vb">
@@ -184,10 +184,10 @@
     <Compile Include="SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tactical.designer.vb">
-      <DependentUpon>tactical.vb</DependentUpon>
+    <Compile Include="tactical_AOE.designer.vb">
+      <DependentUpon>tactical_AOE.vb</DependentUpon>
     </Compile>
-    <Compile Include="tactical.vb">
+    <Compile Include="tactical_AOE.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -198,8 +198,8 @@
     <EmbeddedResource Include="casualties.resx">
       <DependentUpon>casualties.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="charge.resx">
-      <DependentUpon>charge.vb</DependentUpon>
+    <EmbeddedResource Include="charge_AOE.resx">
+      <DependentUpon>charge_AOE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="event_manager.resx">
       <DependentUpon>event_manager.vb</DependentUpon>
@@ -207,8 +207,8 @@
     <EmbeddedResource Include="Firing_AOE.resx">
       <DependentUpon>Firing_AOE.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="movement.resx">
-      <DependentUpon>movement.vb</DependentUpon>
+    <EmbeddedResource Include="movement_AOE.resx">
+      <DependentUpon>movement_AOE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -219,8 +219,8 @@
     <EmbeddedResource Include="planning.resx">
       <DependentUpon>planning.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="reserve.resx">
-      <DependentUpon>reserve.vb</DependentUpon>
+    <EmbeddedResource Include="reserve_AOE.resx">
+      <DependentUpon>reserve_AOE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="resultform.resx">
       <DependentUpon>resultform.vb</DependentUpon>
@@ -234,8 +234,8 @@
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tactical.resx">
-      <DependentUpon>tactical.vb</DependentUpon>
+    <EmbeddedResource Include="tactical_AOE.resx">
+      <DependentUpon>tactical_AOE.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

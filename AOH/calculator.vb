@@ -78,7 +78,7 @@
     End Sub
 
     Private Sub add_routers_Click(sender As Object, e As EventArgs) Handles add_routers.Click
-        tactical.runaway = Val(routers.Text)
+        tactical_AOE.runaway = Val(routers.Text)
         Me.Hide()
     End Sub
 End Class

@@ -140,7 +140,7 @@ backbutton:
                     .Text = "Reserve Movement Phase Results - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .confirm.Text = "OK"
                 End With
-                With Reserve
+                With reserve_AOE
                     .Text = "Reserve Movement Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Reserve Movement Phase" + vbNewLine + "Move Brigades and Batteries"
                     .Tag = p1
@@ -157,7 +157,7 @@ backbutton:
                     .Text = "Tactical March Phase Results - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .confirm.Text = "OK"
                 End With
-                With Tactical
+                With tactical_AOE
                     .Text = "Tactical March Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Tactical March Phase" + vbNewLine + "Move Brigades and Batteries"
                     .doctrine.Visible = IIf(solo.Checked, True, False)
@@ -210,7 +210,7 @@ backbutton:
             End If
             If phase = 7 Then
                 quit = True
-                With charge
+                With charge_AOE
                     .Text = "Charge Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Charge Phase"
                     .attacker.Text = p1

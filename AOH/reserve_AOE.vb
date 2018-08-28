@@ -1,4 +1,4 @@
-﻿Public Class Reserve
+﻿Public Class reserve_AOE
 
     Private Sub Reset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Reset.Click
         resetform()
@@ -22,9 +22,9 @@ elsewhere.CheckedChanged, attached.CheckedChanged, last_turn.CheckedChanged, dis
         modifier = 0
         If elsewhere.Checked Then
             modifier = modifier - 2
-        ElseIf Player.Text = scenariodefaults.player1.Text Then
+        ElseIf Player.text = scenariodefaults.player1.Text Then
             modifier = scenariodefaults.player1_init.Text
-        ElseIf Player.Text = scenariodefaults.player2.Text Then
+        ElseIf Player.text = scenariodefaults.player2.Text Then
             modifier = scenariodefaults.player2_init.Text
         Else
         End If
@@ -34,7 +34,6 @@ elsewhere.CheckedChanged, attached.CheckedChanged, last_turn.CheckedChanged, dis
         If scenariodefaults.gameturn.Text = 1 Then modifier = modifier + 4
         modifier = modifier + Val(Failures.Text)
         modifier = modifier - get_cohesion(Me.Tag)
-
         Dim d As Integer = dice(10)
         result = d + modifier
         Dim droll As String = "[" + Str(d) + " + " + Str(modifier) + "]" + vbNewLine
