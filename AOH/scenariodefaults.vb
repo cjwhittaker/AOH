@@ -76,6 +76,7 @@
                 'End If
             Loop Until p1_roll <> p2_roll
             If p1_roll > p2_roll Then init_option = player1.Text Else init_option = player2.Text
+            quit = True
             With resultform
                 .adjust.Visible = False
                 .Text = "Initiative Phase"
@@ -84,7 +85,9 @@
                 .second_player.Visible = True
                 .reverse.Visible = False
                 .result.Text = "Initiative Inter Phase" + vbNewLine + vbNewLine + init_option + " has the choice of being First or Second Player " + vbNewLine + "Choose below"
+                .ControlBox = False
                 .ShowDialog()
+                .ControlBox = True
                 .confirm.Visible = True
                 .reverse.Visible = True
                 .first_player.Visible = False
