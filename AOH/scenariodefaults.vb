@@ -128,8 +128,9 @@ backbutton:
                 If quit Then GoTo closeprogram
                 If goback And playerphase = 2 Then
                     playerphase = 1
-                    p1 = player1.Text
-                    p2 = player2.Text
+                    temp = p1
+                    p1 = p2
+                    p2 = temp
                     phase = 7
                     goback = False
                     GoTo backbutton
