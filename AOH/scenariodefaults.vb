@@ -133,11 +133,16 @@ backbutton:
             End If
             If phase = 2 Then
                 phase = 3 : quit = True
+                With resultform
+                    .Text = "Reserve Movement Phase Results - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
+                    .confirm.Text = "OK"
+                End With
                 With Reserve
                     .Text = "Reserve Movement Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Reserve Movement Phase" + vbNewLine + "Move Brigades and Batteries"
                     .Tag = p1
                     .ShowDialog()
+
                 End With
 
                 If quit Then GoTo closeprogram
@@ -224,11 +229,10 @@ closeprogram:
     End Sub
 
     Private Sub loadscenario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles loadscenario.Click
-        Dim y As String
         OpenFileDialog1.Filter = "Scenario files (*.sce)|*.sce|All files (*.*)|*.*"
         OpenFileDialog1.InitialDirectory = currdir
-        If OpenFileDialog1.ShowDialog = DialogResult.OK Then scenario = OpenFileDialog1.FileName : y = OpenFileDialog1.SafeFileName Else Exit Sub
-        y = Strings.Left(y, (Len(y) - 4))
+        OpenFileDialog1.FileName = ""
+        If OpenFileDialog1.ShowDialog = DialogResult.OK Then scenario = OpenFileDialog1.FileName Else Exit Sub
         Using MyReader As New Microsoft.VisualBasic.FileIO.TextFieldParser(scenario)
             MyReader.TextFieldType = FileIO.FieldType.Delimited
             MyReader.SetDelimiters(",")
