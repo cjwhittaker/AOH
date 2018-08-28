@@ -60,10 +60,10 @@ Partial Class tactical_AOV
         Me.Player.Location = New System.Drawing.Point(12, 0)
         Me.Player.MinimumSize = New System.Drawing.Size(300, 0)
         Me.Player.Name = "Player"
-        Me.Player.Size = New System.Drawing.Size(660, 58)
+        Me.Player.Size = New System.Drawing.Size(660, 130)
         Me.Player.TabIndex = 9
         Me.Player.Text = "Label1"
-        Me.Player.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Player.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'nextphase
         '
@@ -89,7 +89,7 @@ Partial Class tactical_AOV
         '
         Me.Column.Appearance = System.Windows.Forms.Appearance.Button
         Me.Column.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Column.Location = New System.Drawing.Point(141, 161)
+        Me.Column.Location = New System.Drawing.Point(138, 234)
         Me.Column.Name = "Column"
         Me.Column.Size = New System.Drawing.Size(400, 40)
         Me.Column.TabIndex = 13
@@ -101,7 +101,7 @@ Partial Class tactical_AOV
         '
         Me.Fresh.Appearance = System.Windows.Forms.Appearance.Button
         Me.Fresh.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Fresh.Location = New System.Drawing.Point(141, 207)
+        Me.Fresh.Location = New System.Drawing.Point(138, 280)
         Me.Fresh.Name = "Fresh"
         Me.Fresh.Size = New System.Drawing.Size(400, 40)
         Me.Fresh.TabIndex = 14
@@ -113,7 +113,7 @@ Partial Class tactical_AOV
         '
         Me.spent.Appearance = System.Windows.Forms.Appearance.Button
         Me.spent.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.spent.Location = New System.Drawing.Point(141, 253)
+        Me.spent.Location = New System.Drawing.Point(138, 326)
         Me.spent.Name = "spent"
         Me.spent.Size = New System.Drawing.Size(400, 40)
         Me.spent.TabIndex = 15
@@ -125,7 +125,7 @@ Partial Class tactical_AOV
         '
         Me.disordered.Appearance = System.Windows.Forms.Appearance.Button
         Me.disordered.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.disordered.Location = New System.Drawing.Point(141, 299)
+        Me.disordered.Location = New System.Drawing.Point(138, 372)
         Me.disordered.Name = "disordered"
         Me.disordered.Size = New System.Drawing.Size(400, 40)
         Me.disordered.TabIndex = 16
@@ -157,7 +157,7 @@ Partial Class tactical_AOV
         '
         Me.detached.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.detached.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.detached.Location = New System.Drawing.Point(433, 71)
+        Me.detached.Location = New System.Drawing.Point(430, 144)
         Me.detached.Name = "detached"
         Me.detached.Size = New System.Drawing.Size(107, 38)
         Me.detached.TabIndex = 25
@@ -167,7 +167,7 @@ Partial Class tactical_AOV
         'detached_leader
         '
         Me.detached_leader.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.detached_leader.Location = New System.Drawing.Point(141, 71)
+        Me.detached_leader.Location = New System.Drawing.Point(138, 144)
         Me.detached_leader.Name = "detached_leader"
         Me.detached_leader.Size = New System.Drawing.Size(286, 39)
         Me.detached_leader.TabIndex = 24
@@ -178,7 +178,7 @@ Partial Class tactical_AOV
         '
         Me.attached.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.attached.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.attached.Location = New System.Drawing.Point(433, 117)
+        Me.attached.Location = New System.Drawing.Point(430, 190)
         Me.attached.Name = "attached"
         Me.attached.Size = New System.Drawing.Size(107, 38)
         Me.attached.TabIndex = 27
@@ -188,7 +188,7 @@ Partial Class tactical_AOV
         'attached_leader
         '
         Me.attached_leader.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.attached_leader.Location = New System.Drawing.Point(141, 116)
+        Me.attached_leader.Location = New System.Drawing.Point(138, 189)
         Me.attached_leader.Name = "attached_leader"
         Me.attached_leader.Size = New System.Drawing.Size(286, 39)
         Me.attached_leader.TabIndex = 26
@@ -199,7 +199,7 @@ Partial Class tactical_AOV
         '
         Me.suppressed.Appearance = System.Windows.Forms.Appearance.Button
         Me.suppressed.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.suppressed.Location = New System.Drawing.Point(141, 345)
+        Me.suppressed.Location = New System.Drawing.Point(138, 418)
         Me.suppressed.Name = "suppressed"
         Me.suppressed.Size = New System.Drawing.Size(400, 40)
         Me.suppressed.TabIndex = 12
@@ -211,7 +211,7 @@ Partial Class tactical_AOV
         '
         Me.Cavalry.Appearance = System.Windows.Forms.Appearance.Button
         Me.Cavalry.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cavalry.Location = New System.Drawing.Point(141, 391)
+        Me.Cavalry.Location = New System.Drawing.Point(138, 464)
         Me.Cavalry.Name = "Cavalry"
         Me.Cavalry.Size = New System.Drawing.Size(400, 40)
         Me.Cavalry.TabIndex = 28
