@@ -1,6 +1,6 @@
 ﻿Public Class resultform
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles confirm.Click
-        scenariodefaults.quit = False
+    Private Sub confirm_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles confirm.Click
+        If scenariodefaults.phase < 5 Then scenariodefaults.quit = False
         Me.Hide()
     End Sub
     Private Sub resultform_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
@@ -14,7 +14,7 @@
             End If
         End If
 
-        If (scenariodefaults.phase = 2 Or scenariodefaults.phase = 4) And scenariodefaults.quit Then quitprogram()
+        If scenariodefaults.phase < 5 And scenariodefaults.quit Then quitprogram()
     End Sub
     Public Sub New()
 
