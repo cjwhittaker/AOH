@@ -119,7 +119,7 @@
 
     Sub quitprogram()
         If MsgBox("Do you wish to quit the program", MsgBoxStyle.YesNo, "Quit Program") = MsgBoxResult.Yes Then
-            If scenariodefaults.phase > 1 Then scenariodefaults.phase = scenariodefaults.phase - 1
+            'If scenariodefaults.phase > 1 Then scenariodefaults.phase = scenariodefaults.phase - 1
             savedata(scenariodefaults.scenario)
         Else
             scenariodefaults.quit = False
@@ -129,8 +129,10 @@
         Dim file As System.IO.StreamWriter
         If scenariofile Is Nothing Then Exit Sub
         file = My.Computer.FileSystem.OpenTextFileWriter(scenariofile, False)
-        file.WriteLine("player1=," + My.Forms.scenariodefaults.player1.Text + "," + (My.Forms.scenariodefaults.player1_init.Text) + "," + Str(player1_cinc_attached) + "," + Str(player1_cinc_superceding) + "," + Str(player1_cinc_dead))
-        file.WriteLine("player2=," + My.Forms.scenariodefaults.player2.Text + "," + (My.Forms.scenariodefaults.player2_init.Text) + "," + Str(player2_cinc_attached) + "," + Str(player2_cinc_superceding) + "," + Str(player2_cinc_dead))
+        file.WriteLine("player1=," + My.Forms.scenariodefaults.player1.Text + "," + (My.Forms.scenariodefaults.player1_init.Text))
+        file.WriteLine("player2=," + My.Forms.scenariodefaults.player2.Text + "," + (My.Forms.scenariodefaults.player2_init.Text))
+        'file.WriteLine("player1=," + My.Forms.scenariodefaults.player1.Text + "," + (My.Forms.scenariodefaults.player1_init.Text) + "," + Str(player1_cinc_attached) + "," + Str(player1_cinc_superceding) + "," + Str(player1_cinc_dead))
+        'file.WriteLine("player2=," + My.Forms.scenariodefaults.player2.Text + "," + (My.Forms.scenariodefaults.player2_init.Text) + "," + Str(player2_cinc_attached) + "," + Str(player2_cinc_superceding) + "," + Str(player2_cinc_dead))
         file.WriteLine("player 1 Generals=," + Str(p1_average) + "," + Str(p1_bold) + "," + Str(p1_cautious) + "," + Str(p1_poor))
         file.WriteLine("player 2 Generals=," + Str(p2_average) + "," + Str(p2_bold) + "," + Str(p2_cautious) + "," + Str(p2_poor))
         file.WriteLine("starttime=," + scenariodefaults.start_time.Text)

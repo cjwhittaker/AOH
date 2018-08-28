@@ -29,21 +29,21 @@
             If Me.Tag = scenariodefaults.player1.Text Then
                 casualties.p1_ldr.Value = casualties.p1_ldr.Value + 1
                 casualties.p1_ldr_c.Text = "[1]"
-                player1_cinc_dead = True
+                'player1_cinc_dead = True
             Else
                 casualties.p2_ldr.Value = casualties.p2_ldr.Value + 1
                 casualties.p2_ldr_c.Text = "[1]"
-                player2_cinc_dead = True
+                'player2_cinc_dead = True
             End If
         Else
             If Me.Tag = scenariodefaults.player1.Text Then
                 casualties.p1_ldr.Value = casualties.p1_ldr.Value - 1
                 casualties.p1_ldr_c.Text = "[ ]"
-                player1_cinc_dead = False
+                ''player1_cinc_dead = False
             Else
                 casualties.p2_ldr.Value = casualties.p2_ldr.Value - 1
                 casualties.p2_ldr_c.Text = "[ ]"
-                player2_cinc_dead = False
+                'player2_cinc_dead = False
             End If
         End If
     End Sub

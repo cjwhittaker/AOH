@@ -62,16 +62,18 @@
         If playerphase = 1 And phase = 0 Then
             Do
                 p1_roll = dice(10) : p2_roll = dice(10)
-                If Not player1_cinc_attached And Not player1_cinc_superceding Then p1_roll = p1_roll + player1_init.Text
-                If player1_cinc_attached Or player1_cinc_superceding Or player1_cinc_dead Then p1_roll = -1
-                If Not player2_cinc_attached And Not player2_cinc_superceding Then p2_roll = p2_roll + player2_init.Text
-                If player2_cinc_attached Or player2_cinc_superceding Or player2_cinc_dead Then p2_roll = -1
-                If p1_roll = -1 And p2_roll = -1 And player1_init.Text <> player2_init.Text Then
-                    If player1_init.Text > player2_init.Text Then p1_roll = 100 Else p2_roll = 100
-                ElseIf p1_roll = -1 And p2_roll = -1 And player1_init.Text = player2_init.Text Then
-                    p1_roll = dice(10) : p2_roll = dice(10)
-                Else
-                End If
+                p1_roll = p1_roll + player1_init.Text
+                p2_roll = p2_roll + player2_init.Text
+                'If Not player1_cinc_attached And Not player1_cinc_superceding Then p1_roll = p1_roll + player1_init.Text
+                'If player1_cinc_attached Or player1_cinc_superceding Or player1_cinc_dead Then p1_roll = -1
+                'If Not player2_cinc_attached And Not player2_cinc_superceding Then p2_roll = p2_roll + player2_init.Text
+                'If player2_cinc_attached Or player2_cinc_superceding Or player2_cinc_dead Then p2_roll = -1
+                'If p1_roll = -1 And p2_roll = -1 And player1_init.Text <> player2_init.Text Then
+                '    If player1_init.Text > player2_init.Text Then p1_roll = 100 Else p2_roll = 100
+                'ElseIf p1_roll = -1 And p2_roll = -1 And player1_init.Text = player2_init.Text Then
+                '    p1_roll = dice(10) : p2_roll = dice(10)
+                'Else
+                'End If
             Loop Until p1_roll <> p2_roll
             If p1_roll > p2_roll Then init_option = player1.Text Else init_option = player2.Text
             With resultform
@@ -202,7 +204,7 @@ backbutton:
             End If
             If phase = 6 Then
                 quit = True
-                With charge
+                With charge_FF
                     .Text = "Charge Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Charge Phase"
                     .attacker.Text = p1
@@ -239,15 +241,15 @@ closeprogram:
                     If currentRow(0) = "player1=" Then
                         player1.Text = currentRow(1)
                         player1_init.Text = currentRow(2)
-                        player1_cinc_attached = currentRow(3)
-                        player1_cinc_superceding = currentRow(4)
-                        player1_cinc_dead = currentRow(5)
+                        'player1_cinc_attached = currentRow(3)
+                        'player1_cinc_superceding = currentRow(4)
+                        'player1_cinc_dead = currentRow(5)
                     ElseIf currentRow(0) = "player2=" Then
                         player2.Text = currentRow(1)
                         player2_init.Text = currentRow(2)
-                        player2_cinc_attached = currentRow(3)
-                        player2_cinc_superceding = currentRow(4)
-                        player2_cinc_dead = currentRow(5)
+                        'player2_cinc_attached = currentRow(3)
+                        'player2_cinc_superceding = currentRow(4)
+                        'player2_cinc_dead = currentRow(5)
                     ElseIf currentRow(0) = "Player 1 Generals=" Then
                         p1_average = Val(currentRow(1))
                         p1_bold = Val(currentRow(2))

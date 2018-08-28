@@ -108,10 +108,10 @@
     </Compile>
     <Compile Include="cevents.vb" />
     <Compile Include="cgeneral.vb" />
-    <Compile Include="charge.designer.vb">
-      <DependentUpon>charge.vb</DependentUpon>
+    <Compile Include="charge_FF.designer.vb">
+      <DependentUpon>charge_FF.vb</DependentUpon>
     </Compile>
-    <Compile Include="charge.vb">
+    <Compile Include="charge_FF.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="event_manager.designer.vb">
@@ -192,8 +192,8 @@
     <EmbeddedResource Include="casualties.resx">
       <DependentUpon>casualties.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="charge.resx">
-      <DependentUpon>charge.vb</DependentUpon>
+    <EmbeddedResource Include="charge_FF.resx">
+      <DependentUpon>charge_FF.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="event_manager.resx">
       <DependentUpon>event_manager.vb</DependentUpon>
