@@ -6,7 +6,7 @@
         InitializeComponent()
         ' Add any initialization after the InitializeComponent() call.
         reset_form()
-        currdir = My.Computer.FileSystem.SpecialDirectories.MyDocuments() & "\Wargames Automated Play Assistants\Age of Honour"
+        currdir = My.Computer.FileSystem.SpecialDirectories.MyDocuments() & "\Wargames Automated Play Assistants"
         Randomize(Hour(Now) * 3600 + Minute(Now) * 60 + Second(Now))
         load_doctrine()
         If Not My.Computer.FileSystem.FileExists(currdir + "\solo.txt") Then
