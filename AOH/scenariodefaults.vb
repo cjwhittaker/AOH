@@ -133,6 +133,7 @@ backbutton:
                     goback = False
                 End If
             End If
+<<<<<<< HEAD
             'If phase = 2 Then
             '    phase = 3 : quit = True
             '    With Reserve
@@ -145,6 +146,25 @@ backbutton:
             '    If quit Then GoTo closeprogram
             '    If goback Then phase = 1 : GoTo backbutton
             'End If
+=======
+            If phase = 2 Then
+                phase = 3 : quit = True
+                With resultform
+                    .Text = "Reserve Movement Phase Results - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
+                    .confirm.Text = "OK"
+                End With
+                With Reserve
+                    .Text = "Reserve Movement Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
+                    .Player.Text = p1 + " Reserve Movement Phase" + vbNewLine + "Move Brigades and Batteries"
+                    .Tag = p1
+                    .ShowDialog()
+
+                End With
+
+                If quit Then GoTo closeprogram
+                If goback Then phase = 1 : GoTo backbutton
+            End If
+>>>>>>> master
             If phase = 3 Then
                 phase = 4 : quit = True
                 With resultform
