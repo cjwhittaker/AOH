@@ -62,10 +62,10 @@ Partial Class tactical_AOE
         Me.Player.Location = New System.Drawing.Point(12, 0)
         Me.Player.MinimumSize = New System.Drawing.Size(300, 0)
         Me.Player.Name = "Player"
-        Me.Player.Size = New System.Drawing.Size(660, 58)
+        Me.Player.Size = New System.Drawing.Size(660, 103)
         Me.Player.TabIndex = 9
         Me.Player.Text = "Label1"
-        Me.Player.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Player.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'nextphase
         '
@@ -103,7 +103,7 @@ Partial Class tactical_AOE
         '
         Me.Column.Appearance = System.Windows.Forms.Appearance.Button
         Me.Column.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Column.Location = New System.Drawing.Point(141, 161)
+        Me.Column.Location = New System.Drawing.Point(140, 207)
         Me.Column.Name = "Column"
         Me.Column.Size = New System.Drawing.Size(400, 40)
         Me.Column.TabIndex = 13
@@ -115,9 +115,9 @@ Partial Class tactical_AOE
         '
         Me.Fresh.Appearance = System.Windows.Forms.Appearance.Button
         Me.Fresh.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Fresh.Location = New System.Drawing.Point(141, 253)
+        Me.Fresh.Location = New System.Drawing.Point(141, 299)
         Me.Fresh.Name = "Fresh"
-        Me.Fresh.Size = New System.Drawing.Size(400, 40)
+        Me.Fresh.Size = New System.Drawing.Size(180, 40)
         Me.Fresh.TabIndex = 14
         Me.Fresh.Text = "Fresh"
         Me.Fresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -127,9 +127,9 @@ Partial Class tactical_AOE
         '
         Me.spent.Appearance = System.Windows.Forms.Appearance.Button
         Me.spent.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.spent.Location = New System.Drawing.Point(141, 299)
+        Me.spent.Location = New System.Drawing.Point(360, 299)
         Me.spent.Name = "spent"
-        Me.spent.Size = New System.Drawing.Size(400, 40)
+        Me.spent.Size = New System.Drawing.Size(180, 40)
         Me.spent.TabIndex = 15
         Me.spent.Text = "Spent"
         Me.spent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -151,7 +151,7 @@ Partial Class tactical_AOE
         '
         Me.Impulse.Appearance = System.Windows.Forms.Appearance.Button
         Me.Impulse.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Impulse.Location = New System.Drawing.Point(141, 207)
+        Me.Impulse.Location = New System.Drawing.Point(140, 253)
         Me.Impulse.Name = "Impulse"
         Me.Impulse.Size = New System.Drawing.Size(400, 40)
         Me.Impulse.TabIndex = 17
@@ -183,7 +183,7 @@ Partial Class tactical_AOE
         '
         Me.detached.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.detached.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.detached.Location = New System.Drawing.Point(433, 71)
+        Me.detached.Location = New System.Drawing.Point(432, 117)
         Me.detached.Name = "detached"
         Me.detached.Size = New System.Drawing.Size(107, 38)
         Me.detached.TabIndex = 25
@@ -193,7 +193,7 @@ Partial Class tactical_AOE
         'b1
         '
         Me.b1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.b1.Location = New System.Drawing.Point(141, 71)
+        Me.b1.Location = New System.Drawing.Point(140, 117)
         Me.b1.Name = "b1"
         Me.b1.Size = New System.Drawing.Size(286, 39)
         Me.b1.TabIndex = 24
@@ -204,7 +204,7 @@ Partial Class tactical_AOE
         '
         Me.attached.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.attached.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.attached.Location = New System.Drawing.Point(433, 117)
+        Me.attached.Location = New System.Drawing.Point(432, 163)
         Me.attached.Name = "attached"
         Me.attached.Size = New System.Drawing.Size(107, 38)
         Me.attached.TabIndex = 27
@@ -214,7 +214,7 @@ Partial Class tactical_AOE
         'b2
         '
         Me.b2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.b2.Location = New System.Drawing.Point(141, 116)
+        Me.b2.Location = New System.Drawing.Point(140, 162)
         Me.b2.Name = "b2"
         Me.b2.Size = New System.Drawing.Size(286, 39)
         Me.b2.TabIndex = 26
@@ -266,7 +266,7 @@ Partial Class tactical_AOE
         Me.doctrine.UseVisualStyleBackColor = True
         Me.doctrine.Visible = False
         '
-        'Tactical
+        'tactical_AOE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -298,7 +298,7 @@ Partial Class tactical_AOE
         Me.MaximumSize = New System.Drawing.Size(700, 700)
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(700, 700)
-        Me.Name = "Tactical"
+        Me.Name = "tactical_AOE"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tactical March Phase"
         Me.ResumeLayout(False)
