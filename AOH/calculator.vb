@@ -35,8 +35,8 @@
     End Sub
 
     Private Sub add_firepoints(sender As Object, e As EventArgs) Handles add.Click
-        Firing.firepoints.Text = Val(Firing.firepoints.Text) + Val(points.Text)
-        Firing.adjustfirepoints.Value = Val(Firing.firepoints.Text)
+        Firing_AOH.firepoints.Text = Val(Firing_AOH.firepoints.Text) + Val(points.Text)
+        Firing_AOH.adjustfirepoints.Value = Val(Firing_AOH.firepoints.Text)
         Me.Hide()
     End Sub
 
@@ -78,7 +78,7 @@
     End Sub
 
     Private Sub add_routers_Click(sender As Object, e As EventArgs) Handles add_routers.Click
-        Tactical.runaway = Val(routers.Text)
+        tactical_AOH.runaway = Val(routers.Text)
         Me.Hide()
     End Sub
 End Class

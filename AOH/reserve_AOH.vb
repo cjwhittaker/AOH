@@ -60,13 +60,13 @@ elsewhere.CheckedChanged, attached.CheckedChanged, last_turn.CheckedChanged, dis
     End Sub
 
     Private Sub nextphase_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nextphase.Click
-        If movement.Visible Then movement.Hide()
+        If movement_AOH.Visible Then movement_AOH.Hide()
         scenariodefaults.quit = False
         Me.Hide()
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        movement.Show()
+        movement_AOH.Show()
     End Sub
 
     Private Sub Manouvre_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
