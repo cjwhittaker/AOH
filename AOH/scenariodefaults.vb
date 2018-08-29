@@ -378,8 +378,8 @@ closeprogram:
 
 
     Private Sub reset_form()
-        start_time.Text = TimeValue("10:00")
-        Dusk.Text = TimeValue("18:00")
+        start_time.Text = Format(TimeValue("10:00"), "hh:mm")
+        Dusk.Text = Format(TimeValue("18:00"), "HH:mm")
         start_time_inc.Value = (Hour(start_time.Text) * 60 + Minute(start_time.Text) - 390) / 30
         dusk_inc.Value = (Hour(Dusk.Text) * 60 + Minute(Dusk.Text) - (16 * 60 + 30)) / 30
         Current_time.Text = start_time.Text
