@@ -172,10 +172,10 @@
     <Compile Include="planning.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="reserve_AOH - Copy.designer.vb">
-      <DependentUpon>reserve_AOH - Copy.vb</DependentUpon>
+    <Compile Include="reserve.designer.vb">
+      <DependentUpon>reserve.vb</DependentUpon>
     </Compile>
-    <Compile Include="reserve_AOH - Copy.vb">
+    <Compile Include="reserve.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="reserve_AOH.designer.vb">
@@ -258,8 +258,8 @@
     <EmbeddedResource Include="planning.resx">
       <DependentUpon>planning.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="reserve_AOH - Copy.resx">
-      <DependentUpon>reserve_AOH - Copy.vb</DependentUpon>
+    <EmbeddedResource Include="reserve.resx">
+      <DependentUpon>reserve.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reserve_AOH.resx">
       <DependentUpon>reserve_AOH.vb</DependentUpon>
