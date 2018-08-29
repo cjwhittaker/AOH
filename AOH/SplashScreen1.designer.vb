@@ -63,7 +63,7 @@ Partial Class SplashScreen1
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackgroundImage = Global.AOH.My.Resources.Resources.flags01
+        Me.PictureBox1.BackgroundImage = Global.AOH.My.Resources.Resources.kitch1
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Location = New System.Drawing.Point(2, 2)
         Me.PictureBox1.Name = "PictureBox1"

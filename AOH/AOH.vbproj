@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>AOH.My.MyApplication</StartupObject>
     <RootNamespace>AOH</RootNamespace>
-    <AssemblyName>Fire_and_fury</AssemblyName>
+    <AssemblyName>Before_the_leaves_fall</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -36,7 +36,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Fire_and_fury.xml</DocumentationFile>
+    <DocumentationFile>Before_the_leaves_fall.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -46,7 +46,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Fire_and_fury.xml</DocumentationFile>
+    <DocumentationFile>Before_the_leaves_fall.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -62,7 +62,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\f1.ico</ApplicationIcon>
+    <ApplicationIcon>kitch1_2El_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -108,10 +108,10 @@
     </Compile>
     <Compile Include="cevents.vb" />
     <Compile Include="cgeneral.vb" />
-    <Compile Include="charge_FF.designer.vb">
-      <DependentUpon>charge_FF.vb</DependentUpon>
+    <Compile Include="charge_1914.designer.vb">
+      <DependentUpon>charge_1914.vb</DependentUpon>
     </Compile>
-    <Compile Include="charge_FF.vb">
+    <Compile Include="charge_1914.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="event_manager.designer.vb">
@@ -120,17 +120,17 @@
     <Compile Include="event_manager.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Firing_FF.designer.vb">
-      <DependentUpon>Firing_FF.vb</DependentUpon>
+    <Compile Include="Firing_1914.designer.vb">
+      <DependentUpon>Firing_1914.vb</DependentUpon>
     </Compile>
-    <Compile Include="Firing_FF.vb">
+    <Compile Include="Firing_1914.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
-    <Compile Include="movement_FF.designer.vb">
-      <DependentUpon>movement_FF.vb</DependentUpon>
+    <Compile Include="movement_1914.designer.vb">
+      <DependentUpon>movement_1914.vb</DependentUpon>
     </Compile>
-    <Compile Include="movement_FF.vb">
+    <Compile Include="movement_1914.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -178,10 +178,10 @@
     <Compile Include="SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tactical_FF.designer.vb">
-      <DependentUpon>tactical_FF.vb</DependentUpon>
+    <Compile Include="tactical_1914.designer.vb">
+      <DependentUpon>tactical_1914.vb</DependentUpon>
     </Compile>
-    <Compile Include="tactical_FF.vb">
+    <Compile Include="tactical_1914.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -192,17 +192,17 @@
     <EmbeddedResource Include="casualties.resx">
       <DependentUpon>casualties.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="charge_FF.resx">
-      <DependentUpon>charge_FF.vb</DependentUpon>
+    <EmbeddedResource Include="charge_1914.resx">
+      <DependentUpon>charge_1914.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="event_manager.resx">
       <DependentUpon>event_manager.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Firing_FF.resx">
-      <DependentUpon>Firing_FF.vb</DependentUpon>
+    <EmbeddedResource Include="Firing_1914.resx">
+      <DependentUpon>Firing_1914.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="movement_FF.resx">
-      <DependentUpon>movement_FF.vb</DependentUpon>
+    <EmbeddedResource Include="movement_1914.resx">
+      <DependentUpon>movement_1914.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -225,8 +225,8 @@
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tactical_FF.resx">
-      <DependentUpon>tactical_FF.vb</DependentUpon>
+    <EmbeddedResource Include="tactical_1914.resx">
+      <DependentUpon>tactical_1914.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -268,6 +268,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\f1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitch1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="kitch1_2El_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

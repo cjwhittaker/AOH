@@ -172,7 +172,7 @@ Partial Class casualties
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(101, 25)
         Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Skeddaled"
+        Me.Label5.Text = "Routed"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'p1_ske_c
@@ -385,7 +385,7 @@ Partial Class casualties
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.AOH.My.Resources.Resources.flags01
+        Me.BackgroundImage = Global.AOH.My.Resources.Resources.kitch1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(434, 411)
         Me.Controls.Add(Me.Button1)

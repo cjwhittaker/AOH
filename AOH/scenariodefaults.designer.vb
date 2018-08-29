@@ -421,7 +421,7 @@ Partial Class scenariodefaults
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.AOH.My.Resources.Resources.flags01
+        Me.BackgroundImage = Global.AOH.My.Resources.Resources.kitch1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(684, 661)
         Me.Controls.Add(Me.solo)
