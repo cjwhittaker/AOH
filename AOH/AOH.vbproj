@@ -114,6 +114,12 @@
     <Compile Include="charge.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="charge_AOH.designer.vb">
+      <DependentUpon>charge_AOH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="charge_AOH.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="event_manager.designer.vb">
       <DependentUpon>event_manager.vb</DependentUpon>
     </Compile>
@@ -126,11 +132,23 @@
     <Compile Include="Firing.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Firing_AOH.designer.vb">
+      <DependentUpon>Firing_AOH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Firing_AOH.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Module1.vb" />
     <Compile Include="movement.designer.vb">
       <DependentUpon>movement.vb</DependentUpon>
     </Compile>
     <Compile Include="movement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="movement_AOH.designer.vb">
+      <DependentUpon>movement_AOH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="movement_AOH.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -154,10 +172,16 @@
     <Compile Include="planning.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="reserve.designer.vb">
-      <DependentUpon>reserve.vb</DependentUpon>
+    <Compile Include="reserve_AOH - Copy.designer.vb">
+      <DependentUpon>reserve_AOH - Copy.vb</DependentUpon>
     </Compile>
-    <Compile Include="reserve.vb">
+    <Compile Include="reserve_AOH - Copy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reserve_AOH.designer.vb">
+      <DependentUpon>reserve_AOH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reserve_AOH.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="resultform.designer.vb">
@@ -190,6 +214,12 @@
     <Compile Include="tactical.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="tactical_AOH.designer.vb">
+      <DependentUpon>tactical_AOH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tactical_AOH.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="calculator.resx">
@@ -201,14 +231,23 @@
     <EmbeddedResource Include="charge.resx">
       <DependentUpon>charge.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="charge_AOH.resx">
+      <DependentUpon>charge_AOH.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="event_manager.resx">
       <DependentUpon>event_manager.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Firing.resx">
       <DependentUpon>Firing.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Firing_AOH.resx">
+      <DependentUpon>Firing_AOH.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="movement.resx">
       <DependentUpon>movement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="movement_AOH.resx">
+      <DependentUpon>movement_AOH.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -219,8 +258,11 @@
     <EmbeddedResource Include="planning.resx">
       <DependentUpon>planning.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="reserve.resx">
-      <DependentUpon>reserve.vb</DependentUpon>
+    <EmbeddedResource Include="reserve_AOH - Copy.resx">
+      <DependentUpon>reserve_AOH - Copy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reserve_AOH.resx">
+      <DependentUpon>reserve_AOH.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="resultform.resx">
       <DependentUpon>resultform.vb</DependentUpon>
@@ -236,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tactical.resx">
       <DependentUpon>tactical.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tactical_AOH.resx">
+      <DependentUpon>tactical_AOH.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
