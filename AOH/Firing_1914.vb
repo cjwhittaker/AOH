@@ -23,7 +23,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
 
     Private Sub fire_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fire.Click
         Dim cas As Single, modifier As Integer, result As Integer, msg As String, fire_eff As String
-        Dim effect As Integer = 0, f As Integer = Val(firepoints.Text)
+        Dim effect As Integer = 0, f As Integer = Int(1.5 * Val(firepoints.Text))
         If f <= 0 Then f = 0
         modifier = 0
         If Targetmode.Checked Then modifier = modifier + 1
@@ -39,15 +39,15 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
         Dim droll As String = "[" + Str(f) + " @ " + Str(result) + " + " + Str(modifier) + "]" + vbNewLine
         If Not display_dice Then droll = ""
         If effect >= 11 Then
-            If Artillery.Checked Then fire_eff = "Battery wrecked" Else fire_eff = "Troops lose 3 stands" + vbNewLine + "Cavalry disordered, Infantry suppressed" + vbNewLine + "Movers halt where fire receivied" + vbNewLine + "Chargers retire 1/2 move away from firers"
+            If Artillery.Checked Then fire_eff = "Battery wrecked" Else fire_eff = "Troops lose two stands" + vbNewLine + "Cavalry disordered, Infantry suppressed" + vbNewLine + "Movers halt where fire receivied" + vbNewLine + "Chargers retire 1/2 move away from firers"
             msg = droll + "Gone to Ground" + vbNewLine + fire_eff
             cas = 3
         ElseIf effect >= 9 Then
-            If Artillery.Checked Then fire_eff = "Battery damaged and silenced" Else fire_eff = "Troops lose 2 stands and is disordered"
+            If Artillery.Checked Then fire_eff = "Battery damaged and silenced" Else fire_eff = "Troops lose one and a third stands and is disordered"
             msg = droll + "Deadly Fire" + vbNewLine + fire_eff
             cas = 2
         ElseIf effect >= 6 Then
-            If Artillery.Checked Then fire_eff = "Battery damaged " Else fire_eff = "Troops lose 1 stand and is disordered"
+            If Artillery.Checked Then fire_eff = "Battery damaged " Else fire_eff = "Troops lose two thirds of a stand and is disordered"
             msg = droll + "Telling Fire" + vbNewLine + fire_eff
             cas = 1
         ElseIf effect >= 4 Then

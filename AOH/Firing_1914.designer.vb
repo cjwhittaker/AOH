@@ -736,7 +736,7 @@ Partial Class Firing_1914
         Me.f21.Size = New System.Drawing.Size(100, 21)
         Me.f21.TabIndex = 22
         Me.f21.Tag = "BR"
-        Me.f21.Text = "4"
+        Me.f21.Text = "1"
         Me.f21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'f24
@@ -750,7 +750,7 @@ Partial Class Firing_1914
         Me.f24.Size = New System.Drawing.Size(100, 21)
         Me.f24.TabIndex = 22
         Me.f24.Tag = "FR"
-        Me.f24.Text = "2"
+        Me.f24.Text = "0"
         Me.f24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'cavalry_charging
@@ -812,7 +812,7 @@ Partial Class Firing_1914
         Me.Label10.Size = New System.Drawing.Size(100, 21)
         Me.Label10.TabIndex = 22
         Me.Label10.Tag = "Ot"
-        Me.Label10.Text = "3"
+        Me.Label10.Text = "0"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label11
@@ -841,7 +841,7 @@ Partial Class Firing_1914
         Me.Label13.Text = "0"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Firing
+        'Firing_1914
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -914,7 +914,7 @@ Partial Class Firing_1914
         Me.MaximumSize = New System.Drawing.Size(700, 700)
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(700, 700)
-        Me.Name = "Firing"
+        Me.Name = "Firing_1914"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Firing Phase"
