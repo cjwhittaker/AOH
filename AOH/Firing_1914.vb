@@ -30,8 +30,10 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
         If tirailleur.Checked Then modifier = modifier - 2
         If Cavalry_charging.Checked Then modifier = modifier + 3
         modifier = modifier - Val(cover.Text)
-        For i As Integer = 0 To 9
-            If f <= firecharts(0, i) Then modifier = modifier + firecharts(1, i) : Exit For
+        'AOV
+        For i As Integer = 1 To 10
+            modifier = modifier + firecharts(1, i)
+            If f <= firecharts(0, i) Then Exit For
         Next
         cas = 0
         result = dice(10)
@@ -41,22 +43,22 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
         If effect >= 11 Then
             If Artillery.Checked Then fire_eff = "Battery wrecked" Else fire_eff = "Troops lose two stands" + vbNewLine + "Cavalry disordered, Infantry suppressed" + vbNewLine + "Movers halt where fire receivied" + vbNewLine + "Chargers retire 1/2 move away from firers"
             msg = droll + "Gone to Ground" + vbNewLine + fire_eff
-            cas = 3
+            cas = 2
         ElseIf effect >= 9 Then
             If Artillery.Checked Then fire_eff = "Battery damaged and silenced" Else fire_eff = "Troops lose one and a third stands and is disordered"
             msg = droll + "Deadly Fire" + vbNewLine + fire_eff
-            cas = 2
+            cas = 1.334
         ElseIf effect >= 6 Then
             If Artillery.Checked Then fire_eff = "Battery damaged " Else fire_eff = "Troops lose two thirds of a stand and is disordered"
             msg = droll + "Telling Fire" + vbNewLine + fire_eff
-            cas = 1
+            cas = 0.667
         ElseIf effect >= 4 Then
             If Artillery.Checked Then fire_eff = "Battery silenced" Else fire_eff = "Troops are disordered"
             msg = droll + "Lively Fire" + vbNewLine + fire_eff
         Else
             msg = droll + "Desultory Fire" + vbNewLine + "No effect"
         End If
-        'If result = 10 Then msg = msg + vbNewLine + "Firers are now low On Ammunition"
+        If result = 10 Then msg = msg + vbNewLine + "Infantry Firers are now low On Ammunition"
         If result = 10 Then
             result = dice(10)
             msg = msg + vbNewLine + "A leader, If attached, has "
@@ -83,9 +85,9 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
             End If
         Else
             If InStr(msg, "damaged") > 0 Then
-                cas = 0.5
+                cas = 0.334
             ElseIf InStr(msg, "wrecked") > 0 Then
-                cas = 1
+                cas = 0.667
             Else
                 cas = 0
             End If

@@ -252,7 +252,7 @@ Partial Class Firing_1914
         Me.Targetmode.Name = "Targetmode"
         Me.Targetmode.Size = New System.Drawing.Size(604, 40)
         Me.Targetmode.TabIndex = 28
-        Me.Targetmode.Text = "Tgt is Col or Limbered; Mounted Cav; Changing form, mode or facing"
+        Me.Targetmode.Text = "Tgt is Col or Limbered; Changing form, mode or facing"
         Me.Targetmode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Targetmode.UseVisualStyleBackColor = True
         '
@@ -761,7 +761,7 @@ Partial Class Firing_1914
         Me.cavalry_charging.Name = "cavalry_charging"
         Me.cavalry_charging.Size = New System.Drawing.Size(604, 40)
         Me.cavalry_charging.TabIndex = 47
-        Me.cavalry_charging.Text = "Target is charging cavalry"
+        Me.cavalry_charging.Text = "Target is charging or mounted cavalry"
         Me.cavalry_charging.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.cavalry_charging.UseVisualStyleBackColor = True
         '

@@ -65,8 +65,10 @@ Partial Class casualties
         '
         'p1_cas
         '
+        Me.p1_cas.DecimalPlaces = 1
         Me.p1_cas.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p1_cas.ForeColor = System.Drawing.Color.Black
+        Me.p1_cas.Increment = New Decimal(New Integer() {667, 0, 0, 196608})
         Me.p1_cas.Location = New System.Drawing.Point(154, 99)
         Me.p1_cas.Name = "p1_cas"
         Me.p1_cas.Size = New System.Drawing.Size(51, 31)
@@ -111,8 +113,10 @@ Partial Class casualties
         '
         'p2_cas
         '
+        Me.p2_cas.DecimalPlaces = 1
         Me.p2_cas.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p2_cas.ForeColor = System.Drawing.Color.Black
+        Me.p2_cas.Increment = New Decimal(New Integer() {667, 0, 0, 196608})
         Me.p2_cas.Location = New System.Drawing.Point(279, 100)
         Me.p2_cas.Name = "p2_cas"
         Me.p2_cas.Size = New System.Drawing.Size(51, 31)
@@ -316,7 +320,7 @@ Partial Class casualties
         Me.p1_art.DecimalPlaces = 1
         Me.p1_art.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p1_art.ForeColor = System.Drawing.Color.Black
-        Me.p1_art.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
+        Me.p1_art.Increment = New Decimal(New Integer() {334, 0, 0, 196608})
         Me.p1_art.Location = New System.Drawing.Point(154, 299)
         Me.p1_art.Name = "p1_art"
         Me.p1_art.Size = New System.Drawing.Size(51, 31)
@@ -328,7 +332,7 @@ Partial Class casualties
         Me.p2_art.DecimalPlaces = 1
         Me.p2_art.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.p2_art.ForeColor = System.Drawing.Color.Black
-        Me.p2_art.Increment = New Decimal(New Integer() {5, 0, 0, 65536})
+        Me.p2_art.Increment = New Decimal(New Integer() {334, 0, 0, 196608})
         Me.p2_art.Location = New System.Drawing.Point(279, 300)
         Me.p2_art.Name = "p2_art"
         Me.p2_art.Size = New System.Drawing.Size(51, 31)
