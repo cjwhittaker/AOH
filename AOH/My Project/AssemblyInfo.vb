@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Fire and Fury Automated Quick Reference and Play System")>
+<Assembly: AssemblyTitle("Before The Leaves Fall Automated Quick Reference and Play System")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("cjwhittaker@hotmail.co.uk")>
-<Assembly: AssemblyProduct("F&F")>
+<Assembly: AssemblyProduct("BTLF")>
 <Assembly: AssemblyCopyright("Copyright  © 2018")>
 <Assembly: AssemblyTrademark("")>
 
