@@ -38,15 +38,20 @@
     End Sub
     Private Function scenario_ready()
         scenario_ready = False
+        If phase + playerphase + Val(gameturn.Text) > 1 Then scenario_ready = True : Exit Function
         If player1.Text <> "" And player2.Text <> "" And player2_stands.Text <> "" And player1_stands.Text <> "" And player1_init.Text <> "" And player2_init.Text <> "" And solo_ready() Then scenario_ready = True
         'And (Not solo.Checked Or (solo.Checked And generals.Count > 0))
     End Function
     Private Function solo_ready()
         solo_ready = False
-        If Not solo.Visible Or Not solo.Checked Then solo_ready = True : Exit Function
-        If generals Is Nothing Then Exit Function
-        If Not generals.Contains(player1.Text + "CinC") Or Not generals.Contains(player2.Text + "CinC") Then Exit Function
-        If generals(player1.Text + "CinC").plan = "" Or generals(player2.Text + "CinC").plan = "" Then Exit Function
+        If Not solo.Visible Then solo_ready = True : Exit Function
+        If solo.Checked Then
+            If generals Is Nothing _
+                Or Not generals.Contains(player1.Text + "CinC") _
+                Or Not generals.Contains(player2.Text + "CinC") _
+                Or Not generals(player1.Text + "CinC").finished _
+                Or Not generals(player2.Text + "CinC").finished Then Exit Function
+        End If
         solo_ready = True
 
     End Function
@@ -321,19 +326,28 @@ closeprogram:
         End Using
         load_events(scenario)
         load_generals(scenario)
-        If Not generals Is Nothing Then solo.Checked = True
-        If scenario_ready() Then
-            solo.Enabled = False
-            solo_setup.Enabled = False
-        End If
         casualties.p1.Text = Me.player1.Text
         casualties.p2.Text = Me.player2.Text
-        If Val(gameturn.Text) + phase + playerphase > 1 Then enable_data_entry(False)
         If Not generals Is Nothing Then
-            solo_game = True
             solo.Checked = True
-            solo.Enabled = False
+            solo_game = True
+        Else
+            solo.Checked = False
+            solo_game = False
         End If
+        If Val(gameturn.Text) + phase + playerphase > 1 Then
+            enable_data_entry(False)
+        Else
+
+        End If
+        'If scenario_ready() Then
+        '    solo.Enabled = False
+        '    solo_setup.Enabled = False
+        'End If
+        'If Not generals Is Nothing Then
+        '    solo.Checked = True
+        '    solo.Enabled = False
+        'End If
     End Sub
 
     Private Sub savescenario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles savescenario.Click
@@ -372,6 +386,8 @@ closeprogram:
         player2_init.Enabled = setting
         player1_stands.Enabled = setting
         player2_stands.Enabled = setting
+        solo_setup.Enabled = setting
+        solo.Enabled = setting
     End Sub
 
     Private Sub newscenario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles newscenario.Click
@@ -396,6 +412,7 @@ closeprogram:
         dicerolls.Checked = False
         solo.Checked = False
         solo.BackColor = defa
+        solo.Enabled = True
         dicerolls.BackColor = defa
         solo_setup.Enabled = False
         generals = Nothing
