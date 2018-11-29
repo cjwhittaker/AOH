@@ -164,13 +164,19 @@
             Next
             file.Close()
         End If
-        If Not generals Is Nothing Then
+        If solo_game And Not generals Is Nothing Then
             scenariofile = Strings.Left(scenariofile, InStrRev(scenariofile, ".") - 1) + ".gen"
             file = My.Computer.FileSystem.OpenTextFileWriter(scenariofile, False)
             For Each g As cgeneral In generals
                 g.save_to_file(file)
             Next
             file.Close()
+        ElseIf Not solo_game Then
+            scenariofile = Strings.Left(scenariofile, InStrRev(scenariofile, ".") - 1) + ".gen"
+            If My.Computer.FileSystem.FileExists(scenariofile) Then My.Computer.FileSystem.DeleteFile(scenariofile)
+
+        Else
+
         End If
 
     End Sub
