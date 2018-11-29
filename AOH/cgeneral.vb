@@ -142,6 +142,12 @@
     Public Sub save_to_file(ByVal x As Object)
         x.WriteLine(nation + "," + title + "," + ability + "," + attitude + "," + Str(strength) + "," + Str(casualties) + "," + Str(deployed) + "," + Str(defensive) + "," + mission + "," + edge + "," + plan + "," + oom + "," + doctrine)
     End Sub
+    Public Function finished() As Boolean
+        finished = False
+        If InStr(title, "CinC") = 0 Then Exit Function
+        If plan = "" Or doctrine = "" Or oom = "" Then Exit Function
+        finished = True
+    End Function
     Public Sub reset()
         With Me
             .nation = ""
