@@ -245,7 +245,7 @@ Partial Class charge_1914
         Me.a_Firefight.Name = "a_Firefight"
         Me.a_Firefight.Size = New System.Drawing.Size(211, 36)
         Me.a_Firefight.TabIndex = 20
-        Me.a_Firefight.Text = "Firefight Cas"
+        Me.a_Firefight.Text = "Firefight Hits"
         Me.a_Firefight.UseVisualStyleBackColor = True
         '
         'a_cas
@@ -288,7 +288,7 @@ Partial Class charge_1914
         Me.d_firefight.Name = "d_firefight"
         Me.d_firefight.Size = New System.Drawing.Size(208, 36)
         Me.d_firefight.TabIndex = 20
-        Me.d_firefight.Text = "Firefight Cas"
+        Me.d_firefight.Text = "Firefight Hits"
         Me.d_firefight.UseVisualStyleBackColor = True
         '
         'd_ratio
@@ -593,7 +593,7 @@ Partial Class charge_1914
         Me.d_french.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.d_french.UseVisualStyleBackColor = True
         '
-        'charge
+        'charge_1914
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -651,7 +651,7 @@ Partial Class charge_1914
         Me.MaximumSize = New System.Drawing.Size(700, 700)
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(700, 700)
-        Me.Name = "charge"
+        Me.Name = "charge_1914"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Charge Combat"
