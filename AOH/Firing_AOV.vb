@@ -31,7 +31,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
         If Cavalry_charging.Checked Then modifier = modifier + 3
         modifier = modifier - Val(cover.Text)
         For i As Integer = 1 To 10
-            If i = 10 Then modifier = modifier + firecharts(10, i) : Exit For
+            If i = 10 Then modifier = modifier + firecharts(1, i) : Exit For
             If f <= firecharts(0, i) Then modifier = modifier + firecharts(1, i) : Exit For
         Next
         cas = 0
