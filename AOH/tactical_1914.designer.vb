@@ -79,7 +79,7 @@ Partial Class tactical_1914
         'Reset
         '
         Me.Reset.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Reset.Location = New System.Drawing.Point(434, 609)
+        Me.Reset.Location = New System.Drawing.Point(434, 608)
         Me.Reset.Name = "Reset"
         Me.Reset.Size = New System.Drawing.Size(117, 45)
         Me.Reset.TabIndex = 11

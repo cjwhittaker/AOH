@@ -32,13 +32,13 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
         modifier = modifier - Val(cover.Text)
         'AOV
         For i As Integer = 1 To 10
-            If i = 10 Then modifier = modifier + firecharts(10, i) : Exit For
+            If i = 10 Then modifier = modifier + firecharts(1, i) : Exit For
             If f <= firecharts(0, i) Then modifier = modifier + firecharts(1, i) : Exit For
         Next
         cas = 0
         result = dice(10)
         effect = result + modifier
-        Dim droll As String = "[" + Str(f) + " @ " + Str(result) + " + " + Str(modifier) + "]" + vbNewLine
+        Dim droll As String = "[" + Str(f) + " @ " + Str(result) + " + " + Str(modifier) + "=" + Str(effect) + "]" + vbNewLine
         If Not display_dice Then droll = ""
         If effect >= 11 Then
             If Artillery.Checked Then fire_eff = "Battery wrecked" Else fire_eff = "Troops lose 2 stands (3 hits)" + vbNewLine + "Cavalry disordered, Infantry suppressed" + vbNewLine + "Movers halt where fire receivied" + vbNewLine + "Chargers retire 1/2 move away from firers"
