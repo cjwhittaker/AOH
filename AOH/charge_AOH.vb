@@ -120,13 +120,13 @@ a_fresh.Click, a_spent.Click, d_spent.Click, d_fresh.Click
     End Sub
     Private Sub d_select_square_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles d_select_square.Click
         If d_square.Text = "N/A" Then
-            d_square.Text = "Inf" : inc_mod(3, d)
+            d_square.Text = "Inf" : inc_mod(-1, d)
             emph(d_square)
             If d_flanked.Checked Then d_flanked.Checked = False
         ElseIf d_square.Text = "Inf" Then
-            d_square.Text = "Cav" : inc_mod(-4, d)
+            d_square.Text = "Cav" : inc_mod(4, d)
         ElseIf d_square.Text = "Cav" Then
-            d_square.Text = "N/A" : inc_mod(1, d)
+            d_square.Text = "N/A" : inc_mod(-3, d)
             emph(d_square)
         Else
         End If
@@ -150,17 +150,25 @@ a_fresh.Click, a_spent.Click, d_spent.Click, d_fresh.Click
                 + "Defender retreats a full move and is disordered/silenced" + vbNewLine _
                 + "2 stands rout, and 1 leader and 1 battery is captured if present" + vbNewLine _
                 + IIf(captured > 0, Str(captured) + " stands/batterys captured", "")
-            a_msg = "Attackers breakthrough and must continue to charge a 1/2 move" + vbNewLine +
+            If a_break.BackColor = golden Then
+                a_msg = "Attackers occupy the position"
+            Else
+                a_msg = "Attackers breakthrough and must continue to charge a 1/2 move" + vbNewLine +
                 "towards the nearest enemy with the breakthrough modifier"
+            End If
             player = Defender.Text : captured = captured : skeddadled = 2
         ElseIf result >= 4 Then
             d_msg = "Defender Driven Back" + vbNewLine _
                 + "Defender disordered/silenced retreats beyond musketry/skirmish range or half move (whichever is greater)" + vbNewLine _
                 + "A battery is damaged if present" + vbNewLine _
                 + "1 stand routs"
-            a_msg = "Attackers either occupy the position, or may" + vbNewLine _
+            If a_break.BackColor = golden Then
+                a_msg = "Attackers occupy the position"
+            Else
+                a_msg = "Attackers either occupy the position, or may" + vbNewLine _
                 + "breakthrough and continue to charge a 1/2 move" + vbNewLine _
                 + "towards the nearest enemy with the breakthrough modifier"
+            End If
             player = Defender.Text : captured = 0 : skeddadled = 1
         ElseIf result >= 1 Then
             d_msg = "Defender Withdraws" + vbNewLine _

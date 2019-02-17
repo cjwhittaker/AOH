@@ -191,7 +191,7 @@ Partial Class planning
         Me.plan_c.BackColor = System.Drawing.Color.White
         Me.plan_c.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.plan_c.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.plan_c.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.plan_c.ForeColor = System.Drawing.SystemColors.WindowText
         Me.plan_c.Location = New System.Drawing.Point(348, 371)
         Me.plan_c.Name = "plan_c"
         Me.plan_c.Size = New System.Drawing.Size(37, 27)
@@ -203,7 +203,7 @@ Partial Class planning
         Me.plan_a.BackColor = System.Drawing.Color.White
         Me.plan_a.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.plan_a.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.plan_a.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.plan_a.ForeColor = System.Drawing.SystemColors.WindowText
         Me.plan_a.Location = New System.Drawing.Point(224, 371)
         Me.plan_a.Name = "plan_a"
         Me.plan_a.Size = New System.Drawing.Size(37, 27)
@@ -215,7 +215,7 @@ Partial Class planning
         Me.plan_b.BackColor = System.Drawing.Color.White
         Me.plan_b.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.plan_b.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.plan_b.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.plan_b.ForeColor = System.Drawing.SystemColors.WindowText
         Me.plan_b.Location = New System.Drawing.Point(287, 371)
         Me.plan_b.Name = "plan_b"
         Me.plan_b.Size = New System.Drawing.Size(37, 27)
