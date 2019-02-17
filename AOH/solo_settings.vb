@@ -308,10 +308,10 @@
                     .adjust.Visible = IIf(must_deploy, True, False)
                     .adjust.Text = IIf(must_deploy, "Deploy?", resultform.adjust.Text)
                     .Tag = IIf(must_deploy, player.Text + g.title, "")
-                    .Text = "Solo Command Decisions"
+                    .Text = player.Text + " Solo Command Decisions"
                     .confirm.Visible = True
                     .reverse.Visible = False
-                    .result.Text = "Solo Command Decisions" + vbNewLine + IIf(m = "", g.title + " - No Command Interventions and Decisions this turn", m)
+                    .result.Text = player.Text + " Solo Command Decisions" + vbNewLine + IIf(m = "", g.title + " - No Command Interventions and Decisions this turn", m)
                     .ShowDialog()
                     .adjust.Visible = False
                     .confirm.Visible = True
@@ -337,6 +337,7 @@
     Private Sub command_decisions_Click(sender As Object, e As EventArgs) Handles command_decisions.Click
         generate_command_decisions()
     End Sub
+
 
     Private Sub generals_list_MouseClick(sender As Object, e As MouseEventArgs) Handles generals_list.MouseClick
         If selected_row = "" Or Not command_decisions.Visible Then Exit Sub
