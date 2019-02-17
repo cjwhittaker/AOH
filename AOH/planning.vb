@@ -33,7 +33,7 @@ TextBox10.TextChanged, TextBox11.TextChanged, TextBox12.TextChanged, TextBox13.T
                 End If
             End If
         Next
-        If assessment_complete Then determine_plan.Enabled = True
+        If assessment_complete Then determine_plan.Enabled = True Else determine_plan.Enabled = False
     End Sub
 
     Private Sub determine_plan_Click(sender As Object, e As EventArgs) Handles determine_plan.Click
