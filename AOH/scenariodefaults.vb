@@ -39,7 +39,7 @@
     Private Function scenario_ready()
         scenario_ready = False
         If phase + playerphase + Val(gameturn.Text) > 1 Then scenario_ready = True : Exit Function
-        If player1.Text <> "" And player2.Text <> "" And player2_stands.Text <> "" And player1_stands.Text <> "" And player1_init.Text <> "" And player2_init.Text <> "" And solo_ready() Then scenario_ready = True
+        If player1.Text <> "" And player2.Text <> "" And player2_stands.Text <> "" And player1_stands.Text <> "" And player1_init.Text <> "" And player2_init.Text <> "" Then scenario_ready = True
         'And (Not solo.Checked Or (solo.Checked And generals.Count > 0))
     End Function
     Private Function solo_ready()
@@ -58,7 +58,7 @@
 
     Private Sub nextturn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nextturn.Click
         Dim p1_roll As Integer, p2_roll As Integer, init_option As String, temp As String
-        If Not scenario_ready() Then Exit Sub
+        If Not scenario_ready() Or Not solo_ready() Then Exit Sub
         Me.Hide()
         If player1.Text = "" Or player2.Text = "" Or Current_time.Text = Dusk.Text Then GoTo avoidturninc
         If gameturn.Text = 1 Then enable_data_entry(False)
@@ -444,6 +444,7 @@ closeprogram:
     End Sub
 
     Private Sub solo_setup_Click(sender As Object, e As EventArgs) Handles solo_setup.Click
+        If Not scenario_ready() Then Exit Sub
         With solo_settings
             .enable_command_decisions(False)
             .player.Text = player1.Text
