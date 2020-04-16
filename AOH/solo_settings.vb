@@ -339,6 +339,7 @@
     End Sub
 
 
+
     Private Sub generals_list_MouseClick(sender As Object, e As MouseEventArgs) Handles generals_list.MouseClick
         If selected_row = "" Or Not command_decisions.Visible Then Exit Sub
         If e.X <= generals_list.Width / 2 And generals(selected_row).casualties > 0 Then

@@ -234,7 +234,7 @@ Partial Class charge_1914
         Me.a_disorder.Name = "a_disorder"
         Me.a_disorder.Size = New System.Drawing.Size(296, 36)
         Me.a_disorder.TabIndex = 16
-        Me.a_disorder.Text = "Disordered, Silenced, Lt Inf, Arty"
+        Me.a_disorder.Text = "Disordered, Lt Inf, Open Order"
         Me.a_disorder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.a_disorder.UseVisualStyleBackColor = True
         '
@@ -245,7 +245,7 @@ Partial Class charge_1914
         Me.a_Firefight.Name = "a_Firefight"
         Me.a_Firefight.Size = New System.Drawing.Size(211, 36)
         Me.a_Firefight.TabIndex = 20
-        Me.a_Firefight.Text = "Firefight Hits"
+        Me.a_Firefight.Text = "Firefight Cas"
         Me.a_Firefight.UseVisualStyleBackColor = True
         '
         'a_cas
@@ -288,7 +288,7 @@ Partial Class charge_1914
         Me.d_firefight.Name = "d_firefight"
         Me.d_firefight.Size = New System.Drawing.Size(208, 36)
         Me.d_firefight.TabIndex = 20
-        Me.d_firefight.Text = "Firefight Hits"
+        Me.d_firefight.Text = "Firefight Cas"
         Me.d_firefight.UseVisualStyleBackColor = True
         '
         'd_ratio

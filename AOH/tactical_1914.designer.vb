@@ -42,6 +42,7 @@ Partial Class tactical_1914
         Me.Button2 = New System.Windows.Forms.Button()
         Me.french = New System.Windows.Forms.CheckBox()
         Me.doctrine = New System.Windows.Forms.Button()
+        Me.openorder = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'getresult
@@ -61,7 +62,7 @@ Partial Class tactical_1914
         Me.Player.Location = New System.Drawing.Point(12, 9)
         Me.Player.MinimumSize = New System.Drawing.Size(300, 0)
         Me.Player.Name = "Player"
-        Me.Player.Size = New System.Drawing.Size(660, 100)
+        Me.Player.Size = New System.Drawing.Size(660, 49)
         Me.Player.TabIndex = 9
         Me.Player.Text = "Label1"
         Me.Player.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -90,7 +91,7 @@ Partial Class tactical_1914
         '
         Me.Column.Appearance = System.Windows.Forms.Appearance.Button
         Me.Column.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Column.Location = New System.Drawing.Point(138, 214)
+        Me.Column.Location = New System.Drawing.Point(138, 168)
         Me.Column.Name = "Column"
         Me.Column.Size = New System.Drawing.Size(400, 40)
         Me.Column.TabIndex = 13
@@ -158,7 +159,7 @@ Partial Class tactical_1914
         '
         Me.detached.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.detached.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.detached.Location = New System.Drawing.Point(430, 124)
+        Me.detached.Location = New System.Drawing.Point(430, 78)
         Me.detached.Name = "detached"
         Me.detached.Size = New System.Drawing.Size(107, 38)
         Me.detached.TabIndex = 25
@@ -168,7 +169,7 @@ Partial Class tactical_1914
         'detached_leader
         '
         Me.detached_leader.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.detached_leader.Location = New System.Drawing.Point(138, 124)
+        Me.detached_leader.Location = New System.Drawing.Point(138, 78)
         Me.detached_leader.Name = "detached_leader"
         Me.detached_leader.Size = New System.Drawing.Size(286, 39)
         Me.detached_leader.TabIndex = 24
@@ -179,7 +180,7 @@ Partial Class tactical_1914
         '
         Me.attached.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.attached.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.attached.Location = New System.Drawing.Point(430, 170)
+        Me.attached.Location = New System.Drawing.Point(430, 124)
         Me.attached.Name = "attached"
         Me.attached.Size = New System.Drawing.Size(107, 38)
         Me.attached.TabIndex = 27
@@ -189,7 +190,7 @@ Partial Class tactical_1914
         'attached_leader
         '
         Me.attached_leader.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.attached_leader.Location = New System.Drawing.Point(138, 169)
+        Me.attached_leader.Location = New System.Drawing.Point(138, 123)
         Me.attached_leader.Name = "attached_leader"
         Me.attached_leader.Size = New System.Drawing.Size(286, 39)
         Me.attached_leader.TabIndex = 26
@@ -252,6 +253,18 @@ Partial Class tactical_1914
         Me.doctrine.Text = "Doctrine"
         Me.doctrine.UseVisualStyleBackColor = True
         '
+        'openorder
+        '
+        Me.openorder.Appearance = System.Windows.Forms.Appearance.Button
+        Me.openorder.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.openorder.Location = New System.Drawing.Point(138, 214)
+        Me.openorder.Name = "openorder"
+        Me.openorder.Size = New System.Drawing.Size(400, 40)
+        Me.openorder.TabIndex = 32
+        Me.openorder.Text = "Open Order"
+        Me.openorder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.openorder.UseVisualStyleBackColor = True
+        '
         'tactical_1914
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -259,6 +272,7 @@ Partial Class tactical_1914
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(684, 661)
+        Me.Controls.Add(Me.openorder)
         Me.Controls.Add(Me.doctrine)
         Me.Controls.Add(Me.french)
         Me.Controls.Add(Me.Button2)
@@ -309,4 +323,5 @@ Partial Class tactical_1914
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents french As CheckBox
     Friend WithEvents doctrine As Button
+    Friend WithEvents openorder As CheckBox
 End Class

@@ -84,6 +84,7 @@ Partial Class Firing_1914
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.openorder = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Player
@@ -191,7 +192,7 @@ Partial Class Firing_1914
         Me.f1.Name = "f1"
         Me.f1.Size = New System.Drawing.Size(50, 21)
         Me.f1.TabIndex = 22
-        Me.f1.Text = "12"
+        Me.f1.Text = "15"
         Me.f1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'f3
@@ -204,7 +205,7 @@ Partial Class Firing_1914
         Me.f3.Name = "f3"
         Me.f3.Size = New System.Drawing.Size(100, 21)
         Me.f3.TabIndex = 24
-        Me.f3.Text = "8"
+        Me.f3.Text = "10"
         Me.f3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'f4
@@ -217,7 +218,7 @@ Partial Class Firing_1914
         Me.f4.Name = "f4"
         Me.f4.Size = New System.Drawing.Size(100, 21)
         Me.f4.TabIndex = 25
-        Me.f4.Text = "5"
+        Me.f4.Text = "6"
         Me.f4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'f5
@@ -318,7 +319,7 @@ Partial Class Firing_1914
         Me.f2.Name = "f2"
         Me.f2.Size = New System.Drawing.Size(50, 21)
         Me.f2.TabIndex = 22
-        Me.f2.Text = "10"
+        Me.f2.Text = "12"
         Me.f2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'f6
@@ -344,7 +345,7 @@ Partial Class Firing_1914
         Me.f7.Name = "f7"
         Me.f7.Size = New System.Drawing.Size(50, 21)
         Me.f7.TabIndex = 22
-        Me.f7.Text = "5"
+        Me.f7.Text = "7"
         Me.f7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label9
@@ -370,7 +371,7 @@ Partial Class Firing_1914
         Me.f8.Name = "f8"
         Me.f8.Size = New System.Drawing.Size(100, 21)
         Me.f8.TabIndex = 24
-        Me.f8.Text = "4"
+        Me.f8.Text = "5"
         Me.f8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'f9
@@ -383,7 +384,7 @@ Partial Class Firing_1914
         Me.f9.Name = "f9"
         Me.f9.Size = New System.Drawing.Size(100, 21)
         Me.f9.TabIndex = 25
-        Me.f9.Text = "3"
+        Me.f9.Text = "4"
         Me.f9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'f10
@@ -396,7 +397,7 @@ Partial Class Firing_1914
         Me.f10.Name = "f10"
         Me.f10.Size = New System.Drawing.Size(150, 21)
         Me.f10.TabIndex = 25
-        Me.f10.Text = "2"
+        Me.f10.Text = "3"
         Me.f10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'f11
@@ -422,7 +423,7 @@ Partial Class Firing_1914
         Me.f12.Name = "f12"
         Me.f12.Size = New System.Drawing.Size(50, 21)
         Me.f12.TabIndex = 22
-        Me.f12.Text = "4"
+        Me.f12.Text = "5"
         Me.f12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label23
@@ -448,7 +449,7 @@ Partial Class Firing_1914
         Me.f13.Name = "f13"
         Me.f13.Size = New System.Drawing.Size(100, 21)
         Me.f13.TabIndex = 24
-        Me.f13.Text = "3"
+        Me.f13.Text = "4"
         Me.f13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'f14
@@ -461,7 +462,7 @@ Partial Class Firing_1914
         Me.f14.Name = "f14"
         Me.f14.Size = New System.Drawing.Size(100, 21)
         Me.f14.TabIndex = 25
-        Me.f14.Text = "2"
+        Me.f14.Text = "3"
         Me.f14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'f15
@@ -474,7 +475,7 @@ Partial Class Firing_1914
         Me.f15.Name = "f15"
         Me.f15.Size = New System.Drawing.Size(150, 21)
         Me.f15.TabIndex = 25
-        Me.f15.Text = "1"
+        Me.f15.Text = "2"
         Me.f15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'f16
@@ -487,7 +488,7 @@ Partial Class Firing_1914
         Me.f16.Name = "f16"
         Me.f16.Size = New System.Drawing.Size(50, 21)
         Me.f16.TabIndex = 22
-        Me.f16.Text = "9"
+        Me.f16.Text = "8"
         Me.f16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'f17
@@ -500,7 +501,7 @@ Partial Class Firing_1914
         Me.f17.Name = "f17"
         Me.f17.Size = New System.Drawing.Size(50, 21)
         Me.f17.TabIndex = 22
-        Me.f17.Text = "7"
+        Me.f17.Text = "6"
         Me.f17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label29
@@ -638,9 +639,9 @@ Partial Class Firing_1914
         'select_cover
         '
         Me.select_cover.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.select_cover.Location = New System.Drawing.Point(52, 413)
+        Me.select_cover.Location = New System.Drawing.Point(357, 413)
         Me.select_cover.Name = "select_cover"
-        Me.select_cover.Size = New System.Drawing.Size(480, 38)
+        Me.select_cover.Size = New System.Drawing.Size(175, 38)
         Me.select_cover.TabIndex = 37
         Me.select_cover.Text = "Target Cover"
         Me.select_cover.UseVisualStyleBackColor = True
@@ -722,7 +723,7 @@ Partial Class Firing_1914
         Me.f18.Name = "f18"
         Me.f18.Size = New System.Drawing.Size(100, 21)
         Me.f18.TabIndex = 22
-        Me.f18.Text = "5"
+        Me.f18.Text = "4"
         Me.f18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'f21
@@ -736,7 +737,7 @@ Partial Class Firing_1914
         Me.f21.Size = New System.Drawing.Size(100, 21)
         Me.f21.TabIndex = 22
         Me.f21.Tag = "BR"
-        Me.f21.Text = "1"
+        Me.f21.Text = "2"
         Me.f21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'f24
@@ -812,7 +813,7 @@ Partial Class Firing_1914
         Me.Label10.Size = New System.Drawing.Size(100, 21)
         Me.Label10.TabIndex = 22
         Me.Label10.Tag = "Ot"
-        Me.Label10.Text = "0"
+        Me.Label10.Text = "1"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label11
@@ -841,6 +842,18 @@ Partial Class Firing_1914
         Me.Label13.Text = "0"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'openorder
+        '
+        Me.openorder.Appearance = System.Windows.Forms.Appearance.Button
+        Me.openorder.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.openorder.Location = New System.Drawing.Point(52, 413)
+        Me.openorder.Name = "openorder"
+        Me.openorder.Size = New System.Drawing.Size(299, 40)
+        Me.openorder.TabIndex = 50
+        Me.openorder.Text = "Target is Target is in Open Order"
+        Me.openorder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.openorder.UseVisualStyleBackColor = True
+        '
         'Firing_1914
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -848,6 +861,7 @@ Partial Class Firing_1914
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(684, 661)
+        Me.Controls.Add(Me.openorder)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.adjustfirepoints)
         Me.Controls.Add(Me.cavalry_charging)
@@ -986,4 +1000,5 @@ Partial Class Firing_1914
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label13 As Label
+    Friend WithEvents openorder As CheckBox
 End Class

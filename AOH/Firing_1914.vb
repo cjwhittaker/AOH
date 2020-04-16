@@ -6,17 +6,27 @@
         Targetmode.Checked = False
         Artillery.Checked = False
         tirailleur.Checked = False
-        cavalry_charging.checked = False
+        cavalry_charging.Checked = False
+        openorder.Checked = False
         firepoints.Text = 0
         adjustfirepoints.Value = 0
     End Sub
 
     Private Sub check_color(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles _
-Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, cavalry_charging.CheckedChanged
-        If sender.checked Then sender.backcolor = Color.Goldenrod Else sender.backcolor = Control.DefaultBackColor
-        If sender.name = "Artillery" And sender.backcolor = Color.Goldenrod Then tirailleur.Checked = False : cavalry_charging.Checked = False
-        If sender.name = "tirailleur" And sender.backcolor = Color.Goldenrod Then Artillery.Checked = False : cavalry_charging.Checked = False
-        If sender.name = "cavalry_charging" And sender.backcolor = Color.Goldenrod Then tirailleur.Checked = False : Artillery.Checked = False
+Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, cavalry_charging.CheckedChanged, openorder.CheckedChanged
+        If sender.checked Then sender.backcolor = golden Else sender.backcolor = Control.DefaultBackColor
+        If sender.name = "Artillery" And sender.backcolor = golden Then tirailleur.Checked = False : cavalry_charging.Checked = False : openorder.Checked = False
+        If sender.name = "tirailleur" And sender.backcolor = golden Then Artillery.Checked = False : cavalry_charging.Checked = False : openorder.Checked = False
+        If sender.name = "cavalry_charging" And sender.backcolor = golden Then tirailleur.Checked = False : Artillery.Checked = False : openorder.Checked = False
+        If sender.name = "Targetmode" And sender.backcolor = golden Then openorder.Checked = False
+        If sender.name = "openorder" And sender.backcolor = golden Then
+            For Each c As Control In Me.Controls
+                If TypeOf c Is CheckBox And c.Name <> "openorder" Then
+                    Dim chk As CheckBox = DirectCast(c, CheckBox)
+                    chk.Checked = False
+                End If
+            Next
+        End If
 
     End Sub
 

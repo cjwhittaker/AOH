@@ -14,10 +14,17 @@
         spent.Checked = False
         disordered.Checked = False
         french.Checked = False
+        openorder.Checked = False
     End Sub
 
     Private Sub Fresh_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Fresh.CheckedChanged
         If Fresh.Checked Then spent.Checked = False
+    End Sub
+    Private Sub openorder_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles openorder.CheckedChanged, Column.CheckedChanged
+        If openorder.Checked And sender.name = "openorder" And Column.Checked Then Column.Checked = False
+        If openorder.Checked And Cavalry.Checked Then Cavalry.Checked = False
+        If openorder.Checked And sender.name = "Column" And Column.Checked Then openorder.Checked = False
+
     End Sub
 
     Private Sub spent_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles spent.CheckedChanged
@@ -26,6 +33,7 @@
     Private Sub cavalry_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cavalry.CheckedChanged
         If Cavalry.Checked Then disordered.Checked = True : suppressed.Checked = False
         If Cavalry.Checked And french.Checked Then french.Checked = False
+        If Cavalry.Checked And openorder.Checked Then openorder.Checked = False
     End Sub
     Private Sub disordered_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles disordered.CheckedChanged
         If Not disordered.Checked And Cavalry.Checked Then disordered.Checked = True : suppressed.Checked = False
@@ -45,7 +53,7 @@
 
     Private Sub check_color(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles _
     spent.CheckedChanged, Fresh.CheckedChanged, suppressed.CheckedChanged,
-    disordered.CheckedChanged, Cavalry.CheckedChanged, Column.CheckedChanged, french.CheckedChanged
+    disordered.CheckedChanged, Cavalry.CheckedChanged, Column.CheckedChanged, french.CheckedChanged, openorder.CheckedChanged
         If sender.checked Then sender.backcolor = Color.Goldenrod Else sender.backcolor = Control.DefaultBackColor
 
     End Sub
@@ -55,6 +63,7 @@
         modifier = 0 : quitfield = False : broken = False
         modifier = modifier + IIf(Val(attached.Text) + Val(detached.Text) > 4, 4, Val(attached.Text) + Val(detached.Text))
         If Column.Checked Then modifier = modifier + 1
+        If openorder.Checked Then modifier = modifier - 1
         If Fresh.Checked Then modifier = modifier + 2
         If spent.Checked Then modifier = modifier - 2
         If french.Checked Then modifier = modifier + 1
