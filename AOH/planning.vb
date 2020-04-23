@@ -76,19 +76,22 @@ TextBox10.TextChanged, TextBox11.TextChanged, TextBox12.TextChanged, TextBox13.T
         Else
             generals(player.Text + "CinC").plan = "Plan C"
         End If
+        If generals(player.Text + "CinC").attack Then
+            For i As Integer = 1 To 3
+                If generals(player.Text + "CinC").attitude = oom(0, i) Then
+                    For j As Integer = 1 To 3
+                        If generals(player.Text + "CinC").ability = oom(j, 0) Then
+                            generals(player.Text + "CinC").oom = oom(j, i)
+                            i = 3
+                            Exit For
+                        End If
 
-        For i As Integer = 1 To 3
-            If generals(player.Text + "CinC").attitude = oom(0, i) Then
-                For j As Integer = 1 To 3
-                    If generals(player.Text + "CinC").ability = oom(j, 0) Then
-                        generals(player.Text + "CinC").oom = oom(j, i)
-                        i = 3
-                        Exit For
-                    End If
-
-                Next
-            End If
-        Next
+                    Next
+                End If
+            Next
+        Else
+            generals(player.Text + "CinC").oom = "Troops are deployed on table in defensive positions"
+        End If
         For Each g As cgeneral In generals
             If g.nation = player.Text Then
                 For i As Integer = 1 To 3
@@ -105,24 +108,27 @@ TextBox10.TextChanged, TextBox11.TextChanged, TextBox12.TextChanged, TextBox13.T
                 Next
             End If
         Next
-
         generals(player.Text + "CinC").doctrine = Replace(doctrine, vbNewLine, "!")
         With resultform
             .adjust.Visible = False
             .reverse.Visible = False
             .Text = "Plan Selection Phase"
-            .result.Text = "Plan Selection Phase" + vbNewLine + player.Text + " deploys From the " + generals(player.Text + "CinC").edge + vbNewLine + player.Text + " CinC has decided to adopt " + generals(player.Text + "CinC").plan + vbNewLine + "The Order of March chosen is " + generals(player.Text + "CinC").oom + doctrine
+            .result.Text = "Plan Selection Phase" + vbNewLine +
+                player.Text + " deploys From the " + generals(player.Text + "CinC").edge + vbNewLine +
+                player.Text + " CinC has decided to adopt " + generals(player.Text + "CinC").plan + vbNewLine +
+                IIf(generals(player.Text + "CinC").attack, "The Order of March chosen is ", " ") + generals(player.Text + "CinC").oom + doctrine
             .ShowDialog()
             .reverse.Visible = True
             .adjust.Visible = True
         End With
-
+        determine_plan.Enabled = False
     End Sub
 
     Private Sub planning_Activated(sender As Object, e As EventArgs) Handles Me.Load
         For Each c As Control In Controls
             If TypeOf c Is TextBox And c.Name <> "player" Then c.Text = ""
         Next
+        determine_plan.Enabled = True
     End Sub
 
 End Class
