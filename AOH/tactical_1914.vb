@@ -24,7 +24,7 @@
         If openorder.Checked And sender.name = "openorder" And Column.Checked Then Column.Checked = False
         If openorder.Checked And Cavalry.Checked Then Cavalry.Checked = False
         If openorder.Checked And sender.name = "Column" And Column.Checked Then openorder.Checked = False
-
+        If Column.Checked And digging.Checked Then digging.Checked = False
     End Sub
 
     Private Sub spent_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles spent.CheckedChanged
@@ -34,6 +34,7 @@
         If Cavalry.Checked Then disordered.Checked = True : suppressed.Checked = False
         If Cavalry.Checked And french.Checked Then french.Checked = False
         If Cavalry.Checked And openorder.Checked Then openorder.Checked = False
+        If Cavalry.Checked And digging.Checked Then digging.Checked = False
     End Sub
     Private Sub disordered_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles disordered.CheckedChanged
         If Not disordered.Checked And Cavalry.Checked Then disordered.Checked = True : suppressed.Checked = False
@@ -49,11 +50,17 @@
         If suppressed.Checked And french.Checked Then french.Checked = False
         If disordered.Checked And french.Checked Then french.Checked = False
         If Cavalry.Checked And french.Checked Then french.Checked = False
+        If french.Checked And digging.Checked Then digging.Checked = False
+    End Sub
+    Private Sub digging_CheckedChanged(sender As Object, e As EventArgs) Handles digging.CheckedChanged
+        If french.Checked And digging.Checked Then french.Checked = False
+        If Column.Checked And digging.Checked Then Column.Checked = False
+        If Cavalry.Checked And digging.Checked Then Cavalry.Checked = False
     End Sub
 
     Private Sub check_color(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles _
     spent.CheckedChanged, Fresh.CheckedChanged, suppressed.CheckedChanged,
-    disordered.CheckedChanged, Cavalry.CheckedChanged, Column.CheckedChanged, french.CheckedChanged, openorder.CheckedChanged
+    disordered.CheckedChanged, Cavalry.CheckedChanged, Column.CheckedChanged, french.CheckedChanged, openorder.CheckedChanged, digging.CheckedChanged
         If sender.checked Then sender.backcolor = Color.Goldenrod Else sender.backcolor = Control.DefaultBackColor
 
     End Sub
@@ -117,6 +124,7 @@
 
 
         End If
+        If digging.Checked And (InStr(msg, "Stalled") > 0 Or InStr(msg, "Cautious") > 0 Or InStr(msg, "En Avant") > 0 Or InStr(msg, "Pas de Charge") > 0) Then msg = "Digging Commences"
         With resultform
             .result.Text = droll + msg
             .reverse.Visible = False
@@ -214,4 +222,5 @@
             .adjust.Visible = True
         End With
     End Sub
+
 End Class

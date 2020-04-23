@@ -43,12 +43,13 @@ Partial Class tactical_1914
         Me.french = New System.Windows.Forms.CheckBox()
         Me.doctrine = New System.Windows.Forms.Button()
         Me.openorder = New System.Windows.Forms.CheckBox()
+        Me.digging = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'getresult
         '
         Me.getresult.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.getresult.Location = New System.Drawing.Point(240, 545)
+        Me.getresult.Location = New System.Drawing.Point(248, 555)
         Me.getresult.Name = "getresult"
         Me.getresult.Size = New System.Drawing.Size(210, 47)
         Me.getresult.TabIndex = 8
@@ -91,7 +92,7 @@ Partial Class tactical_1914
         '
         Me.Column.Appearance = System.Windows.Forms.Appearance.Button
         Me.Column.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Column.Location = New System.Drawing.Point(138, 168)
+        Me.Column.Location = New System.Drawing.Point(151, 144)
         Me.Column.Name = "Column"
         Me.Column.Size = New System.Drawing.Size(400, 40)
         Me.Column.TabIndex = 13
@@ -103,7 +104,7 @@ Partial Class tactical_1914
         '
         Me.Fresh.Appearance = System.Windows.Forms.Appearance.Button
         Me.Fresh.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Fresh.Location = New System.Drawing.Point(138, 260)
+        Me.Fresh.Location = New System.Drawing.Point(151, 236)
         Me.Fresh.Name = "Fresh"
         Me.Fresh.Size = New System.Drawing.Size(400, 40)
         Me.Fresh.TabIndex = 14
@@ -115,7 +116,7 @@ Partial Class tactical_1914
         '
         Me.spent.Appearance = System.Windows.Forms.Appearance.Button
         Me.spent.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.spent.Location = New System.Drawing.Point(138, 306)
+        Me.spent.Location = New System.Drawing.Point(151, 282)
         Me.spent.Name = "spent"
         Me.spent.Size = New System.Drawing.Size(400, 40)
         Me.spent.TabIndex = 15
@@ -127,7 +128,7 @@ Partial Class tactical_1914
         '
         Me.disordered.Appearance = System.Windows.Forms.Appearance.Button
         Me.disordered.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.disordered.Location = New System.Drawing.Point(138, 352)
+        Me.disordered.Location = New System.Drawing.Point(151, 328)
         Me.disordered.Name = "disordered"
         Me.disordered.Size = New System.Drawing.Size(400, 40)
         Me.disordered.TabIndex = 16
@@ -159,7 +160,7 @@ Partial Class tactical_1914
         '
         Me.detached.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.detached.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.detached.Location = New System.Drawing.Point(430, 78)
+        Me.detached.Location = New System.Drawing.Point(443, 54)
         Me.detached.Name = "detached"
         Me.detached.Size = New System.Drawing.Size(107, 38)
         Me.detached.TabIndex = 25
@@ -169,7 +170,7 @@ Partial Class tactical_1914
         'detached_leader
         '
         Me.detached_leader.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.detached_leader.Location = New System.Drawing.Point(138, 78)
+        Me.detached_leader.Location = New System.Drawing.Point(151, 54)
         Me.detached_leader.Name = "detached_leader"
         Me.detached_leader.Size = New System.Drawing.Size(286, 39)
         Me.detached_leader.TabIndex = 24
@@ -180,7 +181,7 @@ Partial Class tactical_1914
         '
         Me.attached.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.attached.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.attached.Location = New System.Drawing.Point(430, 124)
+        Me.attached.Location = New System.Drawing.Point(443, 100)
         Me.attached.Name = "attached"
         Me.attached.Size = New System.Drawing.Size(107, 38)
         Me.attached.TabIndex = 27
@@ -190,7 +191,7 @@ Partial Class tactical_1914
         'attached_leader
         '
         Me.attached_leader.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.attached_leader.Location = New System.Drawing.Point(138, 123)
+        Me.attached_leader.Location = New System.Drawing.Point(151, 99)
         Me.attached_leader.Name = "attached_leader"
         Me.attached_leader.Size = New System.Drawing.Size(286, 39)
         Me.attached_leader.TabIndex = 26
@@ -201,7 +202,7 @@ Partial Class tactical_1914
         '
         Me.suppressed.Appearance = System.Windows.Forms.Appearance.Button
         Me.suppressed.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.suppressed.Location = New System.Drawing.Point(138, 398)
+        Me.suppressed.Location = New System.Drawing.Point(151, 374)
         Me.suppressed.Name = "suppressed"
         Me.suppressed.Size = New System.Drawing.Size(400, 40)
         Me.suppressed.TabIndex = 12
@@ -213,7 +214,7 @@ Partial Class tactical_1914
         '
         Me.Cavalry.Appearance = System.Windows.Forms.Appearance.Button
         Me.Cavalry.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cavalry.Location = New System.Drawing.Point(138, 444)
+        Me.Cavalry.Location = New System.Drawing.Point(151, 420)
         Me.Cavalry.Name = "Cavalry"
         Me.Cavalry.Size = New System.Drawing.Size(400, 40)
         Me.Cavalry.TabIndex = 28
@@ -235,7 +236,7 @@ Partial Class tactical_1914
         '
         Me.french.Appearance = System.Windows.Forms.Appearance.Button
         Me.french.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.french.Location = New System.Drawing.Point(138, 490)
+        Me.french.Location = New System.Drawing.Point(151, 466)
         Me.french.Name = "french"
         Me.french.Size = New System.Drawing.Size(400, 40)
         Me.french.TabIndex = 30
@@ -257,13 +258,25 @@ Partial Class tactical_1914
         '
         Me.openorder.Appearance = System.Windows.Forms.Appearance.Button
         Me.openorder.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.openorder.Location = New System.Drawing.Point(138, 214)
+        Me.openorder.Location = New System.Drawing.Point(151, 190)
         Me.openorder.Name = "openorder"
         Me.openorder.Size = New System.Drawing.Size(400, 40)
         Me.openorder.TabIndex = 32
         Me.openorder.Text = "Open Order"
         Me.openorder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.openorder.UseVisualStyleBackColor = True
+        '
+        'digging
+        '
+        Me.digging.Appearance = System.Windows.Forms.Appearance.Button
+        Me.digging.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.digging.Location = New System.Drawing.Point(151, 512)
+        Me.digging.Name = "digging"
+        Me.digging.Size = New System.Drawing.Size(400, 40)
+        Me.digging.TabIndex = 33
+        Me.digging.Text = "Dig In Dismounted Troops"
+        Me.digging.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.digging.UseVisualStyleBackColor = True
         '
         'tactical_1914
         '
@@ -272,6 +285,7 @@ Partial Class tactical_1914
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(684, 661)
+        Me.Controls.Add(Me.digging)
         Me.Controls.Add(Me.openorder)
         Me.Controls.Add(Me.doctrine)
         Me.Controls.Add(Me.french)
@@ -324,4 +338,5 @@ Partial Class tactical_1914
     Friend WithEvents french As CheckBox
     Friend WithEvents doctrine As Button
     Friend WithEvents openorder As CheckBox
+    Friend WithEvents digging As CheckBox
 End Class
