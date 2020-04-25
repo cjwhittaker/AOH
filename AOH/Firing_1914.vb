@@ -16,17 +16,10 @@
 Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, cavalry_charging.CheckedChanged, openorder.CheckedChanged
         If sender.checked Then sender.backcolor = golden Else sender.backcolor = Control.DefaultBackColor
         If sender.name = "Artillery" And sender.backcolor = golden Then tirailleur.Checked = False : cavalry_charging.Checked = False : openorder.Checked = False
-        If sender.name = "tirailleur" And sender.backcolor = golden Then Artillery.Checked = False : cavalry_charging.Checked = False : openorder.Checked = False
+        If sender.name = "tirailleur" And sender.backcolor = golden Then Artillery.Checked = False : cavalry_charging.Checked = False
         If sender.name = "cavalry_charging" And sender.backcolor = golden Then tirailleur.Checked = False : Artillery.Checked = False : openorder.Checked = False
         If sender.name = "Targetmode" And sender.backcolor = golden Then openorder.Checked = False
-        If sender.name = "openorder" And sender.backcolor = golden Then
-            For Each c As Control In Me.Controls
-                If TypeOf c Is CheckBox And c.Name <> "openorder" Then
-                    Dim chk As CheckBox = DirectCast(c, CheckBox)
-                    chk.Checked = False
-                End If
-            Next
-        End If
+        If sender.name = "openorder" And sender.backcolor = golden Then Artillery.Checked = False : cavalry_charging.Checked = False
 
     End Sub
 
@@ -38,6 +31,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
         modifier = 0
         If Targetmode.Checked Then modifier = modifier + 1
         If tirailleur.Checked Then modifier = modifier - 2
+        If openorder.Checked Then modifier = modifier - 1
         If Cavalry_charging.Checked Then modifier = modifier + 3
         modifier = modifier - Val(cover.Text)
         'AOV
@@ -51,17 +45,17 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
         Dim droll As String = "[" + Str(f) + " @ " + Str(result) + " + " + Str(modifier) + "=" + Str(effect) + "]" + vbNewLine
         If Not display_dice Then droll = ""
         If effect >= 11 Then
-            If Artillery.Checked Then fire_eff = "Battery wrecked" Else fire_eff = "Troops lose 2 stands (3 hits)" + vbNewLine + "Cavalry disordered, Infantry suppressed" + vbNewLine + "Movers halt where fire receivied" + vbNewLine + "Chargers retire 1/2 move away from firers"
+            If Artillery.Checked Then fire_eff = "Battery wrecked" Else fire_eff = "Troops lose 3 stands" + vbNewLine + "Cavalry disordered, Infantry suppressed" + vbNewLine + "Movers halt where fire receivied" + vbNewLine + "Chargers retire 1/2 move away from firers"
             msg = droll + "Gone to Ground" + vbNewLine + fire_eff
-            cas = 2
+            cas = 3
         ElseIf effect >= 9 Then
-            If Artillery.Checked Then fire_eff = "Battery damaged and silenced" Else fire_eff = "Troops lose 1 and 1/3 stands and is disordered (2 hits)"
+            If Artillery.Checked Then fire_eff = "Battery damaged and silenced" Else fire_eff = "Troops lose 2 stands and is disordered"
             msg = droll + "Deadly Fire" + vbNewLine + fire_eff
-            cas = 1.334
+            cas = 2
         ElseIf effect >= 6 Then
-            If Artillery.Checked Then fire_eff = "Battery damaged " Else fire_eff = "Troops lose 2/3 of a stand and is disordered (1 hits)"
+            If Artillery.Checked Then fire_eff = "Battery damaged " Else fire_eff = "Troops lose a stand and is disordered"
             msg = droll + "Telling Fire" + vbNewLine + fire_eff
-            cas = 0.667
+            cas = 1
         ElseIf effect >= 4 Then
             If Artillery.Checked Then fire_eff = "Battery silenced" Else fire_eff = "Troops are disordered"
             msg = droll + "Lively Fire" + vbNewLine + fire_eff
@@ -95,9 +89,9 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
             End If
         Else
             If InStr(msg, "damaged") > 0 Then
-                cas = 0.334
+                cas = 0.5
             ElseIf InStr(msg, "wrecked") > 0 Then
-                cas = 0.667
+                cas = 1.0
             Else
                 cas = 0
             End If
