@@ -265,7 +265,7 @@
 
     End Sub
 
-    Private Sub generate_command_decisions()
+    Public Sub generate_command_decisions()
         Dim m As String = "", dice_roll As Integer = 0, cas_rate As Integer = 0, must_deploy As Boolean = False
         If generals.Count = 0 Then
         End If

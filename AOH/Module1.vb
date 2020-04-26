@@ -301,8 +301,8 @@
     Public Sub test_for_decisions(s As String)
         With solo_settings
             .player.Text = s
-            .enable_command_decisions(True)
-            .ShowDialog()
+            .generate_command_decisions()
+            '.ShowDialog()
         End With
     End Sub
 
