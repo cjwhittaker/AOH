@@ -26,7 +26,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
 
     Private Sub fire_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fire.Click
         Dim cas As Single, modifier As Integer, result As Integer, msg As String, fire_eff As String
-        Dim effect As Integer = 0, f As Integer = Int(1.5 * Val(firepoints.Text))
+        Dim effect As Integer = 0, f As Integer = Val(firepoints.Text)
         If f <= 0 Then f = 0
         modifier = 0
         If Targetmode.Checked Then modifier = modifier + 1
@@ -36,13 +36,13 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
         modifier = modifier - Val(cover.Text)
         'AOV
         For i As Integer = 1 To 10
-            If i = 10 Then modifier = modifier + firecharts(1, i) : Exit For
-            If f <= firecharts(0, i) Then modifier = modifier + firecharts(1, i) : Exit For
+            If i = 10 Then f = firecharts(1, i) : Exit For
+            If f <= firecharts(0, i) Then f = firecharts(1, i) : Exit For
         Next
         cas = 0
         result = dice(10)
-        effect = result + modifier
-        Dim droll As String = "[" + Str(f) + " @ " + Str(result) + " + " + Str(modifier) + "=" + Str(effect) + "]" + vbNewLine
+        effect = result + modifier + f
+        Dim droll As String = firepoints.Text + "FP" + "[" + (Str(f)) + " + " + Str(modifier) + " + " + Trim(Str(result)) + "=" + Trim(Str(effect)) + "]" + vbNewLine
         If Not display_dice Then droll = ""
         If effect >= 11 Then
             If Artillery.Checked Then fire_eff = "Battery wrecked" Else fire_eff = "Troops lose 3 stands" + vbNewLine + "Cavalry disordered, Infantry suppressed" + vbNewLine + "Movers halt where fire receivied" + vbNewLine + "Chargers retire 1/2 move away from firers"
