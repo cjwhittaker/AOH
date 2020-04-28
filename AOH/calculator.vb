@@ -65,7 +65,8 @@
 
     End Sub
     Private Sub calculator_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        If Me.Tag = "rout" Then
+        If Tag = "rout" Then
+            add_routers_Click(add_routers, Nothing)
             For Each c As Control In Me.Controls
                 If c.Tag <> "c" Then c.Visible = True
             Next
@@ -78,7 +79,7 @@
     End Sub
 
     Private Sub add_routers_Click(sender As Object, e As EventArgs) Handles add_routers.Click
-        tactical_1914.runaway = Val(routers.Text)
-        Me.Hide()
+        routed = Val(routers.Text)
+        Close()
     End Sub
 End Class
