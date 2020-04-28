@@ -25,10 +25,10 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
 
 
     Private Sub fire_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fire.Click
-        Dim cas As Single, modifier As Integer, result As Integer, msg As String, fire_eff As String
+        Dim modifier As Integer, result As Integer, msg As String, fire_eff As String
         Dim effect As Integer = 0, f As Integer = Val(firepoints.Text)
         If f <= 0 Then f = 0
-        modifier = 0
+        modifier = 0 : cas = 0
         If Targetmode.Checked Then modifier = modifier + 1
         If tirailleur.Checked Then modifier = modifier - 2
         If openorder.Checked Then modifier = modifier - 1
@@ -79,31 +79,6 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
                 Case 10 : msg = msg + "cooly ignored the fire"
             End Select
         End If
-        If Not Artillery.Checked Then
-            If Me.Tag = scenariodefaults.player1.Text Then
-                casualties.p2_cas.Value = casualties.p2_cas.Value + cas
-                casualties.p2_cas_c.Text = "[" + Str(cas) + "]"
-            Else
-                casualties.p1_cas.Value = casualties.p1_cas.Value + cas
-                casualties.p1_cas_c.Text = "[" + Str(cas) + "]"
-            End If
-        Else
-            If InStr(msg, "damaged") > 0 Then
-                cas = 0.5
-            ElseIf InStr(msg, "wrecked") > 0 Then
-                cas = 1.0
-            Else
-                cas = 0
-            End If
-
-            If Me.Tag = scenariodefaults.player1.Text Then
-                casualties.p2_art.Value = casualties.p2_art.Value + cas
-                casualties.p2_art_c.Text = "[" + Str(cas) + "]"
-            Else
-                casualties.p1_art.Value = casualties.p1_art.Value + cas
-                casualties.p1_art_c.Text = "[" + Str(cas) + "]"
-            End If
-        End If
         With resultform
             .result.Text = msg
             .reverse.Visible = False
@@ -128,7 +103,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
     End Sub
 
     Private Sub adjust_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles adjust.Click
-        casualties.ShowDialog()
+        display_adjust_casualties("both")
     End Sub
 
     Private Sub nextphase_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nextphase.Click

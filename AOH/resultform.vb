@@ -4,15 +4,15 @@
         Me.Close()
     End Sub
     Private Sub resultform_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-        If scenariodefaults.phase = 1 Then
-            If p1 = scenariodefaults.player1.Text Then
-                If supercedes.Checked Then player1_cinc_superceding = True Else player1_cinc_superceding = False
-                If attached.Checked Then player1_cinc_attached = True Else player1_cinc_attached = False
-            Else
-                If supercedes.Checked Then player2_cinc_superceding = True Else player2_cinc_superceding = False
-                If attached.Checked Then player2_cinc_attached = True Else player2_cinc_attached = False
-            End If
-        End If
+        'If scenariodefaults.phase = 1 Then
+        '    If p1 = scenariodefaults.player1.Text Then
+        '        If supercedes.Checked Then player1_cinc_superceding = True Else player1_cinc_superceding = False
+        '        If attached.Checked Then player1_cinc_attached = True Else player1_cinc_attached = False
+        '    Else
+        '        If supercedes.Checked Then player2_cinc_superceding = True Else player2_cinc_superceding = False
+        '        If attached.Checked Then player2_cinc_attached = True Else player2_cinc_attached = False
+        '    End If
+        'End If
 
         If scenariodefaults.phase <= 5 And scenariodefaults.quit Then quitprogram()
         If scenariodefaults.phase > 5 Then assign_losses()
@@ -83,8 +83,7 @@
     Private Sub second_player_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles second_player.Click
         Me.Tag = "Second" : Me.Hide()
     End Sub
-    Private Sub check_color(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles _
-supercedes.CheckedChanged, arty.CheckedChanged, leader.CheckedChanged, attached.CheckedChanged
+    Private Sub check_color(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles arty.CheckedChanged, leader.CheckedChanged
         If sender.checked Then sender.backcolor = golden Else sender.backcolor = defa
 
     End Sub

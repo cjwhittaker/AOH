@@ -82,7 +82,7 @@
         If Not display_dice Then droll = ""
         If disordered.Checked Then
             If result <= 0 Then
-                msg = "Broken" + vbNewLine + "The Brigade does not rally it retreats a full move disordered and one stand lost "
+                msg = "Broken" + vbNewLine + "The Brigade does not rally it retreats a full move disordered and one stand cas"
                 broken = True
             ElseIf result <= 2 Then
                 msg = "Retreat" + vbNewLine + "The Brigade does not rally it retreats a full move disordered"
@@ -151,7 +151,7 @@
     End Sub
 
     Private Sub adjust_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles adjust.Click
-        casualties.ShowDialog()
+        display_adjust_casualties("both")
     End Sub
 
     Private Sub nextphase_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nextphase.Click
