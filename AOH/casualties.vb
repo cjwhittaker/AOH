@@ -30,13 +30,13 @@
             For Each c As Control In Controls
                 If c.Name = ctrl + "cas" Then
                     Dim chk As NumericUpDown = DirectCast(c, NumericUpDown)
-                    losses(y, 1) = losses(y, 1) + Val(chk.Value)
+                    cas = Val(chk.Value)
                 ElseIf c.Name = ctrl + "ske" Then
                     Dim chk As NumericUpDown = DirectCast(c, NumericUpDown)
-                    losses(y, 2) = losses(y, 2) + Val(chk.Value)
+                    routed = Val(chk.Value)
                 ElseIf c.Name = ctrl + "cap" Then
                     Dim chk As NumericUpDown = DirectCast(c, NumericUpDown)
-                    losses(y, 3) = losses(y, 3) + Val(chk.Value)
+                    captured = Val(chk.Value)
                 Else
                 End If
             Next

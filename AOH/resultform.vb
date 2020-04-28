@@ -13,9 +13,10 @@
                 If attached.Checked Then player2_cinc_attached = True Else player2_cinc_attached = False
             End If
         End If
-
         If scenariodefaults.phase <= 5 And scenariodefaults.quit Then quitprogram()
         If scenariodefaults.phase > 5 Then assign_losses()
+        logging(scenariodefaults.gameturn.Text + "," + Replace(result.Text, vbNewLine, " ") + "," + Str(cas) + "," + Str(routed) + "," + Str(captured))
+        cas = 0 : captured = 0 : routed = 0
     End Sub
     Public Sub New()
 
@@ -65,6 +66,11 @@
             losses(y, 5) = losses(y, 5) + IIf(damaged, 0.5, 1)
         ElseIf InStr(result.Text, "Desultory Fire") = 0 Then
             losses(y, 1) = losses(y, 1) + cas
+        ElseIf InStr(result.Text, "Routs" + vbNewLine) > 0 Then
+            calculator.Tag = "rout"
+            calculator.ShowDialog()
+        ElseIf InStr(result.Text, "Broken" + vbNewLine) > 0 Then
+            routed = 1
         Else
         End If
 

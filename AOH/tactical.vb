@@ -87,15 +87,15 @@
             .reverse.Visible = False
         End With
 
-        If quitfield Or broken Then
-            If quitfield Then
-                calculator.Tag = "rout"
-                calculator.ShowDialog()
-            Else
-                runaway = 1
-            End If
-            If Tag = scenariodefaults.player1.Text Then losses(1, 2) = losses(1, 2) + runaway Else losses(2, 2) = losses(2, 2) + runaway
-        End If
+        'If quitfield Or broken Then
+        '    If quitfield Then
+        '        calculator.Tag = "rout"
+        '        calculator.ShowDialog()
+        '    Else
+        '        runaway = 1
+        '    End If
+        '    If Tag = scenariodefaults.player1.Text Then losses(1, 2) = losses(1, 2) + runaway Else losses(2, 2) = losses(2, 2) + runaway
+        'End If
 
         resetform()
     End Sub

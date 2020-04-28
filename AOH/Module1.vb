@@ -127,6 +127,12 @@
             scenariodefaults.quit = False
         End If
     End Sub
+    Public Sub logging(log As String)
+        Dim file As System.IO.StreamWriter
+        file = My.Computer.FileSystem.OpenTextFileWriter(Replace(scenariodefaults.scenario, ".sce", ".his"), True)
+        file.WriteLine(log)
+        file.Close()
+    End Sub
     Sub savedata(ByVal scenariofile As String)
         Dim file As System.IO.StreamWriter, loss As String = ""
         If scenariofile Is Nothing Then Exit Sub
