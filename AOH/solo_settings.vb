@@ -274,7 +274,7 @@
                 dice_roll = dice(100)
                 For i As Integer = 1 To 3
                     m = ""
-                    If losses(0, i) = g.attitude Then
+                    If loss_rate(0, i) = g.attitude Then
                         For j As Integer = 1 To 24
                             If Not g.deployed And g.attack And dice_roll <= Val(deployment(j, i)) Then
                                 m = g.title + " - must deploy into battle formation if there is enemy in sight within " + Str(deployment(j, 0)) + vbNewLine
@@ -284,18 +284,18 @@
                         If Not g.defensive And g.attack Then
                             cas_rate = Int(1 + 20 * (g.casualties / g.strength))
                             If cas_rate > 13 Then cas_rate = 13
-                            If dice_roll <= Val(losses(cas_rate, i)) Then m = m + g.title + " - orders a halt to the attack and to adopt defensive positions" + vbNewLine
+                            If dice_roll <= Val(loss_rate(cas_rate, i)) Then m = m + g.title + " - orders a halt to the attack and to adopt defensive positions" + vbNewLine
                             g.defensive = True
                             Exit For
                         ElseIf g.defence Then
                             cas_rate = Int(1 + 24 * (g.casualties / g.strength))
                             If cas_rate > 13 Then cas_rate = 13
-                            If dice_roll <= Val(losses(cas_rate, i)) Then m = m + g.title + " - orders the withdrawal to a reserve defensive position" + vbNewLine
+                            If dice_roll <= Val(loss_rate(cas_rate, i)) Then m = m + g.title + " - orders the withdrawal to a reserve defensive position" + vbNewLine
                             Exit For
                         ElseIf g.delay Then
                             cas_rate = Int(1 + 40 * (g.casualties / g.strength))
                             If cas_rate > 13 Then cas_rate = 13
-                            If dice_roll <= Val(losses(cas_rate, i)) Then m = m + g.title + " - orders the withdrawal to the next delaying position" + vbNewLine
+                            If dice_roll <= Val(loss_rate(cas_rate, i)) Then m = m + g.title + " - orders the withdrawal to the next delaying position" + vbNewLine
                             Exit For
                         Else
                         End If

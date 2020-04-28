@@ -1,5 +1,5 @@
 ﻿Public Class scenariodefaults
-    Public quit As Boolean, scenario As String, p1 As String, p2 As String, phase As Integer, playerphase As Integer, cohesion As Integer
+    Public quit As Boolean, scenario As String, phase As Integer, playerphase As Integer, cohesion As Integer
     Public Sub New()
 
         ' This call is required by the Windows Form Designer.
@@ -291,27 +291,10 @@ closeprogram:
                         playerphase = currentRow(1)
                     ElseIf currentRow(0) = "game phase=" Then
                         phase = currentRow(1)
-                    ElseIf Microsoft.VisualBasic.Left(currentRow(0), 6) = casualties.p1_cas.Name Then
-                        casualties.p1_cas.Value = currentRow(1)
-                    ElseIf Microsoft.VisualBasic.Left(currentRow(0), 6) = casualties.p1_ske.Name Then
-                        casualties.p1_ske.Value = currentRow(1)
-                    ElseIf Microsoft.VisualBasic.Left(currentRow(0), 6) = casualties.p1_ldr.Name Then
-                        casualties.p1_ldr.Value = currentRow(1)
-                    ElseIf Microsoft.VisualBasic.Left(currentRow(0), 6) = casualties.p1_cap.Name Then
-                        casualties.p1_cap.Value = currentRow(1)
-                    ElseIf Microsoft.VisualBasic.Left(currentRow(0), 6) = casualties.p1_art.Name Then
-                        casualties.p1_art.Value = currentRow(1)
-                    ElseIf Microsoft.VisualBasic.Left(currentRow(0), 6) = casualties.p2_cas.Name Then
-                        casualties.p2_cas.Value = currentRow(1)
-                    ElseIf Microsoft.VisualBasic.Left(currentRow(0), 6) = casualties.p2_ske.Name Then
-                        casualties.p2_ske.Value = currentRow(1)
-                    ElseIf Microsoft.VisualBasic.Left(currentRow(0), 6) = casualties.p2_ldr.Name Then
-                        casualties.p2_ldr.Value = currentRow(1)
-                    ElseIf Microsoft.VisualBasic.Left(currentRow(0), 6) = casualties.p2_cap.Name Then
-                        casualties.p2_cap.Value = currentRow(1)
-                    ElseIf Microsoft.VisualBasic.Left(currentRow(0), 6) = casualties.p2_art.Name Then
-                        casualties.p2_art.Value = currentRow(1)
-
+                    ElseIf currentRow(0) = "p1losses=" Then
+                        For i = 1 To 5 : losses(1, i) = Val(currentRow(i)) : Next
+                    ElseIf currentRow(0) = "p2losses=" Then
+                        For i = 1 To 5 : losses(2, i) = Val(currentRow(i)) : Next
                     Else
                     End If
                 Catch ex As Microsoft.VisualBasic.FileIO.MalformedLineException
@@ -490,7 +473,7 @@ closeprogram:
     End Sub
 
     Private Sub adjust_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles adjust.Click
-        casualties.ShowDialog()
+        display_adjust_casualties("both")
     End Sub
 
     'Private Sub player1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles player1_stands.TextChanged, player1_init.TextChanged

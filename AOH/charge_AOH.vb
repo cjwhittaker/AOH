@@ -138,14 +138,16 @@ a_fresh.Click, a_spent.Click, d_spent.Click, d_fresh.Click
     End Sub
 
     Private Sub Fight_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Fight.Click
-        Dim captured As Integer, skeddadled As Integer, a_msg As String, d_msg As String, msg As String, player As String
+        Dim a_msg As String, d_msg As String, msg As String, player As String
         Dim ad As Integer = dice(10), dd As Integer = dice(10)
+        captured = 0 : routed = 0
+        losses(0, 5) = 0
         result = (ad + Val(a_mod.Text)) - (dd + Val(d_mod.Text))
         Dim droll As String = "[" + Str(result) + " =a(" + Str(ad) + " + " + a_mod.Text + ") - d(" + Str(dd) + " + " + d_mod.Text + ")]" + vbNewLine
         If Not display_dice Then droll = ""
         msg = "" : d_msg = "" : a_msg = "" : player = ""
         If result >= 7 Then
-            If result > 10 Then captured = 1 + result - 10 Else captured = 1
+            If result > 10 Then captured = result - 10
             d_msg = "Shattered!" + vbNewLine _
                 + "Defender retreats a full move and is disordered/silenced" + vbNewLine _
                 + "2 stands rout, and 1 leader and 1 battery is captured if present" + vbNewLine _
@@ -156,7 +158,7 @@ a_fresh.Click, a_spent.Click, d_spent.Click, d_fresh.Click
                 a_msg = "Attackers breakthrough and must continue to charge a 1/2 move" + vbNewLine +
                 "towards the nearest enemy with the breakthrough modifier"
             End If
-            player = Defender.Text : captured = captured : skeddadled = 2
+            player = Defender.Text : routed = 2
         ElseIf result >= 4 Then
             d_msg = "Defender Driven Back" + vbNewLine _
                 + "Defender disordered/silenced retreats beyond musketry/skirmish range or half move (whichever is greater)" + vbNewLine _
@@ -169,7 +171,7 @@ a_fresh.Click, a_spent.Click, d_spent.Click, d_fresh.Click
                 + "breakthrough and continue to charge a 1/2 move" + vbNewLine _
                 + "towards the nearest enemy with the breakthrough modifier"
             End If
-            player = Defender.Text : captured = 0 : skeddadled = 1
+            player = Defender.Text : routed = 1
         ElseIf result >= 1 Then
             d_msg = "Defender Withdraws" + vbNewLine _
                 + "Defender retreats 2 inches and is disordered" + vbNewLine _
@@ -180,11 +182,7 @@ a_fresh.Click, a_spent.Click, d_spent.Click, d_fresh.Click
                 + "Both attacker and defender are disordered/silenced" + vbNewLine _
                 + "Both lose 1 stand or 1 gun wrecked" + vbNewLine _
                 + "Continue the charge combat with new modifiers"
-            casualties.p1_cas.Value = casualties.p1_cas.Value + 1
-            casualties.p1_cas_c.Text = "[1]"
-            casualties.p2_cas.Value = casualties.p2_cas.Value + 1
-            casualties.p2_cas_c.Text = "[1]"
-
+            player = attacker.Text
         ElseIf result >= -3 Then
             a_msg = "Attacker Withdraws" + vbNewLine _
                 + "Attackers retreats 2 inches and is disordered" + vbNewLine
@@ -194,26 +192,17 @@ a_fresh.Click, a_spent.Click, d_spent.Click, d_fresh.Click
                 + "Attacker retreats beyond musketry/skirmish range or half move (whichever is greater) and is disordered/silenced" + vbNewLine _
                 + "1 stand routs"
             d_msg = "Defenders hold their position" + vbNewLine + "Infantry in the open form square if victorious against Cavalry"
-            player = attacker.Text : captured = 0 : skeddadled = 1
+            player = attacker.Text : captured = 0 : routed = 1
         Else
-            If Math.Abs(result) > 10 Then captured = 1 + Math.Abs(result) - 10 Else captured = 1
+            If Math.Abs(result) > 10 Then captured = Math.Abs(result) - 10
             a_msg = "Attacker Shattered" + vbNewLine _
                 + "Attackers retreats a full move and is disordered/silenced, 2 stands rout" + vbNewLine _
                 + "A leader is captured if present" + vbNewLine _
                 + IIf(captured > 0, Str(captured) + " stands captured", "")
 
             d_msg = "Defenders hold their position" + vbNewLine + "Infantry in the open form square if victorious against Cavalry"
-            player = attacker.Text : captured = captured : skeddadled = 2
+            player = attacker.Text : routed = 2
 
-        End If
-        If result <> 0 Then
-            If player = scenariodefaults.player1.Text Then
-                casualties.p1_ske.Value = casualties.p1_ske.Value + skeddadled
-                casualties.p1_cap.Value = casualties.p1_cap.Value + captured
-            Else
-                casualties.p2_ske.Value = casualties.p2_ske.Value + skeddadled
-                casualties.p2_cap.Value = casualties.p2_cap.Value + captured
-            End If
         End If
         If result >= 7 Then
             resultform.arty.Visible = True
@@ -292,7 +281,7 @@ a_fresh.Click, a_spent.Click, d_spent.Click, d_fresh.Click
         For Each c As Control In Me.Controls
             If c.BackColor = golden Then c.BackColor = defa
         Next
-
+        routed = 0 : captured = 0 : cas = 0
     End Sub
     Private Sub check_color(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles _
         a_disorder.CheckedChanged, a_trot.CheckedChanged, a_heavy.CheckedChanged, a_armd.CheckedChanged,
@@ -321,7 +310,7 @@ d_supported.CheckedChanged, d_flanked.CheckedChanged, a_break.CheckedChanged, a_
     End Sub
 
     Private Sub adjust_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles adjust.Click
-        casualties.ShowDialog()
+        display_adjust_casualties("both")
 
     End Sub
 

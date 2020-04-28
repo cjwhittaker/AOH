@@ -5,7 +5,7 @@
     End Sub
     Private Sub resultform_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         If scenariodefaults.phase = 1 Then
-            If scenariodefaults.p1 = scenariodefaults.player1.Text Then
+            If p1 = scenariodefaults.player1.Text Then
                 If supercedes.Checked Then player1_cinc_superceding = True Else player1_cinc_superceding = False
                 If attached.Checked Then player1_cinc_attached = True Else player1_cinc_attached = False
             Else
@@ -15,6 +15,7 @@
         End If
 
         If scenariodefaults.phase <= 5 And scenariodefaults.quit Then quitprogram()
+        If scenariodefaults.phase > 5 Then assign_losses()
     End Sub
     Public Sub New()
 
@@ -29,78 +30,44 @@
             generals(Me.Tag).deployed = True
 
         ElseIf adjust.Text = "Adjust Cas" Then
-            casualties.ShowDialog()
+            display_adjust_casualties(Tag)
         Else
         End If
 
 
     End Sub
 
-    Private Sub leader_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles leader.CheckedChanged
-        If leader.Checked Then
-            If Me.Tag = scenariodefaults.player1.Text Then
-                casualties.p1_ldr.Value = casualties.p1_ldr.Value + 1
-                casualties.p1_ldr_c.Text = "[1]"
-                player1_cinc_dead = True
-            Else
-                casualties.p2_ldr.Value = casualties.p2_ldr.Value + 1
-                casualties.p2_ldr_c.Text = "[1]"
-                player2_cinc_dead = True
-            End If
+    Private Sub assign_losses()
+        Dim damaged As Boolean = IIf(InStr(result.Text, "damaged") > 0, True, False)
+        Dim wrecked As Boolean = IIf(InStr(result.Text, "wrecked") > 0, True, False)
+        'If Not damaged And Not wrecked Then Exit Sub
+        Dim y As Integer = IIf(Tag = scenariodefaults.player1.Text, 1, 2)
+        If InStr(result.Text, "Locked in Combat") > 0 Then
+            losses(y, 1) = losses(y, 1) + 1
+            y = IIf(y = 1, 2, 1)
+            If arty.Checked Then losses(y, 5) = losses(y, 5) + 1 Else losses(y, 1) = losses(y, 1) + 1
+        ElseIf InStr(result.Text, "Shattered!") > 0 Then
+            If arty.Checked Then losses(y, 5) = losses(y, 5) + 1
+            If leader.Checked Then losses(y, 4) = losses(y, 4) + 1
+            losses(y, 2) = losses(y, 2) + routed
+            losses(y, 3) = losses(y, 3) + captured
+        ElseIf damaged And InStr(result.Text, "Defender Driven Back") > 0 Then
+            losses(y, 2) = losses(y, 2) + routed
+            If arty.Checked Then losses(y, 5) = losses(y, 5) + 0.5
+        ElseIf InStr(result.Text, "Attacker Shattered") Then
+            If leader.Checked Then losses(y, 4) = losses(y, 4) + 1
+            If y = 1 Then player1_cinc_dead = True Else player2_cinc_dead = True
+            losses(y, 2) = losses(y, 2) + routed
+            losses(y, 3) = losses(y, 3) + captured
+        ElseIf InStr(result.Text, "Attack Driven Back") Then
+            losses(y, 2) = losses(y, 2) + routed
+        ElseIf damaged Or wrecked Then
+            losses(y, 5) = losses(y, 5) + IIf(damaged, 0.5, 1)
+        ElseIf InStr(result.Text, "Desultory Fire") = 0 Then
+            losses(y, 1) = losses(y, 1) + cas
         Else
-            If Me.Tag = scenariodefaults.player1.Text Then
-                casualties.p1_ldr.Value = casualties.p1_ldr.Value - 1
-                casualties.p1_ldr_c.Text = "[ ]"
-                player1_cinc_dead = False
-            Else
-                casualties.p2_ldr.Value = casualties.p2_ldr.Value - 1
-                casualties.p2_ldr_c.Text = "[ ]"
-                player2_cinc_dead = False
-            End If
         End If
-    End Sub
 
-    Private Sub arty_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles arty.CheckedChanged
-        Dim artydamage As Boolean
-        If InStr(Me.result.Text, "damage") > 0 Then artydamage = True Else artydamage = False
-        If arty.Checked Then
-            If Me.Tag = scenariodefaults.player1.Text Then
-                If artydamage Then
-                    casualties.p1_art.Value = casualties.p1_art.Value + 0.5
-                    casualties.p1_art_c.Text = "[0.5]"
-                Else
-                    casualties.p1_cap.Value = casualties.p1_cap.Value + 1
-                    casualties.p1_cap_c.Text = "[1]"
-                End If
-            Else
-                If artydamage Then
-                    casualties.p2_art.Value = casualties.p2_art.Value + 0.5
-                    casualties.p2_art_c.Text = "[0.5]"
-                Else
-                    casualties.p2_cap.Value = casualties.p2_cap.Value + 1
-                    casualties.p2_cap_c.Text = "[1]"
-                End If
-            End If
-        Else
-            If Me.Tag = scenariodefaults.player1.Text Then
-                If artydamage Then
-                    casualties.p1_art.Value = casualties.p1_art.Value - 0.5
-                    casualties.p1_art_c.Text = "[ ]"
-                Else
-                    casualties.p1_cap.Value = casualties.p1_cap.Value - 1
-                    casualties.p1_cap_c.Text = "[ ]"
-                End If
-            Else
-                If artydamage Then
-                    casualties.p2_art.Value = casualties.p2_art.Value - 0.5
-                    casualties.p2_art_c.Text = "[ ]"
-                Else
-                    casualties.p2_cap.Value = casualties.p2_cap.Value - 1
-                    casualties.p2_cap_c.Text = "[ ]"
-                End If
-            End If
-
-        End If
     End Sub
 
 

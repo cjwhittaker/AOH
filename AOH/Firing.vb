@@ -19,7 +19,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged
 
 
     Private Sub fire_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fire.Click
-        Dim x As Integer, cas As Single, modifier As Integer, result As Integer, msg As String, fire_eff As String
+        Dim x As Integer, modifier As Integer, result As Integer, msg As String, fire_eff As String
         modifier = 0
         If Targetmode.Checked Then modifier = modifier + 1
         If tirailleur.Checked Then modifier = modifier - 2
@@ -46,7 +46,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged
             cas = 2
         ElseIf effect = 2 Then
             If Artillery.Checked Then fire_eff = "Battery damaged and silenced" Else fire_eff = "Troops lose 1 stand and is disordered"
-            msg = droll + "Telling Fire" + vbNewLine + "Troops disordered and lose a stand" + vbNewLine + "Battery damaged and silenced"
+            msg = droll + "Telling Fire" + vbNewLine + fire_eff
             cas = 1
         ElseIf effect = 1 Then
             If Artillery.Checked Then fire_eff = "Battery silenced" Else fire_eff = "Troops are disordered"
@@ -70,32 +70,6 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged
                 Case 9 : msg = msg + "one of his staff officer's struck"
                 Case 10 : msg = msg + "cooly ignored the fire"
             End Select
-        End If
-        If Not Artillery.Checked Then
-            If Me.Tag = scenariodefaults.player1.Text Then
-                casualties.p2_cas.Value = casualties.p2_cas.Value + cas
-                casualties.p2_cas_c.Text = "[" + Str(cas) + "]"
-            Else
-                casualties.p1_cas.Value = casualties.p1_cas.Value + cas
-                casualties.p1_cas_c.Text = "[" + Str(cas) + "]"
-            End If
-        Else
-            If InStr(msg, "damaged") > 0 Then
-                cas = 0.5
-            ElseIf InStr(msg, "wrecked") > 0 Then
-                cas = 1
-            Else
-                cas = 0
-            End If
-
-
-            If Me.Tag = scenariodefaults.player1.Text Then
-                casualties.p2_art.Value = casualties.p2_art.Value + cas
-                casualties.p2_art_c.Text = "[" + Str(cas) + "]"
-            Else
-                casualties.p1_art.Value = casualties.p1_art.Value + cas
-                casualties.p1_art_c.Text = "[" + Str(cas) + "]"
-            End If
         End If
         With resultform
             .result.Text = msg
@@ -125,7 +99,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged
     End Sub
 
     Private Sub adjust_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles adjust.Click
-        casualties.ShowDialog()
+        display_adjust_casualties("both")
     End Sub
 
     Private Sub nextphase_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nextphase.Click
