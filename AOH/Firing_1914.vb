@@ -80,6 +80,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
             End Select
         End If
         With resultform
+            .Tag = IIf(scenariodefaults.player1.Text = Tag, scenariodefaults.player2.Text, scenariodefaults.player1.Text)
             .result.Text = msg
             .reverse.Visible = False
             .ShowDialog()
