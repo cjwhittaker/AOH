@@ -94,18 +94,14 @@
             Else
                 runaway = 1
             End If
-            If Me.Tag = scenariodefaults.player1.Text Then
-                casualties.p1_ske.Value = casualties.p1_ske.Value + runaway
-            Else
-                casualties.p2_ske.Value = casualties.p2_ske.Value + runaway
-            End If
+            If Tag = scenariodefaults.player1.Text Then losses(1, 2) = losses(1, 2) + runaway Else losses(2, 2) = losses(2, 2) + runaway
         End If
 
         resetform()
     End Sub
 
     Private Sub adjust_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles adjust.Click
-        casualties.ShowDialog()
+        display_adjust_casualties("both")
     End Sub
 
     Private Sub nextphase_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nextphase.Click

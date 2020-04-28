@@ -1,24 +1,26 @@
 ﻿Module Module1
     'Test 
     Public currdir As String, goback As Boolean = False, event_list As Collection, generals As Collection, timed_event As cevents, display_dice As Boolean, solo_game As Boolean
+    Public p1 As String, p2 As String
+    Public cas As Single = 0, routed As Integer = 0, captured As Integer = 0
     Public p1_poor As Integer, p1_average As Integer, p1_cautious As Integer, p1_bold As Integer
     Public p2_poor As Integer, p2_average As Integer, p2_cautious As Integer, p2_bold As Integer
     Public player1_cinc_attached As Boolean, player1_cinc_superceding As Boolean, player2_cinc_attached As Boolean, player2_cinc_superceding As Boolean
     Public player1_cinc_dead As Boolean, player2_cinc_dead As Boolean
-
+    Public losses(3, 5) As Single
     Public defa As Color = Control.DefaultBackColor, golden As Color = Color.Goldenrod
-    Public plan_criteria(7, 6) As String, attack(3, 3) As String, losses(13, 3) As String, deployment(24, 3) As String, defence(3, 3) As String
+    Public plan_criteria(7, 6) As String, attack(3, 3) As String, loss_rate(13, 3) As String, deployment(24, 3) As String, defence(3, 3) As String
     Public oom(3, 3) As String
     Public firecharts = New Integer(1, 10) {{0, 5, 10, 15, 20, 30, 40, 50, 60, 65, 66}, {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5}}
 
     Public Function get_cohesion(p As String)
-        Dim x As Integer
+        Dim x As Single, y As Integer
         get_cohesion = 0
-        If p = My.Forms.scenariodefaults.player1.Text Then
-            x = 100 * (My.Forms.casualties.p1_cas.Value + My.Forms.casualties.p1_ske.Value + My.Forms.casualties.p1_cap.Value + My.Forms.casualties.p1_ldr.Value + My.Forms.casualties.p1_art.Value) / Val(scenariodefaults.player1_stands.Text)
-        Else
-            x = 100 * (My.Forms.casualties.p2_cas.Value + My.Forms.casualties.p2_ske.Value + My.Forms.casualties.p2_cap.Value + My.Forms.casualties.p2_ldr.Value + My.Forms.casualties.p2_art.Value) / Val(scenariodefaults.player2_stands.Text)
-        End If
+        If p = My.Forms.scenariodefaults.player1.Text Then y = 1 Else y = 2
+        For i = 1 To 5 : x = x + Str(losses(y, i)) : Next
+        x = 100 * x / Val(scenariodefaults.player1_stands.Text)
+        'x = 100 * (My.Forms.casualties.p1_cas.Value + My.Forms.casualties.p1_ske.Value + My.Forms.casualties.p1_cap.Value + My.Forms.casualties.p1_ldr.Value + My.Forms.casualties.p1_art.Value) / Val(scenariodefaults.player1_stands.Text)
+        'x = 100 * (My.Forms.casualties.p2_cas.Value + My.Forms.casualties.p2_ske.Value + My.Forms.casualties.p2_cap.Value + My.Forms.casualties.p2_ldr.Value + My.Forms.casualties.p2_art.Value) / Val(scenariodefaults.player2_stands.Text)
         get_cohesion = -(Int(x / 5) - 5)
         If get_cohesion >= 0 Then get_cohesion = 0
     End Function
@@ -75,7 +77,7 @@
         End If
     End Sub
     Sub savedata(ByVal scenariofile As String)
-        Dim file As System.IO.StreamWriter
+        Dim file As System.IO.StreamWriter, loss As String = ""
         If scenariofile Is Nothing Then Exit Sub
         file = My.Computer.FileSystem.OpenTextFileWriter(scenariofile, False)
         file.WriteLine("player1=," + My.Forms.scenariodefaults.player1.Text + "," + (My.Forms.scenariodefaults.player1_init.Text))
@@ -88,22 +90,17 @@
         file.WriteLine("dusk=," + scenariodefaults.Dusk.Text)
         file.WriteLine("currenttime=," + scenariodefaults.Current_time.Text)
         file.WriteLine("gameturn=," + scenariodefaults.gameturn.Text)
-        file.WriteLine("p1=," + scenariodefaults.p1)
-        file.WriteLine("p2=," + scenariodefaults.p2)
+        file.WriteLine("p1=," + p1)
+        file.WriteLine("p2=," + p2)
         file.WriteLine("p1strength=," + scenariodefaults.player1_stands.Text)
         file.WriteLine("p2strength=," + scenariodefaults.player2_stands.Text)
         file.WriteLine("player phase=," + Str(scenariodefaults.playerphase))
         file.WriteLine("game phase=," + Str(scenariodefaults.phase))
-        file.WriteLine(casualties.p1_cas.Name + "=," + Str(casualties.p1_cas.Value))
-        file.WriteLine(casualties.p1_ske.Name + "=," + Str(casualties.p1_ske.Value))
-        file.WriteLine(casualties.p1_ldr.Name + "=," + Str(casualties.p1_ldr.Value))
-        file.WriteLine(casualties.p1_cap.Name + "=," + Str(casualties.p1_cap.Value))
-        file.WriteLine(casualties.p1_art.Name + "=," + Str(casualties.p1_art.Value))
-        file.WriteLine(casualties.p2_cas.Name + "=," + Str(casualties.p2_cas.Value))
-        file.WriteLine(casualties.p2_ske.Name + "=," + Str(casualties.p2_ske.Value))
-        file.WriteLine(casualties.p2_ldr.Name + "=," + Str(casualties.p2_ldr.Value))
-        file.WriteLine(casualties.p2_cap.Name + "=," + Str(casualties.p2_cap.Value))
-        file.WriteLine(casualties.p2_art.Name + "=," + Str(casualties.p2_art.Value))
+        For i = 1 To 5 : loss = loss + Str(losses(1, i)) + IIf(i < 5, ",", "") : Next
+        file.WriteLine("p1losses=," + loss)
+        loss = ""
+        For i = 1 To 5 : loss = loss + Str(losses(2, i)) + IIf(i < 5, ",", "") : Next
+        file.WriteLine("p2losses=," + loss)
         file.Close()
         If event_list.Count > 0 Then
             scenariofile = Strings.Left(scenariofile, InStrRev(scenariofile, ".") - 1) + ".ent"
@@ -241,7 +238,7 @@
                         Do
                             For j As Integer = 0 To 13
                                 For i As Integer = 0 To 3
-                                    losses(j, i) = lineread(i)
+                                    loss_rate(j, i) = lineread(i)
                                 Next
                                 lineread = MyReader.ReadFields
                                 If lineread(0) = "Deployment" Then Exit For
@@ -308,10 +305,26 @@
 
     Public Sub update_casualties(side As String)
         If generals Is Nothing Then Exit Sub
-        If side = scenariodefaults.player1.Text Then
-            generals(side + "CinC").casualties = casualties.p1_cas.Value + casualties.p1_ske.Value + casualties.p1_cap.Value + casualties.p1_art.Value
-        Else
-            generals(side + "CinC").casualties = casualties.p2_cas.Value + casualties.p2_ske.Value + casualties.p2_cap.Value + casualties.p2_art.Value
-        End If
+        Dim y As Integer, x As Integer
+        'If side = scenariodefaults.player1.Text Then
+        '    generals(side + "CinC").casualties = casualties.p1_cas.Value + casualties.p1_ske.Value + casualties.p1_cap.Value + casualties.p1_art.Value
+        'Else
+        '    generals(side + "CinC").casualties = casualties.p2_cas.Value + casualties.p2_ske.Value + casualties.p2_cap.Value + casualties.p2_art.Value
+        'End If
+        If side = My.Forms.scenariodefaults.player1.Text Then y = 1 Else y = 2
+        For i = 1 To 5
+            If i <> 4 Then x = x + Str(losses(y, i))
+        Next
+        generals(side + "CinC").casualties = x
+    End Sub
+    Public Sub display_adjust_casualties(side As String)
+        With casualties
+            .p1.Text = scenariodefaults.player1.Text
+            .p2.Text = scenariodefaults.player2.Text
+            .cas_adjust_mode = side
+            .cas_adjust()
+            .ShowDialog()
+            .Dispose()
+        End With
     End Sub
 End Module

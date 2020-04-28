@@ -8,6 +8,7 @@
         tirailleur.Checked = False
         firepoints.Text = 0
         adjustfirepoints.Value = 0
+        cas = 0 : routed = 0 : captured = 0
     End Sub
 
     Private Sub check_color(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles _
@@ -69,32 +70,6 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged
                 Case 10 : msg = msg + "cooly ignored the fire"
             End Select
         End If
-        If Not Artillery.Checked Then
-            If Me.Tag = scenariodefaults.player1.Text Then
-                casualties.p2_cas.Value = casualties.p2_cas.Value + cas
-                casualties.p2_cas_c.Text = "[" + Str(cas) + "]"
-            Else
-                casualties.p1_cas.Value = casualties.p1_cas.Value + cas
-                casualties.p1_cas_c.Text = "[" + Str(cas) + "]"
-            End If
-        Else
-            If InStr(msg, "damaged") > 0 Then
-                cas = 0.5
-            ElseIf InStr(msg, "wrecked") > 0 Then
-                cas = 1
-            Else
-                cas = 0
-            End If
-
-
-            If Me.Tag = scenariodefaults.player1.Text Then
-                casualties.p2_art.Value = casualties.p2_art.Value + cas
-                casualties.p2_art_c.Text = "[" + Str(cas) + "]"
-            Else
-                casualties.p1_art.Value = casualties.p1_art.Value + cas
-                casualties.p1_art_c.Text = "[" + Str(cas) + "]"
-            End If
-        End If
         With resultform
             .result.Text = msg
             .reverse.Visible = False
@@ -123,7 +98,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged
     End Sub
 
     Private Sub adjust_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles adjust.Click
-        casualties.ShowDialog()
+        display_adjust_casualties("both")
     End Sub
 
     Private Sub nextphase_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nextphase.Click
