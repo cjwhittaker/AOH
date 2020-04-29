@@ -196,6 +196,7 @@ backbutton:
                 With Firing
                     .Text = "Firing Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p2 + " Defender's Fire Phase"
+                    .Text = .Player.Text + " - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Tag = p2
                     .ShowDialog()
                 End With
@@ -208,6 +209,7 @@ backbutton:
                 With Firing
                     .Text = "Firing Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Attacker's Fire Phase"
+                    .Text = .Player.Text + " - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Tag = p1
                     .ShowDialog()
                 End With
@@ -219,6 +221,7 @@ backbutton:
                 With charge
                     .Text = "Charge Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Charge Phase"
+                    .Text = .Player.Text + " - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .attacker.Text = p1
                     .Defender.Text = p2
                     .ShowDialog()

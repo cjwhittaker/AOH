@@ -109,25 +109,26 @@
 
         End If
         With resultform
+            .Text = p1 + " " + Text
             .result.Text = droll + msg
             .reverse.Visible = False
             .ShowDialog()
             .reverse.Visible = False
         End With
 
-        If quitfield Or broken Then
-            If quitfield Then
-                calculator.Tag = "rout"
-                calculator.ShowDialog()
-            Else
-                runaway = 1
-            End If
-            If Me.Tag = scenariodefaults.player1.Text Then
-                casualties.p1_ske.Value = casualties.p1_ske.Value + runaway
-            Else
-                casualties.p2_ske.Value = casualties.p2_ske.Value + runaway
-            End If
-        End If
+        'If quitfield Or broken Then
+        '    If quitfield Then
+        '        calculator.Tag = "rout"
+        '        calculator.ShowDialog()
+        '    Else
+        '        runaway = 1
+        '    End If
+        '    If Me.Tag = scenariodefaults.player1.Text Then
+        '        casualties.p1_ske.Value = casualties.p1_ske.Value + runaway
+        '    Else
+        '        casualties.p2_ske.Value = casualties.p2_ske.Value + runaway
+        '    End If
+        'End If
 
         resetform()
 

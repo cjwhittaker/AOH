@@ -190,6 +190,7 @@ a_fresh.Click, a_spent.Click, d_spent.Click, d_fresh.Click
         Else
         End If
         resultform.Tag = player
+        resultform.Text = Text
         resultform.reverse.Visible = False
         If result = 0 Then
             resultform.result.Text = droll + msg

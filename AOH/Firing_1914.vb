@@ -6,52 +6,56 @@
         Targetmode.Checked = False
         Artillery.Checked = False
         tirailleur.Checked = False
-        cavalry_charging.checked = False
+        cavalry_charging.Checked = False
+        openorder.Checked = False
         firepoints.Text = 0
         adjustfirepoints.Value = 0
     End Sub
 
     Private Sub check_color(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles _
-Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, cavalry_charging.CheckedChanged
-        If sender.checked Then sender.backcolor = Color.Goldenrod Else sender.backcolor = Control.DefaultBackColor
-        If sender.name = "Artillery" And sender.backcolor = Color.Goldenrod Then tirailleur.Checked = False : cavalry_charging.Checked = False
-        If sender.name = "tirailleur" And sender.backcolor = Color.Goldenrod Then Artillery.Checked = False : cavalry_charging.Checked = False
-        If sender.name = "cavalry_charging" And sender.backcolor = Color.Goldenrod Then tirailleur.Checked = False : Artillery.Checked = False
+Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, cavalry_charging.CheckedChanged, openorder.CheckedChanged
+        If sender.checked Then sender.backcolor = golden Else sender.backcolor = Control.DefaultBackColor
+        If sender.name = "Artillery" And sender.backcolor = golden Then tirailleur.Checked = False : cavalry_charging.Checked = False : openorder.Checked = False
+        If sender.name = "tirailleur" And sender.backcolor = golden Then Artillery.Checked = False : cavalry_charging.Checked = False
+        If sender.name = "cavalry_charging" And sender.backcolor = golden Then tirailleur.Checked = False : Artillery.Checked = False : openorder.Checked = False
+        If sender.name = "Targetmode" And sender.backcolor = golden Then openorder.Checked = False
+        If sender.name = "openorder" And sender.backcolor = golden Then Artillery.Checked = False : cavalry_charging.Checked = False
 
     End Sub
 
 
     Private Sub fire_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles fire.Click
-        Dim cas As Single, modifier As Integer, result As Integer, msg As String, fire_eff As String
-        Dim effect As Integer = 0, f As Integer = Int(1.5 * Val(firepoints.Text))
+        Dim modifier As Integer, result As Integer, msg As String, fire_eff As String
+        Dim effect As Integer = 0, f As Integer = Val(firepoints.Text)
         If f <= 0 Then f = 0
-        modifier = 0
+        modifier = 0 : cas = 0
         If Targetmode.Checked Then modifier = modifier + 1
         If tirailleur.Checked Then modifier = modifier - 2
+        If openorder.Checked Then modifier = modifier - 1
         If Cavalry_charging.Checked Then modifier = modifier + 3
         modifier = modifier - Val(cover.Text)
         'AOV
         For i As Integer = 1 To 10
-            If i = 10 Then modifier = modifier + firecharts(1, i) : Exit For
-            If f <= firecharts(0, i) Then modifier = modifier + firecharts(1, i) : Exit For
+            If i = 10 Then f = firecharts(1, i) : Exit For
+            If f <= firecharts(0, i) Then f = firecharts(1, i) : Exit For
         Next
         cas = 0
         result = dice(10)
-        effect = result + modifier
-        Dim droll As String = "[" + Str(f) + " @ " + Str(result) + " + " + Str(modifier) + "=" + Str(effect) + "]" + vbNewLine
+        effect = result + modifier + f
+        Dim droll As String = firepoints.Text + "FP" + "[" + (Str(f)) + " + " + Str(modifier) + " + " + Trim(Str(result)) + "=" + Trim(Str(effect)) + "]" + vbNewLine
         If Not display_dice Then droll = ""
         If effect >= 11 Then
-            If Artillery.Checked Then fire_eff = "Battery wrecked" Else fire_eff = "Troops lose 2 stands (3 hits)" + vbNewLine + "Cavalry disordered, Infantry suppressed" + vbNewLine + "Movers halt where fire receivied" + vbNewLine + "Chargers retire 1/2 move away from firers"
+            If Artillery.Checked Then fire_eff = "Battery wrecked" Else fire_eff = "Troops lose 3 stands" + vbNewLine + "Cavalry disordered, Infantry suppressed" + vbNewLine + "Movers halt where fire received" + vbNewLine + "Chargers retire 1/2 move away from firers"
             msg = droll + "Gone to Ground" + vbNewLine + fire_eff
-            cas = 2
+            cas = 3
         ElseIf effect >= 9 Then
-            If Artillery.Checked Then fire_eff = "Battery damaged and silenced" Else fire_eff = "Troops lose 1 and 1/3 stands and is disordered (2 hits)"
+            If Artillery.Checked Then fire_eff = "Battery damaged and silenced" Else fire_eff = "Troops lose 2 stands and is disordered"
             msg = droll + "Deadly Fire" + vbNewLine + fire_eff
-            cas = 1.334
+            cas = 2
         ElseIf effect >= 6 Then
-            If Artillery.Checked Then fire_eff = "Battery damaged " Else fire_eff = "Troops lose 2/3 of a stand and is disordered (1 hits)"
+            If Artillery.Checked Then fire_eff = "Battery damaged " Else fire_eff = "Troops lose a stand and is disordered"
             msg = droll + "Telling Fire" + vbNewLine + fire_eff
-            cas = 0.667
+            cas = 1
         ElseIf effect >= 4 Then
             If Artillery.Checked Then fire_eff = "Battery silenced" Else fire_eff = "Troops are disordered"
             msg = droll + "Lively Fire" + vbNewLine + fire_eff
@@ -75,32 +79,9 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
                 Case 10 : msg = msg + "cooly ignored the fire"
             End Select
         End If
-        If Not Artillery.Checked Then
-            If Me.Tag = scenariodefaults.player1.Text Then
-                casualties.p2_cas.Value = casualties.p2_cas.Value + cas
-                casualties.p2_cas_c.Text = "[" + Str(cas) + "]"
-            Else
-                casualties.p1_cas.Value = casualties.p1_cas.Value + cas
-                casualties.p1_cas_c.Text = "[" + Str(cas) + "]"
-            End If
-        Else
-            If InStr(msg, "damaged") > 0 Then
-                cas = 0.334
-            ElseIf InStr(msg, "wrecked") > 0 Then
-                cas = 0.667
-            Else
-                cas = 0
-            End If
-
-            If Me.Tag = scenariodefaults.player1.Text Then
-                casualties.p2_art.Value = casualties.p2_art.Value + cas
-                casualties.p2_art_c.Text = "[" + Str(cas) + "]"
-            Else
-                casualties.p1_art.Value = casualties.p1_art.Value + cas
-                casualties.p1_art_c.Text = "[" + Str(cas) + "]"
-            End If
-        End If
         With resultform
+            .Tag = IIf(scenariodefaults.player1.Text = Tag, scenariodefaults.player2.Text, scenariodefaults.player1.Text)
+            .Text = Text
             .result.Text = msg
             .reverse.Visible = False
             .ShowDialog()
@@ -124,7 +105,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
     End Sub
 
     Private Sub adjust_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles adjust.Click
-        casualties.ShowDialog()
+        display_adjust_casualties("both")
     End Sub
 
     Private Sub nextphase_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles nextphase.Click
