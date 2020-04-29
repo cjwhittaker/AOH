@@ -198,8 +198,8 @@ backbutton:
             If phase = 5 Then
                 phase = 6 : quit = True
                 With Firing_1914
-                    .Text = "Firing Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p2 + " Defender's Fire Phase"
+                    .Text = .Player.Text + " - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Tag = p2
                     .ShowDialog()
                 End With
@@ -210,8 +210,8 @@ backbutton:
             If phase = 6 Then
                 phase = 7 : quit = True
                 With Firing_1914
-                    .Text = "Firing Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Attacker's Fire Phase"
+                    .Text = .Player.Text + " - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Tag = p1
                     .ShowDialog()
                 End With
@@ -221,8 +221,8 @@ backbutton:
             If phase = 7 Then
                 quit = True
                 With charge_1914
-                    .Text = "Charge Phase - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .Player.Text = p1 + " Charge Phase"
+                    .Text = .Player.Text + " - GT" + Trim(Str(gameturn.Text)) + " at " + Current_time.Text + "hrs"
                     .attacker.Text = p1
                     .Defender.Text = p2
                     .ShowDialog()

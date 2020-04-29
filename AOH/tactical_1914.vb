@@ -126,25 +126,26 @@
         End If
         If digging.Checked And (InStr(msg, "Stalled") > 0 Or InStr(msg, "Cautious") > 0 Or InStr(msg, "En Avant") > 0 Or InStr(msg, "Pas de Charge") > 0) Then msg = "Digging Commences"
         With resultform
+            .Text = p1 + " " + Text
             .result.Text = droll + msg
             .reverse.Visible = False
             .ShowDialog()
             .reverse.Visible = False
         End With
 
-        If quitfield Or broken Then
-            If quitfield Then
-                calculator.Tag = "rout"
-                calculator.ShowDialog()
-            Else
-                runaway = 1
-            End If
-            If Me.Tag = scenariodefaults.player1.Text Then
-                casualties.p1_ske.Value = casualties.p1_ske.Value + runaway
-            Else
-                casualties.p2_ske.Value = casualties.p2_ske.Value + runaway
-            End If
-        End If
+        'If quitfield Or broken Then
+        '    If quitfield Then
+        '        calculator.Tag = "rout"
+        '        calculator.ShowDialog()
+        '    Else
+        '        runaway = 1
+        '    End If
+        '    If Me.Tag = scenariodefaults.player1.Text Then
+        '        casualties.p1_ske.Value = casualties.p1_ske.Value + runaway
+        '    Else
+        '        casualties.p2_ske.Value = casualties.p2_ske.Value + runaway
+        '    End If
+        'End If
 
         resetform()
 
