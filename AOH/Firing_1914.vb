@@ -45,7 +45,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
         Dim droll As String = firepoints.Text + "FP" + "[" + (Str(f)) + " + " + Str(modifier) + " + " + Trim(Str(result)) + "=" + Trim(Str(effect)) + "]" + vbNewLine
         If Not display_dice Then droll = ""
         If effect >= 11 Then
-            If Artillery.Checked Then fire_eff = "Battery wrecked" Else fire_eff = "Troops lose 3 stands" + vbNewLine + "Cavalry disordered, Infantry suppressed" + vbNewLine + "Movers halt where fire received" + vbNewLine + "Chargers retire 1/2 move away from firers"
+            If Artillery.Checked Then fire_eff = "Battery wrecked" Else fire_eff = "Troops lose " + IIf(openorder.Checked, "2", "3") + " stands" + vbNewLine + "Cavalry disordered, Infantry suppressed" + vbNewLine + "Movers halt where fire received" + vbNewLine + "Chargers retire 1/2 move away from firers"
             msg = droll + "Gone to Ground" + vbNewLine + fire_eff
             cas = 3
         ElseIf effect >= 9 Then
@@ -84,8 +84,13 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged, 
             .Text = Text
             .result.Text = msg
             .reverse.Visible = False
+            .leader.Text = "Go To Ground"
+            .leader.Visible = IIf(effect >= 6 And effect <= 10 And openorder.Checked, True, False)
+            .leader.Checked = False
             .ShowDialog()
             .reverse.Visible = False
+            .leader.Text = "CinC Lost"
+            .leader.Visible = False
         End With
 
         resetform()

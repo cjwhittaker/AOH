@@ -96,6 +96,16 @@
     End Sub
     Private Sub check_color(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles arty.CheckedChanged, leader.CheckedChanged
         If sender.checked Then sender.backcolor = golden Else sender.backcolor = defa
-
+        If leader.Text = "Go To Ground" And Visible Then
+            If leader.BackColor = golden Then
+                cas = cas - 1
+                result.Text = Replace(result.Text, "Troops lose a stand and is disordered", "Troops are suppressed")
+                result.Text = Replace(result.Text, "Troops lose 2 stands and is disordered", "Troops lose one stand and are suppressed")
+            Else
+                cas = cas + 1
+                result.Text = Replace(result.Text, "Troops are suppressed", "Troops lose a stand and is disordered")
+                result.Text = Replace(result.Text, "Troops lose one stand and are suppressed", "Troops lose 2 stands and is disordered")
+            End If
+        End If
     End Sub
 End Class

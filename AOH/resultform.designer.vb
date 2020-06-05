@@ -95,7 +95,7 @@ Partial Class resultform
         Me.leader.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.leader.Location = New System.Drawing.Point(431, 593)
         Me.leader.Name = "leader"
-        Me.leader.Size = New System.Drawing.Size(76, 56)
+        Me.leader.Size = New System.Drawing.Size(82, 56)
         Me.leader.TabIndex = 33
         Me.leader.Text = "CinC Lost"
         Me.leader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -132,11 +132,11 @@ Partial Class resultform
         Me.BackgroundImage = Global.AOH.My.Resources.Resources.kitch1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(684, 661)
+        Me.Controls.Add(Me.leader)
         Me.Controls.Add(Me.reverse)
         Me.Controls.Add(Me.first_player)
         Me.Controls.Add(Me.second_player)
         Me.Controls.Add(Me.adjust)
-        Me.Controls.Add(Me.leader)
         Me.Controls.Add(Me.arty)
         Me.Controls.Add(Me.confirm)
         Me.Controls.Add(Me.result)
