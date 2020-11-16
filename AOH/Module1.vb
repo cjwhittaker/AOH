@@ -63,11 +63,17 @@
                                             {0, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4},
                                             {0, 1, 2, 2, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4}}
     Public Function get_cohesion(p As String)
-        Dim x As Single, y As Integer
+        Dim x As Single = 0, y As Integer = 0, stands As Integer = 0
         get_cohesion = 0
-        If p = My.Forms.scenariodefaults.player1.Text Then y = 1 Else y = 2
+        If p = My.Forms.scenariodefaults.player1.Text Then
+            y = 1
+            stands = Val(scenariodefaults.player1_stands.Text)
+        Else
+            y = 2
+            stands = Val(scenariodefaults.player2_stands.Text)
+        End If
         For i = 1 To 5 : x = x + Str(losses(y, i)) : Next
-        x = 100 * x / Val(scenariodefaults.player1_stands.Text)
+        x = 100 * x / stands
         'x = 100 * (My.Forms.casualties.p1_cas.Value + My.Forms.casualties.p1_ske.Value + My.Forms.casualties.p1_cap.Value + My.Forms.casualties.p1_ldr.Value + My.Forms.casualties.p1_art.Value) / Val(scenariodefaults.player1_stands.Text)
         'x = 100 * (My.Forms.casualties.p2_cas.Value + My.Forms.casualties.p2_ske.Value + My.Forms.casualties.p2_cap.Value + My.Forms.casualties.p2_ldr.Value + My.Forms.casualties.p2_art.Value) / Val(scenariodefaults.player2_stands.Text)
         get_cohesion = -(Int(x / 5) - 5)
