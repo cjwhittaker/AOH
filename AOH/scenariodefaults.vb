@@ -61,7 +61,13 @@
         If Not scenario_ready() Or Not solo_ready() Then Exit Sub
         Me.Hide()
         If player1.Text = "" Or player2.Text = "" Or Current_time.Text = Dusk.Text Then GoTo avoidturninc
-        If gameturn.Text = 1 Then enable_data_entry(False)
+        If gameturn.Text = 1 Then
+            If scenario Is Nothing Then
+                scenario = "game created on " + Format(Now, "dd MMM yyyy") + ".sce"
+            End If
+            savedata(scenario)
+            enable_data_entry(False)
+        End If
         'initiative phase?
         If playerphase = 0 Then playerphase = 1
         If playerphase = 1 And phase = 0 Then

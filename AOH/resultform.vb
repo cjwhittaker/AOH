@@ -1,7 +1,7 @@
 ﻿Public Class resultform
     Private Sub confirm_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles confirm.Click
         If scenariodefaults.phase <= 5 Then scenariodefaults.quit = False
-        Me.Close()
+        Close()
     End Sub
     Private Sub resultform_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         If scenariodefaults.phase = 1 Then

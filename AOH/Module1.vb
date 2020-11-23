@@ -141,7 +141,6 @@
     End Sub
     Sub savedata(ByVal scenariofile As String)
         Dim file As System.IO.StreamWriter, loss As String = ""
-        If scenariofile Is Nothing Then Exit Sub
         file = My.Computer.FileSystem.OpenTextFileWriter(scenariofile, False)
         file.WriteLine("player1=," + My.Forms.scenariodefaults.player1.Text + "," + (My.Forms.scenariodefaults.player1_init.Text) + "," + Str(player1_cinc_attached) + "," + Str(player1_cinc_superceding) + "," + Str(player1_cinc_dead))
         file.WriteLine("player2=," + My.Forms.scenariodefaults.player2.Text + "," + (My.Forms.scenariodefaults.player2_init.Text) + "," + Str(player2_cinc_attached) + "," + Str(player2_cinc_superceding) + "," + Str(player2_cinc_dead))
