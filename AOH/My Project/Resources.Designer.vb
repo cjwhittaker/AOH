@@ -141,6 +141,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to 1.
+        '''</summary>
+        Friend ReadOnly Property LIGHTS() As String
+            Get
+                Return ResourceManager.GetString("LIGHTS", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to False.
+        '''</summary>
+        Friend ReadOnly Property LOW_AMMO() As String
+            Get
+                Return ResourceManager.GetString("LOW_AMMO", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property napoleon_Logo2() As System.Drawing.Bitmap
@@ -177,6 +195,15 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("syw1", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Tgt is Col or Limbered; Mounted Cav; Changing form, mode or facing.
+        '''</summary>
+        Friend ReadOnly Property TARGET_MODE() As String
+            Get
+                Return ResourceManager.GetString("TARGET_MODE", resourceCulture)
             End Get
         End Property
     End Module

@@ -23,7 +23,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged
         Dim x As Integer, cas As Single, modifier As Integer, result As Integer, msg As String, fire_eff As String
         modifier = 0
         If Targetmode.Checked Then modifier = modifier + 1
-        If tirailleur.Checked Then modifier = modifier - 2
+        If tirailleur.Checked Then modifier = modifier - light_inf
 
         modifier = modifier - Val(cover.Text)
         cas = 0
@@ -55,7 +55,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged
         Else
             msg = droll + "Desultory Fire" + vbNewLine + "No effect"
         End If
-        If result = 10 Then msg = msg + vbNewLine + "Firers are now low on Ammunition"
+        If result = 10 And low_ammo Then msg = msg + vbNewLine + "Firers are now low on Ammunition"
         If result = 10 Then
             result = dice(10)
             msg = msg + vbNewLine + "A leader, if attached, has "
@@ -93,6 +93,7 @@ Targetmode.CheckedChanged, Artillery.CheckedChanged, tirailleur.CheckedChanged
 
         ' Add any initialization after the InitializeComponent() call.
         resetform()
+        Targetmode.Text = My.Resources.TARGET_MODE
     End Sub
 
     Private Sub Reset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Reset.Click

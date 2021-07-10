@@ -154,4 +154,13 @@
   <data name="_1870" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1870.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LIGHTS" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LOW_AMMO" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="TARGET_MODE" xml:space="preserve">
+    <value>Tgt is Col or Limbered; Mounted Cav; Changing form, mode or facing</value>
+  </data>
 </root>

@@ -8,6 +8,8 @@
     Public player1_cinc_attached As Boolean, player1_cinc_superceding As Boolean, player2_cinc_attached As Boolean, player2_cinc_superceding As Boolean
     Public player1_cinc_dead As Boolean, player2_cinc_dead As Boolean
     Public losses(3, 5) As Single
+    Public low_ammo As Boolean = CBool(My.Resources.LOW_AMMO)
+    Public light_inf As Integer = CInt(My.Resources.LIGHTS)
     Public defa As Color = Control.DefaultBackColor, golden As Color = Color.Goldenrod
     Public plan_criteria(7, 6) As String, attack(3, 3) As String, loss_rate(13, 3) As String, deployment(24, 3) As String, defence(3, 3) As String
     Public oom(3, 3) As String
